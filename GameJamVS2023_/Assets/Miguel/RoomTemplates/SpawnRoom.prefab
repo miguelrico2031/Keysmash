@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 1191481916144869959}
   m_Layer: 0
   m_Name: SpawnRoom
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
     DoorsList: []
   SimpleDoorModeData:
     DistanceFromCorners: 2
-    DoorLength: 2
+    DoorLength: 1
     Mode: 0
     VerticalDoors:
       Length: 1
