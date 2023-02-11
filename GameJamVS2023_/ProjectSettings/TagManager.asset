@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemigo
   - Personaje
+  - Room
+  - SpawnPoint
+  - Corridor
+  - Door
+
   layers:
   - Default
   - TransparentFX
