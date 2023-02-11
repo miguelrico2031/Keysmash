@@ -13,8 +13,7 @@ public class PrPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 movement = new Vector2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
-        Debug.Log(movement);
-        transform.Translate(movement * 50f * Time.deltaTime);
+        Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        transform.Translate(movement * 5f * Time.deltaTime);
     }
 }
