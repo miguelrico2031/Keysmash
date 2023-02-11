@@ -10,7 +10,8 @@ TagManager:
   - SpawnPoint
   - Corridor
   - Door
-
+  - Keyboard
+  - Enemy
   layers:
   - Default
   - TransparentFX

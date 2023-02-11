@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManosMovimiento : MonoBehaviour
+public class HandsFollowPlayer : MonoBehaviour
 {
     public Transform Target;
     public float Speed = 4.95f;

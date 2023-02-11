@@ -28,7 +28,7 @@ public class Personaje : MonoBehaviour
         {
             _facingDirection = movement.normalized;
         }
-        if (!Dash_Space.EnDash)
+        if (!Dash_Space.EnDash) //!!
         {
             rb2d.velocity = movement * Velocidad;
         }       

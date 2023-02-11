@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Boomerang_R : MonoBehaviour
 {
-    public int Daño;
+    public int DaÃ±o;
     public float CoolDown;
     public float TiempoAntesDeVuelta;
     public float VelocidadInicial;
@@ -53,7 +53,7 @@ public class Boomerang_R : MonoBehaviour
         {
             if (_enAtaque)
             {
-                colliderEnemigo.transform.GetComponent<Enemigo>().RecibirDaño(Daño);
+                colliderEnemigo.transform.GetComponent<Enemigo>().RecibirDaÃ±o(DaÃ±o);
                 Debug.Log("Auch");
             }
         }

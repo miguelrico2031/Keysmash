@@ -21,12 +21,18 @@ public class RoomManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        if(!DungeonManager.Instance) return;
         DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     private void OnDisable()
     {
         DungeonManager.Instance.DungeonGenerated.RemoveListener(OnDungeonGenerated);
+    }
+
+    private void Start()
+    {
+        DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     public void OnDungeonGenerated()

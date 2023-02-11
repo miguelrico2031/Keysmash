@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Melee1_Q : MonoBehaviour
 {
-    public int Daño;
+    public int DaÃ±o;
     public float CoolDown;
     public float DuracionAtaque;
     bool _sePuedeUsar;
@@ -38,7 +38,7 @@ public class Melee1_Q : MonoBehaviour
         {
             if (_enAtaque)
             {
-                colliderEnemigo.transform.GetComponent<Enemigo>().RecibirDaño(Daño);
+                colliderEnemigo.transform.GetComponent<Enemigo>().RecibirDaÃ±o(DaÃ±o);
                 Debug.Log("Auch");
             }           
         }

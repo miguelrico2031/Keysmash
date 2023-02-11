@@ -10,12 +10,18 @@ public class CorridorManager : MonoBehaviour
 
     private void OnEnable()
     {
+        if(!DungeonManager.Instance) return;
         DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     private void OnDisable()
     {
         DungeonManager.Instance.DungeonGenerated.RemoveListener(OnDungeonGenerated);
+    }
+
+    private void Start()
+    {
+        DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     // Update is called once per frame
