@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Room
   - SpawnPoint
-  - Wall
+  - Corridor
+  - Door
   layers:
   - Default
   - TransparentFX
