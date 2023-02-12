@@ -13,17 +13,24 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         _playerMovement = GetComponent<PlayerMovement>();
         _rb = GetComponent<Rigidbody2D>();
-        _headAnimator = GetComponent<Animator>();
         
         for (int i = 0; i < transform.childCount; i++)
         {
             var child = transform.GetChild(i);
-            if (child.CompareTag("Feet"))
+            if (child.CompareTag("Feet") && !_feetAnimator)
             {
                 _feetAnimator = child.GetComponent<Animator>();
-                break;
+                
             }
+            else if (child.CompareTag("Head") && !_headAnimator)
+            {
+                _headAnimator = child.GetComponent<Animator>();
+                
+            }
+
+            if(_headAnimator && _feetAnimator) break;
         }
+
     }
 
     void FixedUpdate()
@@ -31,6 +38,8 @@ public class PlayerAnimationManager : MonoBehaviour
         _feetAnimator.SetFloat("Speed", _rb.velocity.magnitude);
         _feetAnimator.SetFloat("Horizontal", _playerMovement.RawDirection.x);
         _feetAnimator.SetFloat("Vertical", _playerMovement.RawDirection.y);
+
+        _headAnimator.SetFloat("Speed", _rb.velocity.magnitude);
         _headAnimator.SetFloat("Horizontal", _playerMovement.RawDirection.x);
         _headAnimator.SetFloat("Vertical", _playerMovement.RawDirection.y);
     }

@@ -13,6 +13,8 @@ TagManager:
   - Keyboard
   - Enemy
   - Feet
+  - Hand
+  - Head
   layers:
   - Default
   - TransparentFX
