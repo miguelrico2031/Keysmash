@@ -25,6 +25,8 @@ public class DashPower : Power
         
         _direction = _playerMovement.Direction;
 
+        UsePower.Invoke(this);
+
         Dash();
         
     }
@@ -50,6 +52,7 @@ public class DashPower : Power
             _rb.velocity = Vector2.zero;
             _dashing = false;
             _playerMovement.BlockMovement = false;
+            BlockPowers = false;
         }
 
     }
@@ -60,6 +63,14 @@ public class DashPower : Power
         _speed = _initialSpeed;
         _acceleration = -_initialSpeed / _dashDuration;
         _dashing = true;
+        BlockPowers = true;
 
+    }
+
+    public override void OnCoolDownOver()
+    {
+        base.OnCoolDownOver();
+
+        PowerAvailable.Invoke(this);
     }
 }

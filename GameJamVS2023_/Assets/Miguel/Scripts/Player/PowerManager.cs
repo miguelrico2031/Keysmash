@@ -5,6 +5,8 @@ using UnityEngine;
 public class PowerManager : MonoBehaviour
 {
     public PlayerStats Stats;
+    
+    private Power _activePower;
 
     private void Start()
     {
@@ -13,23 +15,32 @@ public class PowerManager : MonoBehaviour
     
     private void Update()
     {
-        foreach(var power in Stats.Powers)
+        if(_activePower && _activePower.BlockPowers) _activePower.OnUpdate();
+        
+        else
         {
-            if(Input.GetKeyDown(power.Key))
+            foreach(var power in Stats.Powers)
             {
-                power.Use(gameObject);
-                if(power.CoolDownOver && power.CoolDown > 0) StartCoroutine(PowerCooldown(power));
-                break;
+                if(Input.GetKeyDown(power.Key))
+                {
+                    _activePower = power;
+                    power.Use(gameObject);
+                    if(power.CoolDownOver && power.CoolDown > 0) StartCoroutine(PowerCooldown(power));
+                    break;
+                }
             }
-        }
 
-        foreach(var power in Stats.Powers) power.OnUpdate();
+            foreach(var power in Stats.Powers) power.OnUpdate();
+        }
+        
         
     }
 
     private void FixedUpdate()
-    {
-        foreach(var power in Stats.Powers) power.OnFixedUpdate();
+    {   
+        if(_activePower && _activePower.BlockPowers) _activePower.OnFixedUpdate();
+
+        else foreach(var power in Stats.Powers) power.OnFixedUpdate();
     }
 
     private IEnumerator PowerCooldown(Power power)
@@ -37,5 +48,6 @@ public class PowerManager : MonoBehaviour
         power.CoolDownOver = false;
         yield return new WaitForSeconds(power.CoolDown);
         power.CoolDownOver = true;
+        power.OnCoolDownOver();
     }
 }

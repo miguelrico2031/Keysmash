@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [HideInInspector] public bool BlockMovement = false;
+    public bool BlockMovement = false;
     [SerializeField] private float _speed;
 
     private GameObject _keyboard;

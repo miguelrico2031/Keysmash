@@ -27,4 +27,9 @@ public class HandsFollowPlayer : MonoBehaviour
 
 
     }
+
+    public void SetHandInPosition()
+    {
+        transform.position = Target.position;
+    }
 }

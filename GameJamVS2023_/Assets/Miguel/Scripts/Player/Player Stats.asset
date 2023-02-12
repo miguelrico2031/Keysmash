@@ -15,6 +15,8 @@ MonoBehaviour:
   Powers:
   - {fileID: 11400000, guid: 0a84ad1fffd727c4783d5592254c971f, type: 2}
   - {fileID: 11400000, guid: 97dacee80bed28d4fae4221a15ccb976, type: 2}
+  - {fileID: 11400000, guid: ed8e6b284e6aa6643b64de5899c0ff29, type: 2}
+  - {fileID: 11400000, guid: 7dc282dce266339498db3956af9f4a4c, type: 2}
   MaxHealth: 10
   _invulnerabilityDuration: 1
-  Health: 10
+  Health: -12

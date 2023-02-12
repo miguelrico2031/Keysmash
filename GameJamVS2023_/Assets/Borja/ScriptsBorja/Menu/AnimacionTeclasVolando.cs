@@ -7,8 +7,8 @@ public class AnimacionTeclasVolando : MonoBehaviour
     public GameObject[] Teclas;
     public GameObject Collider;
     public float Vel;
-    public float TamañoVel;
-    public float CapTamaño;
+    public float TamaÃ±oVel;
+    public float CapTamaÃ±o;
     public float MaxRotacion;
     public float TiempoHastaCollider;
     bool _enAnimacion;
@@ -55,9 +55,9 @@ public class AnimacionTeclasVolando : MonoBehaviour
         {
             foreach (var tecla in Teclas)
             {
-                float x = Mathf.Clamp((tecla.transform.localScale.x + TamañoVel * Time.fixedDeltaTime), 0, CapTamaño);
-                float y = Mathf.Clamp((tecla.transform.localScale.y + TamañoVel * Time.fixedDeltaTime), 0, CapTamaño);
-                float z = Mathf.Clamp((tecla.transform.localScale.z + TamañoVel * Time.fixedDeltaTime), 0, CapTamaño);
+                float x = Mathf.Clamp((tecla.transform.localScale.x + TamaÃ±oVel * Time.fixedDeltaTime), 0, CapTamaÃ±o);
+                float y = Mathf.Clamp((tecla.transform.localScale.y + TamaÃ±oVel * Time.fixedDeltaTime), 0, CapTamaÃ±o);
+                float z = Mathf.Clamp((tecla.transform.localScale.z + TamaÃ±oVel * Time.fixedDeltaTime), 0, CapTamaÃ±o);
                 tecla.transform.localScale = new Vector3(x, y, z);
                 tecla.GetComponent<Rigidbody2D>().angularVelocity = Mathf.Clamp(tecla.GetComponent<Rigidbody2D>().angularVelocity, -MaxRotacion, MaxRotacion);
                 tecla.GetComponent<Rigidbody2D>().velocity = new Vector2 (Mathf.Clamp(tecla.GetComponent<Rigidbody2D>().velocity.x * Vel, -Vel, Vel), Mathf.Clamp(tecla.GetComponent<Rigidbody2D>().velocity.y * Vel, -Vel, Vel));

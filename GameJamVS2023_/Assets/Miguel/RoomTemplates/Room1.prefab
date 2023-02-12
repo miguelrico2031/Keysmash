@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 3602288167027609848}
   - component: {fileID: 8033250360915343603}
   - component: {fileID: 8408245044851444207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a947a60657e8d4bb8eecb492d08d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsSpawn: 0
+  IsSpawned: 0
 --- !u!50 &3674728354256882229
 Rigidbody2D:
   serializedVersion: 4

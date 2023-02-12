@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 5847615468288058497}
   - component: {fileID: 8470457822615332104}
   - component: {fileID: 509129766689317148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c556c45ebbd6f45a1f0624e0c89811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _door: {fileID: 0}
+  Open: 0
 --- !u!1 &6191408874631507969
 GameObject:
   m_ObjectHideFlags: 0

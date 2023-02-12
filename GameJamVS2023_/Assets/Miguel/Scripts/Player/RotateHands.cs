@@ -9,6 +9,9 @@ public class RotateHands : MonoBehaviour
     [SerializeField] private float _rotationSpeed;
     private PlayerMovement _playerMovement;
     private Transform _leftHand, _rightHand;
+    //private HandsFollowPlayer _leftHandFollowPlayer, _rightHandFollowPlayer;
+
+    private Vector2 _lastDirection;
     void Awake()
     {
         _playerMovement = GetComponentInParent<PlayerMovement>();
@@ -22,6 +25,9 @@ public class RotateHands : MonoBehaviour
                 else _leftHand = child;
             }
         }
+
+        //_leftHandFollowPlayer = _leftHand.GetComponent<HandsFollowPlayer>();
+        //_rightHandFollowPlayer = _rightHand.GetComponent<HandsFollowPlayer>();
     }
 
     // Update is called once per frame
@@ -29,16 +35,25 @@ public class RotateHands : MonoBehaviour
     {
         if(IsBlocked) return;
 
+        if(_lastDirection != _playerMovement.Direction && _lastDirection + _playerMovement.Direction == Vector2.zero)
+        {
+            transform.Rotate(Vector3.forward, 180f);
+            _leftHand.Rotate(Vector3.forward, 180f);
+            _rightHand.Rotate(Vector3.forward, 180f);
+            //_leftHandFollowPlayer.SetHandInPosition();
+            //_rightHandFollowPlayer.SetHandInPosition();
+        }
+
         float angle = Mathf.Atan2(_playerMovement.Direction.y, _playerMovement.Direction.x) * Mathf.Rad2Deg;
         
         Quaternion rotation = Quaternion.AngleAxis(angle + 90f, Vector3.forward);
-        Quaternion rotation2 = Quaternion.AngleAxis(angle, Vector3.forward);
-        Quaternion rotation3 = Quaternion.AngleAxis(-angle, Vector3.forward);
         Quaternion smoothRotation =  Quaternion.RotateTowards(transform.rotation, rotation, _rotationSpeed * Time.fixedDeltaTime);
         transform.rotation = smoothRotation;
         _leftHand.rotation = smoothRotation;
-        //_leftHand.Rotate(Vector3.forward, -90);
+        _leftHand.Rotate(Vector3.forward, 90);
         _rightHand.rotation = smoothRotation;
-        //_rightHand.Rotate(Vector3.forward, 90);
+        _rightHand.Rotate(Vector3.forward, -90);
+
+        _lastDirection = _playerMovement.Direction;
     }
 }

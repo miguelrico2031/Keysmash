@@ -27,6 +27,8 @@ public class ProjectilePower : Power
     
         _direction = _playerMovement.Direction;
 
+        UsePower.Invoke(this);
+
         ThrowKeyCap();
     }    
 
@@ -64,6 +66,7 @@ public class ProjectilePower : Power
     {
         _keyCap.gameObject.SetActive(false);
         _hasKeyCap = true;
+        PowerAvailable.Invoke(this);
     }
     
 }
