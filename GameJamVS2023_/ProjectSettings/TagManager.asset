@@ -10,7 +10,11 @@ TagManager:
   - SpawnPoint
   - Corridor
   - Door
-
+  - Keyboard
+  - Enemy
+  - Feet
+  - Hand
+  - Head
   layers:
   - Default
   - TransparentFX

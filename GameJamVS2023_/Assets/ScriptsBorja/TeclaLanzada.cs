@@ -6,7 +6,7 @@ public class TeclaLanzada : MonoBehaviour
 {
     public float VelocidadInicial;
     public float TiempoDeVuelo;
-    public int Daño;
+    public int DaÃ±o;
     public Vector3 Direccion;
     float _aceleracion;
     float _velocidad;
@@ -38,7 +38,7 @@ public class TeclaLanzada : MonoBehaviour
         {
             if (collider.CompareTag("Enemigo"))
             {
-                collider.transform.GetComponent<Enemigo>().RecibirDaño(Daño);
+                collider.transform.GetComponent<Enemigo>().RecibirDaÃ±o(DaÃ±o);
                 Debug.Log("Auch");
             }
 

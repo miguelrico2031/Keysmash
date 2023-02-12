@@ -6,9 +6,9 @@ public class Enemigo : MonoBehaviour
 {
     public int Vida;
 
-    public void RecibirDaño(int daño)
+    public void RecibirDaÃ±o(int daÃ±o)
     {
-        Vida -= daño;
+        Vida -= daÃ±o;
         if (Vida <= 0)
         {
             Muerte();

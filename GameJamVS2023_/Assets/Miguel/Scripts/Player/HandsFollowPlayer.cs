@@ -2,23 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManosMovimiento : MonoBehaviour
+public class HandsFollowPlayer : MonoBehaviour
 {
     public Transform Target;
     public float Speed = 4.95f;
     public float Threshold = 0.1f;
-    public bool IsAboutToAct;
+    public bool isRightHand;
+    public bool IsBlocked = false;
+    public bool IsInPlace;
 
-    void Update()
+    void FixedUpdate()
     {
-
+        if(IsBlocked) return;
         float distance = Vector2.Distance(transform.position, Target.position);
         if (distance > Threshold)
         {
+            
             Vector2 targetPosition = Target.position;
             Vector2 direction = (targetPosition - (Vector2)transform.position);
-            transform.position = (Vector2)transform.position + direction * Speed * Time.deltaTime;
+            transform.position = (Vector2)transform.position + direction * Speed * Time.fixedDeltaTime;
         }
+        
+        IsInPlace = distance <= Threshold;
 
 
     }

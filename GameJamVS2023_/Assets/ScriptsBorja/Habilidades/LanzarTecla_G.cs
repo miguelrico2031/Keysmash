@@ -6,7 +6,7 @@ public class LanzarTecla_G : MonoBehaviour
 {
     public Transform Personaje;
     public GameObject Tecla;
-    public int Daño;
+    public int DaÃ±o;
     public float VelocidadInicial;
     public float TiempoDeVuelo;
     public static bool TieneTeclaParaLanzar;
@@ -22,7 +22,7 @@ public class LanzarTecla_G : MonoBehaviour
         {
             TeclaLanzada tecla = Tecla.GetComponent<TeclaLanzada>();
             tecla.Direccion = (Vector3)Personaje.GetComponent<Personaje>().GetFacingDirection();
-            tecla.Daño = Daño;
+            tecla.DaÃ±o = DaÃ±o;
             tecla.TiempoDeVuelo = TiempoDeVuelo;
             tecla.VelocidadInicial = VelocidadInicial;
             Instantiate(Tecla, transform.position, Quaternion.identity);

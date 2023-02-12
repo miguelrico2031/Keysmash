@@ -6,7 +6,7 @@ using Edgar.Unity;
 public class RoomManager : MonoBehaviour 
 {
     // Start is called before the first frame update
-    public bool IsSpawn;
+    public bool IsSpawned;
 
     //[SerializeField] private List<Enemy> enemies;
 
@@ -21,12 +21,18 @@ public class RoomManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        if(!DungeonManager.Instance) return;
         DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     private void OnDisable()
     {
         DungeonManager.Instance.DungeonGenerated.RemoveListener(OnDungeonGenerated);
+    }
+
+    private void Start()
+    {
+        DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     public void OnDungeonGenerated()
@@ -42,7 +48,7 @@ public class RoomManager : MonoBehaviour
 
     public void OnRoomEnter()
     {
-        if(IsSpawn) OpenDoors();
+        if(IsSpawned) OpenDoors();
         else CloseDoors();
     }
     public void OnRoomComplete()
