@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7051729164616296217}
   - component: {fileID: 7051729164616296220}
   m_Layer: 0
-  m_Name: Tecla K
+  m_Name: Tecla I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1537322444, guid: 6fc222b46bf93594bbf8036cbf4b4aca, type: 3}
+  m_Sprite: {fileID: 612226885, guid: 6fc222b46bf93594bbf8036cbf4b4aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InterfazGO: {fileID: 5996537028853567865, guid: 369b37d6e3c794a4f9936f76c2c06f68, type: 3}
-  Power: {fileID: 11400000, guid: ed8e6b284e6aa6643b64de5899c0ff29, type: 2}
+  Power: {fileID: 11400000, guid: 97dacee80bed28d4fae4221a15ccb976, type: 2}
 --- !u!50 &7051729164616296217
 Rigidbody2D:
   serializedVersion: 4

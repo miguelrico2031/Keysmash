@@ -5,10 +5,13 @@ using UnityEngine;
 public class TeclaPower : MonoBehaviour
 {
     StatsManager _stats;
+
+    private GameObject InterfazGO;
     public Power Power;
 
     void Start()
     {
+        InterfazGO = GameObject.Find("Canvas");
         _stats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>();
     }
 
@@ -19,13 +22,10 @@ public class TeclaPower : MonoBehaviour
             if (!_stats.Stats.Powers.Contains(Power))
             {
                 _stats.Stats.Powers.Add(Power);
+                InterfazGO.GetComponent<Interfaz>().ShowNewKey(Power);
             }      
             Destroy(gameObject);
         }
     }
 
-    void Update()
-    {
-        
-    }
 }

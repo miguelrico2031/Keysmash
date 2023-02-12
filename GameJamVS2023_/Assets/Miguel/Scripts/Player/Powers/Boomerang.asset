@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be449c3dd24a7b4468a37c88deb256b4, type: 3}
   m_Name: Boomerang
   m_EditorClassIdentifier: 
-  UIPrefab: {fileID: 0}
-  HUDPrefab: {fileID: 0}
+  UIPrefab: {fileID: 9120614116966694449, guid: 7cef5dfa61b58994bb8a0660539a17d6, type: 3}
+  HUDPrefab: {fileID: 8768541666950029508, guid: f0ee415d0ae18b748bf4d800af12fa8e, type: 3}
   CoolDown: 0
   CoolDownOver: 1
   BlockPowers: 0
   Key: o
+  Description: 
+  UsePower:
+    m_PersistentCalls:
+      m_Calls: []
+  PowerAvailable:
+    m_PersistentCalls:
+      m_Calls: []
   _damage: 1
   _attackDuration: 0.7
   _initialSpeed: 350

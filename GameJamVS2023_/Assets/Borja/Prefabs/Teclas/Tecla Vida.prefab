@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6944821816514990835}
+  - component: {fileID: -7078309545954571102}
   - component: {fileID: 318602139541306957}
-  - component: {fileID: 318602139541306956}
   - component: {fileID: 7051729164616296217}
   - component: {fileID: 7051729164616296220}
   m_Layer: 0
-  m_Name: Tecla K
+  m_Name: Tecla Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,6 +35,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7078309545954571102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168968917317028419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbba4ab4fdba7d448bcab8bb1c743d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amplitud: 0.2
+  Frecuencia: 0.6
 --- !u!212 &318602139541306957
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +90,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1537322444, guid: 6fc222b46bf93594bbf8036cbf4b4aca, type: 3}
+  m_Sprite: {fileID: 47982925, guid: abc363534fbd5af4da9533d3593b0e3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,20 +101,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &318602139541306956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4168968917317028419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f36895ac98e1864fa3816d4e878e089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InterfazGO: {fileID: 5996537028853567865, guid: 369b37d6e3c794a4f9936f76c2c06f68, type: 3}
-  Power: {fileID: 11400000, guid: ed8e6b284e6aa6643b64de5899c0ff29, type: 2}
 --- !u!50 &7051729164616296217
 Rigidbody2D:
   serializedVersion: 4

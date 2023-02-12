@@ -21,10 +21,9 @@ public class FlashLive : MonoBehaviour
     }
     public IEnumerator FlashCoroutine()
     {
-        Debug.Log("entra");
+
         if (FlashAmount < _flashCount) 
         {
-            Debug.Log("rompe");
             _flashCount = 0;
             yield break;
         }
@@ -32,15 +31,15 @@ public class FlashLive : MonoBehaviour
         Pink.SetActive(true);
         Red.SetActive(false);
 
-        yield return new WaitForSeconds(FlashInterval);
+        yield return new WaitForSecondsRealtime(FlashInterval);
 
         Pink.SetActive(false);
         Red.SetActive(true);
 
-        yield return new WaitForSeconds(FlashInterval);
+        yield return new WaitForSecondsRealtime(FlashInterval);
 
         _flashCount++;
-        Debug.Log("sale");
+
         StartCoroutine(FlashCoroutine());
     }
 }
