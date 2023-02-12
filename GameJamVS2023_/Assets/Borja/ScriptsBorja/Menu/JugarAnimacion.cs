@@ -2,25 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JugarAnimacion : MonoBehaviour
 {
+    public GameObject Panel;
     public GameObject Mano;
+    public GameObject ManoDer;
     public GameObject SpriteDedo;
     public GameObject SpritePuño;
     public GameObject Teclas;
     public GameObject Teclado;
     public GameObject TecladoRoto;
+    public GameObject Camara;
 
     public float[] TiempoDeEsperaEvento;
+
+    public Transform ManoIzqPosInicial;
+    public Transform TecladoPosInicial;
+    public Transform ManoDerPosInicial;
+    public Transform ManoDerPosFinal;
 
     public Transform GolpePos1;
     public float GolpeVelocidad1;
     public float GolpeAceleracion1;
     public Transform GolpePos2;
     public float GolpeVelocidad2;
+    public float VelocidadRecogerTeclado;
 
     int _golpe = 0;
+    int _final = 0;
     float _vel1;
 
     private void Start()
@@ -31,11 +42,14 @@ public class JugarAnimacion : MonoBehaviour
 
     public void AnimacionDeJugar()
     {
-        StartCoroutine(Eventos());  
+        Panel.SetActive(false);
+        
+        StartCoroutine(Eventos());
     }
 
     private void Update()
     {
+        
         if (_golpe == 1)
         {
             Vector3 dir1 = GolpePos1.position - Mano.transform.position;
@@ -54,6 +68,7 @@ public class JugarAnimacion : MonoBehaviour
         {
             Vector3 dir2 = GolpePos2.position - Mano.transform.position;
             Mano.transform.Translate(dir2.normalized * GolpeVelocidad2 * Time.deltaTime);
+            
             if (dir2.magnitude <= 0.2f)
             {
                 Mano.transform.position = GolpePos2.transform.position;
@@ -66,9 +81,67 @@ public class JugarAnimacion : MonoBehaviour
             Teclas.GetComponent<AnimacionTeclasVolando>().IniciarAnimTeclasVolando();
             Teclado.SetActive(false);
             TecladoRoto.SetActive(true);
-            _golpe= 5;
+            Mano.GetComponent<TeclearAnimacion>().AnimacionFinal = true;
+            _golpe = 5;
+            StartCoroutine(EsperarRecogida());
+            
+            Camara.GetComponent<ScreenShake>().TriggerShake();
         }
+        
+        if (_final == 1)
+        {
+            
+            Vector2 dirManoIzq = ManoIzqPosInicial.position - Mano.transform.position;
 
+            if (dirManoIzq.magnitude >= 0.05f)
+            {
+                Mano.transform.Translate(dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime);
+                Debug.Log((dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime).x);
+            }
+            Mano.transform.Translate(dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime);
+
+            Vector2 dir3 = ManoDerPosFinal.position - ManoDer.transform.position;
+            ManoDer.transform.Translate(-dir3.normalized * VelocidadRecogerTeclado * Time.deltaTime);
+            if (dir3.magnitude <= 0.05f)
+            {
+                _final = 2;
+            }
+        }
+        else if (_final == 2)
+        {
+            Vector2 dirManoIzq = ManoIzqPosInicial.position - Mano.transform.position;
+            if (dirManoIzq.magnitude >= 0.0005f)
+            {
+                Mano.transform.Translate(dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime);
+
+            }
+
+            Vector2 dir4 = ManoDerPosInicial.position - ManoDer.transform.position;
+            ManoDer.transform.Translate(-dir4.normalized * VelocidadRecogerTeclado * Time.deltaTime);
+            TecladoRoto.transform.Translate(dir4.normalized * VelocidadRecogerTeclado * Time.deltaTime);
+            if (dir4.magnitude <= 0.05f)
+            {
+                _final = 3;
+            }
+        }else if (_final == 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+    IEnumerator EsperarRecogida()
+    {
+        if (_final == 0)
+        {
+            _final = -1;
+            Debug.Log("recogida");
+            yield return new WaitForSeconds(TiempoDeEsperaEvento[15]);
+
+            _final = 1;
+        }
+        else
+        {
+            yield return null;
+        }
     }
     IEnumerator EsperarGolpe()
     {

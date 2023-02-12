@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TeclearAnimacion : MonoBehaviour
 {
-
+    public bool AnimacionFinal;
     public Transform ManoPosInicial;
     public Transform Teclado;
     public Transform OtraMano;
@@ -25,12 +25,11 @@ public class TeclearAnimacion : MonoBehaviour
     {
         Ida = false;
         _enAnimacion = false;
-
+        AnimacionFinal = false;
     }
 
     public void AnimacionTeclear(int punto)
     {
-        Debug.Log(punto);
         _objetivo = PuntosDeAnimacion[punto];
         Ida = true;
         _enAnimacion = true;
@@ -47,51 +46,56 @@ public class TeclearAnimacion : MonoBehaviour
 
     void Update()
     {
-        
-        if (_enAnimacion)
+        if (!AnimacionFinal)
         {
-            if (Ida)
+            if (_enAnimacion)
             {
-                Vector3 direccion = _objetivo.position - transform.position;
-                transform.Translate(direccion.normalized * VelocidadIda * Time.deltaTime);
-                if (direccion.magnitude <= 0.05f)
+                if (Ida)
                 {
-                    Debug.Log("llegue");
-                    Ida = false;
-                    if (_tecladoSeMueve == 0)
+                    Vector3 direccion = _objetivo.position - transform.position;
+                    transform.Translate(direccion.normalized * VelocidadIda * Time.deltaTime);
+                    if (direccion.magnitude <= 0.05f)
                     {
-                        StartCoroutine(AnimacionTeclado());
+                        Ida = false;
+                        if (_tecladoSeMueve == 0)
+                        {
+                            StartCoroutine(AnimacionTeclado());
+                        }
+
                     }
-                    
                 }
-            }
-            else if (!Ida)
-            {
-                Vector3 dir = ManoPosInicial.position - transform.position;
-                transform.Translate(dir.normalized * VelocidadVuelta * Time.deltaTime);
-                if (dir.magnitude <= 0.05f)
+                else if (!Ida)
                 {
-                    Debug.Log("volvi");
-                    _enAnimacion = false;
+                    Vector3 dir = ManoPosInicial.position - transform.position;
+                    transform.Translate(dir.normalized * VelocidadVuelta * Time.deltaTime);
+                    if (dir.magnitude <= 0.05f)
+                    {
+                        _enAnimacion = false;
+                    }
                 }
             }
+            if (_tecladoSeMueve == 1)
+            {
+                Teclado.Translate(Vector3.down * VelocidadTeclado * Time.deltaTime);
+                OtraMano.Translate(Vector3.up * VelocidadTeclado * Time.deltaTime);
+            }
+            else if (_tecladoSeMueve == 2)
+            {
+                Vector3 dirT = TecladoPosInicial.position - Teclado.position;
+                Vector3 dirM = OtraManoPosInicial.position - OtraMano.position;
+                Teclado.Translate(dirT * VelocidadTeclado * Time.deltaTime);
+                OtraMano.Translate(dirM * VelocidadTeclado * Time.deltaTime);
+            }
+            else if (_tecladoSeMueve == 0)
+            {
+                if (!AnimacionFinal)
+                {
+                    Teclado.position = TecladoPosInicial.position;
+                    OtraMano.position = OtraManoPosInicial.position;
+                }
+
+            }
         }
-        if (_tecladoSeMueve == 1)
-        {
-            Teclado.Translate(Vector3.down * VelocidadTeclado * Time.deltaTime);
-            OtraMano.Translate(Vector3.up * VelocidadTeclado * Time.deltaTime);
-        }
-        else if (_tecladoSeMueve == 2)
-        {
-            Vector3 dirT = TecladoPosInicial.position - Teclado.position;
-            Vector3 dirM = OtraManoPosInicial.position - OtraMano.position;
-            Teclado.Translate(dirT * VelocidadTeclado * Time.deltaTime);
-            OtraMano.Translate(dirM * VelocidadTeclado * Time.deltaTime);
-        }
-        else if (_tecladoSeMueve == 0)
-        {
-            Teclado.position = TecladoPosInicial.position;
-            OtraMano.position = OtraManoPosInicial.position;
-        }
+        
     }
 }

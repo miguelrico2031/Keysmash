@@ -8,6 +8,7 @@ public class InputSystem : MonoBehaviour
 {
     public GameObject[] MenuIndiceGO; // 0 es MainMenu, 1 es Opciones, 2 es Créditos
     public TextMeshProUGUI OutputText;
+    public GameObject Title;
 
     public GameObject Personaje;
     bool _animacionEnCurso;
@@ -100,12 +101,13 @@ public class InputSystem : MonoBehaviour
 
     void LeerInput()
     {
-        if (_inputText == "opciones" || _inputText == "Opciones")
+        if (_inputText == "config" || _inputText == "Config")
         {
             if (_menuIndice == 0)
             {
                 _menuIndice = 1;
                 MenuIndiceGO[0].SetActive(false);
+                Title.SetActive(false);
                 MenuIndiceGO[1].SetActive(true);
             }
             
@@ -119,12 +121,13 @@ public class InputSystem : MonoBehaviour
             }
             
         }
-        else if (_inputText == "creditos" || _inputText == "Creditos" || _inputText == "créditos" || _inputText == "Créditos")
+        else if (_inputText == "creds" || _inputText == "Creds" || _inputText == "créds" || _inputText == "Créds")
         {
             if (_menuIndice == 0)
             {
                 _menuIndice = 2;
                 MenuIndiceGO[0].SetActive(false);
+                Title.SetActive(false);
                 MenuIndiceGO[2].SetActive(true);
             }
             
@@ -145,6 +148,7 @@ public class InputSystem : MonoBehaviour
                 MenuIndiceGO[2].SetActive(false);
                 MenuIndiceGO[1].SetActive(false);
                 MenuIndiceGO[0].SetActive(true);
+                Title.SetActive(true);
                 _menuIndice = 0;
                 Debug.Log("Atrás...");
             }

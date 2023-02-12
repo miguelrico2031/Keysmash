@@ -40,7 +40,6 @@ public class AnimacionTeclasVolando : MonoBehaviour
             tecla.GetComponent<SpriteRenderer>().enabled = true;
             float angulo = Random.Range(0f, 90f);
             Vector2 dir = new Vector2(Mathf.Cos(angulo), Mathf.Sin(angulo));
-            Debug.Log(dir);
             tecla.GetComponent<Rigidbody2D>().velocity =  dir * Vel;
         }
     }
