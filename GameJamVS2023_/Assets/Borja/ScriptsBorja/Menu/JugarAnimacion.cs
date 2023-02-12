@@ -15,6 +15,7 @@ public class JugarAnimacion : MonoBehaviour
     public GameObject Teclado;
     public GameObject TecladoRoto;
     public GameObject Camara;
+    public GameObject TecladoEnGrande;
 
     public float[] TiempoDeEsperaEvento;
 
@@ -23,6 +24,8 @@ public class JugarAnimacion : MonoBehaviour
     public Transform ManoDerPosInicial;
     public Transform ManoDerPosFinal;
 
+    public float KeyboardSizeSpeed;
+    public float KeyboardMaxSize;
     public Transform GolpePos1;
     public float GolpeVelocidad1;
     public float GolpeAceleracion1;
@@ -93,7 +96,7 @@ public class JugarAnimacion : MonoBehaviour
             
             Vector2 dirManoIzq = ManoIzqPosInicial.position - Mano.transform.position;
 
-            if (dirManoIzq.magnitude >= 0.05f)
+            if (dirManoIzq.magnitude >= 0.1f)
             {
                 Mano.transform.Translate(dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime);
                 Debug.Log((dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime).x);
@@ -109,8 +112,9 @@ public class JugarAnimacion : MonoBehaviour
         }
         else if (_final == 2)
         {
+            
             Vector2 dirManoIzq = ManoIzqPosInicial.position - Mano.transform.position;
-            if (dirManoIzq.magnitude >= 0.0005f)
+            if (dirManoIzq.magnitude >= 0.1f)
             {
                 Mano.transform.Translate(dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime);
 
@@ -125,9 +129,32 @@ public class JugarAnimacion : MonoBehaviour
             }
         }else if (_final == 3)
         {
+            TecladoEnGrande.SetActive(true);
+            TecladoEnGrande.transform.localScale = Vector3.zero;
+            _final = 4;
+        }
+        else if (_final == 4)
+        {
+            TecladoEnGrande.transform.localScale += Vector3.one * KeyboardSizeSpeed * Time.deltaTime;
+            if (TecladoEnGrande.transform.localScale.x >= KeyboardMaxSize)
+            {
+                _final = 5;
+            }
+        }
+        else if (_final == 5)
+        {
+
+        }
+        else if (_final == 6)
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+    IEnumerator Monologo()
+    {
+        yield return null;
+    }
+    
     IEnumerator EsperarRecogida()
     {
         if (_final == 0)
@@ -135,7 +162,8 @@ public class JugarAnimacion : MonoBehaviour
             _final = -1;
             Debug.Log("recogida");
             yield return new WaitForSeconds(TiempoDeEsperaEvento[15]);
-
+            SpriteDedo.SetActive(true);
+            SpritePuño.SetActive(false);
             _final = 1;
         }
         else
@@ -175,8 +203,10 @@ public class JugarAnimacion : MonoBehaviour
         yield return new WaitForSeconds(TiempoDeEsperaEvento[11]);
         Mano.GetComponent<TeclearAnimacion>().AnimacionTeclear(0);
         yield return new WaitForSeconds(TiempoDeEsperaEvento[12]);
+
         SpriteDedo.SetActive(false);
         SpritePuño.SetActive(true);
+
         yield return new WaitForSeconds(TiempoDeEsperaEvento[13]);
         _golpe = 1;
     }

@@ -2,11 +2,13 @@ using UnityEngine;
 
 public abstract class Power : ScriptableObject
 {
-    public Sprite UISprite;
+    public GameObject UIPrefab, HUDPrefab;
     public float CoolDown;
     [HideInInspector] public bool CoolDownOver = true;
+    [HideInInspector] public bool BlockPowers = false;
     public string Key;
     protected GameObject _player;
+
 
     public abstract void Use(GameObject player);
 
