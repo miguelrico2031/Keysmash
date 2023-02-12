@@ -12,6 +12,7 @@ TagManager:
   - Door
   - Keyboard
   - Enemy
+  - Feet
   layers:
   - Default
   - TransparentFX

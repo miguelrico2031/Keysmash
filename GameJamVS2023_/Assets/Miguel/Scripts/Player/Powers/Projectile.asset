@@ -17,5 +17,5 @@ MonoBehaviour:
   Key: p
   _keyCapPrefab: {fileID: 7459885029885128383, guid: d5fef4f39bdab6445a6f565362fdc952, type: 3}
   _damage: 1
-  _speed: 5000
-  _harmlessSpeed: 0.2
+  _speed: 25
+  _harmlessSpeed: 3

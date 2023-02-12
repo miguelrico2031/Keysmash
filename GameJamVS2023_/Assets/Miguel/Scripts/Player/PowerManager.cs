@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PowerManager : MonoBehaviour
 {
-    public PlayerPowers Powers;
+    public PlayerStats Stats;
 
     private void Start()
     {
-        foreach(var power in Powers.Powers) power.OnStart();
+        foreach(var power in Stats.Powers) power.OnStart();
     }
     
     private void Update()
     {
-        foreach(var power in Powers.Powers)
+        foreach(var power in Stats.Powers)
         {
             if(Input.GetKeyDown(power.Key))
             {
@@ -23,13 +23,13 @@ public class PowerManager : MonoBehaviour
             }
         }
 
-        foreach(var power in Powers.Powers) power.OnUpdate();
+        foreach(var power in Stats.Powers) power.OnUpdate();
         
     }
 
     private void FixedUpdate()
     {
-        foreach(var power in Powers.Powers) power.OnFixedUpdate();
+        foreach(var power in Stats.Powers) power.OnFixedUpdate();
     }
 
     private IEnumerator PowerCooldown(Power power)

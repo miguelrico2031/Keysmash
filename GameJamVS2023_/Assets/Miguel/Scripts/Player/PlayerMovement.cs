@@ -14,13 +14,15 @@ public class PlayerMovement : MonoBehaviour
 
 
     public Vector2 Direction {get; private set;}
+    public Vector2 RawDirection {get; private set;}
 
     void Awake()
     {
         _keyboard = transform.parent.Find("Keyboard").gameObject;
         _rb = GetComponent<Rigidbody2D>();
         _renderer = GetComponent<SpriteRenderer>();
-        Direction = Vector2.down;
+        RawDirection = Vector2.down;
+        Direction = RawDirection;
 
     }
 
@@ -28,17 +30,36 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         _movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-
     }
 
-    void FixedUpdate()
+    void FixedUpdate()  
     {
         if(BlockMovement) return;
 
         Vector2 moveDirection = _movement.normalized;
-        if(_movement.x != 0 || _movement.y != 0) Direction = moveDirection;
+        if(_movement.x != 0 || _movement.y != 0)
+        {
+            Direction = moveDirection;
+            RawDirection = _movement;
+            
+        }
+        _rb.velocity = moveDirection * _speed * Time.fixedDeltaTime;
         
-        _rb.velocity = moveDirection * _speed;
+        
+    }
+
+    public void AddKnockback(Vector2 force, float duration)
+    {
+        _rb.velocity = Vector2.zero;
+        _rb.AddForce(force, ForceMode2D.Impulse);
+        StartCoroutine(BlockMovementDuringKnockback(duration));
+    }
+
+    private IEnumerator BlockMovementDuringKnockback(float duration)
+    {
+        if(BlockMovement) yield break;
+        BlockMovement = true;
+        yield return new WaitForSeconds(duration);
+        BlockMovement = false;
     }
 }

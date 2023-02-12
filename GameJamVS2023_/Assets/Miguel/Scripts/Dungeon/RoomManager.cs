@@ -6,7 +6,7 @@ using Edgar.Unity;
 public class RoomManager : MonoBehaviour 
 {
     // Start is called before the first frame update
-    public bool IsSpawn;
+    public bool IsSpawned;
 
     //[SerializeField] private List<Enemy> enemies;
 
@@ -48,7 +48,7 @@ public class RoomManager : MonoBehaviour
 
     public void OnRoomEnter()
     {
-        if(IsSpawn) OpenDoors();
+        if(IsSpawned) OpenDoors();
         else CloseDoors();
     }
     public void OnRoomComplete()

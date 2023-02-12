@@ -18,12 +18,10 @@ public class DashPower : Power
     {
         if(!CoolDownOver || _dashing) return;
 
-        if(!_player)
-        {
-            _player = player;
-            _rb = _player.GetComponent<Rigidbody2D>();
-            _playerMovement = player.GetComponent<PlayerMovement>();
-        }
+
+        _player = player;
+        _rb = _player.GetComponent<Rigidbody2D>();
+        _playerMovement = player.GetComponent<PlayerMovement>();
         
         _direction = _playerMovement.Direction;
 

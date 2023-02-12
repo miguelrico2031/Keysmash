@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyCap : MonoBehaviour
 {
+    [HideInInspector] public int Damage;
     [HideInInspector] public float Speed;
     [HideInInspector] public float HarmlessSpeed;
 
@@ -11,10 +12,12 @@ public class KeyCap : MonoBehaviour
     
 
     private Rigidbody2D _rb;
-    // Start is called before the first frame update
+    private BoxCollider2D _collider;
+
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _collider = GetComponent<BoxCollider2D>();
     }
 
     public void Throw(Vector2 direction)
@@ -22,7 +25,7 @@ public class KeyCap : MonoBehaviour
         _rb.AddForce(Speed * direction, ForceMode2D.Impulse);
     }
 
-    // Update is called once per frame
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -31,13 +34,14 @@ public class KeyCap : MonoBehaviour
         {
             if(other.gameObject.CompareTag("Enemy"))
             {
-
+                other.gameObject.GetComponent<Enemy>().TakeDamage(Damage);
             }
         }
         else if (other.gameObject.CompareTag("Player"))
         {
             ProjectilePower.GetKeyCap();
         }
+        
         
     }
 }

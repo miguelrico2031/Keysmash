@@ -7,7 +7,7 @@ using UnityEngine;
 public class ProjectilePower : Power
 {
     [SerializeField] private GameObject _keyCapPrefab;
-    [SerializeField] private float _damage;
+    [SerializeField] private int _damage;
     [SerializeField] private float _speed;
     [SerializeField] private float _harmlessSpeed;
     
@@ -21,11 +21,10 @@ public class ProjectilePower : Power
     {
         if(!_hasKeyCap) return;
 
-        if(!_player)
-        {
-            _player = player;
-            _playerMovement = player.GetComponent<PlayerMovement>();
-        }
+
+        _player = player;
+        _playerMovement = player.GetComponent<PlayerMovement>();
+    
         _direction = _playerMovement.Direction;
 
         ThrowKeyCap();
@@ -38,6 +37,7 @@ public class ProjectilePower : Power
         _keyCap.ProjectilePower = this;
         _keyCap.Speed = _speed;
         _keyCap.HarmlessSpeed = _harmlessSpeed;
+        _keyCap.Damage = _damage;
         _keyCap.gameObject.SetActive(false);
     }
 
