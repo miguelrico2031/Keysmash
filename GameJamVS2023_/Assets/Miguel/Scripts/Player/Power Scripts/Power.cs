@@ -18,6 +18,7 @@ public abstract class Power : ScriptableObject
     protected GameObject _player;
     
 
+
     public abstract void Use(GameObject player);
 
     public abstract void OnStart();

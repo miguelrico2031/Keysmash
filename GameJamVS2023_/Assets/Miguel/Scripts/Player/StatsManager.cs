@@ -19,14 +19,14 @@ public class StatsManager : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if(_isInvulnerable) return;
+        if (_isInvulnerable) return;
         Stats.DamagePlayer(damage);
         HealthChange.Invoke(-damage);
     }
 
     public void TakeDamage(int damage, Vector2 knockBackForce, float duration)
     {
-        if(_isInvulnerable) return;
+        if (_isInvulnerable) return;
         Stats.DamagePlayer(damage);
         _playerMovement.AddKnockback(knockBackForce, duration);
         HealthChange.Invoke(-damage);

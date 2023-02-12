@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1427224f02863f14485d7f366673fde0, type: 3}
   m_Name: Dash
   m_EditorClassIdentifier: 
+  UIPrefab: {fileID: 3185839040724459741, guid: 2121407a0a623d746abd7fc1fc7048d7, type: 3}
+  HUDPrefab: {fileID: 4121232026928964722, guid: 50b39710672d62140899798ae93cf6cf, type: 3}
   CoolDown: 1
   CoolDownOver: 1
+  BlockPowers: 0
   Key: space
   _initialSpeed: 20
   _dashDuration: 0.3
