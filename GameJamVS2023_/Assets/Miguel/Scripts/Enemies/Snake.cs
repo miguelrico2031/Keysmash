@@ -53,7 +53,9 @@ public class Snake : Enemy
     public override void Attack()
     {
         _directionToPlayer = (_player.transform.position - transform.position).normalized;
-        _playerStats.TakeDamage(_attackDamage, _directionToPlayer * _knockbackForce, _knockbackDuration);
+        
+        LastAttack = new EnemyAttack(_attackDamage, _directionToPlayer * _knockbackForce, _knockbackDuration);
+        _playerStats.TakeDamage(LastAttack);
     }
 
     public override void TakeDamage(int damage)

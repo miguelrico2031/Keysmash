@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c411d4b8a5b5d8a48bd78d98f4c6d486
+guid: 927113f2292b0b2499b1be9f6c6309d2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 33
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crab_atk_0
+      name: Slime_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 28
-        height: 40
+        width: 42
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb1b4f3510034044b80ba07d13d1c3c
-      internalID: 478905665
+      spriteID: 7cc77462ad38360459fa66faf724d38c
+      internalID: -637952505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_atk_1
+      name: Slime_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 30
+        x: 42
         y: 0
-        width: 28
-        height: 40
+        width: 42
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b9000faefbb5594fb8bdb8a160ce06f
-      internalID: -1769189671
+      spriteID: e6e699d69df778c40b79db7fd9075f32
+      internalID: 365277578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_atk_2
+      name: Slime_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 59
+        x: 84
         y: 0
-        width: 28
-        height: 40
+        width: 42
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44c0026dc00180949963d9c378a2b2e6
-      internalID: 804293514
+      spriteID: 31f070a4f85a2ff4b9f82e6e56a11179
+      internalID: 770187458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crab_atk_3
+      name: Slime_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 88
+        x: 126
         y: 0
-        width: 28
-        height: 40
+        width: 42
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,50 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3532ffd2bef6a94aa56525a5e25d6c2
-      internalID: 858813959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_atk_4
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 0
-        width: 28
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ceb0200427d08f49be4509fe450a8a2
-      internalID: -179383160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crab_atk_5
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 0
-        width: 28
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e5ac270b5acd0045b79e8cdbd509049
-      internalID: 1534321748
+      spriteID: 4f4c39bf59122a1468cc8e90b03c1038
+      internalID: -832553868
       vertices: []
       indices: 
       edges: []
@@ -253,12 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crab_atk_4: -179383160
-      crab_atk_0: 478905665
-      crab_atk_5: 1534321748
-      crab_atk_1: -1769189671
-      crab_atk_2: 804293514
-      crab_atk_3: 858813959
+      Slime_spritesheet_1: 365277578
+      Slime_spritesheet_2: 770187458
+      Slime_spritesheet_3: -832553868
+      Slime_spritesheet_0: -637952505
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

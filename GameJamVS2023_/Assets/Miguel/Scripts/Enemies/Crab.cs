@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Crab : Enemy
 {
+    public CrabState State  {get { return _state; } set { _state = value; NewState(); }}
+
     [SerializeField] private float _speed, _knockbackDuration, _knockbackForce;
     [SerializeField] private float _initialHiddenTime, _idleTime, _attackSpeed;
     [SerializeField] private CircleCollider2D _trigger;
@@ -26,7 +28,7 @@ public class Crab : Enemy
         _player = GameObject.FindGameObjectWithTag("Player");
         _playerStats = _player.GetComponent<StatsManager>();
 
-        _state = CrabState.Mimic;
+        State = CrabState.Mimic;
 
         _animator.SetFloat("AttackSpeed", _attackSpeed);
 
@@ -41,7 +43,7 @@ public class Crab : Enemy
 
     void FixedUpdate()
     {
-        if(_state != CrabState.Chase || IsBlocked) return;
+        if(!Alive || State != CrabState.Chase || IsBlocked) return;
 
         Vector2 direction = (_player.transform.position - transform.position).normalized;
 
@@ -50,23 +52,31 @@ public class Crab : Enemy
 
     void InitialAppear()
     {
-        if(_state != CrabState.Mimic) return;
+        if(State != CrabState.Mimic) return;
 
         // _trigger.enabled = false;
-        _state = CrabState.Chase;
+        State = CrabState.Chase;
         _animator.SetBool("Moving", true);
         
+    }
+    
+    public void StartAttackProcess()
+    {
+        State = CrabState.Change;
+        _rb.velocity = Vector2.zero;
+        _animator.SetTrigger("Attack");
     }
 
     public override void Attack()
     {
         Vector2 direction = (_player.transform.position - transform.position).normalized;
-        _playerStats.TakeDamage(_attackDamage, direction * _knockbackForce, _knockbackDuration);
+        LastAttack = new EnemyAttack(_attackDamage, direction * _knockbackForce, _knockbackDuration);
+        _playerStats.TakeDamage(LastAttack);
     }
 
     public override void TakeDamage(int damage)
     {
-        if(_state != CrabState.Idle) return;
+        if(State != CrabState.Idle) return;
 
         base.TakeDamage(damage);
 
@@ -94,16 +104,16 @@ public class Crab : Enemy
 
     public void OnAttackStart()
     {
-        if(_state == CrabState.Change)
+        if(State == CrabState.Change)
         {
-            _state = CrabState.Attack;
+            State = CrabState.Attack;
             //_trigger.enabled = true;
         }
     }
 
     public void OnAttackEnd()
     {
-        if(_state == CrabState.Attack)
+        if(State == CrabState.Attack)
         {
             //_trigger.enabled = false;
             StartCoroutine(IdleTime());
@@ -112,34 +122,45 @@ public class Crab : Enemy
 
     IEnumerator IdleTime()
     {
-        _state = CrabState.Idle;
+        State = CrabState.Idle;
         yield return new WaitForSeconds(_idleTime);
-        _state = CrabState.Change;
+
+        if(!Alive) yield break;
+
+        State = CrabState.Change;
         _animator.SetTrigger("Hide");
     }
 
     public void OnHide()
     {
-        _state = CrabState.Chase;
+        State = CrabState.Chase;
         _animator.SetBool("Moving", true);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void NewState()
     {
-        if(!other.gameObject.CompareTag("Player")) return;
-
-        if(_state == CrabState.Mimic || _state == CrabState.Chase)
+        switch(State)
         {
-            _state = CrabState.Change;
-            _rb.velocity = Vector2.zero;
-            _animator.SetTrigger("Attack");
-        }
+            case CrabState.Mimic:
+                _rb.isKinematic = true;
+                break;
 
-        else if(_state == CrabState.Attack)
-        {
-            Attack();
-        }
+            case CrabState.Chase:
+                _rb.isKinematic = false;
+                break;
 
+            case CrabState.Attack:
+
+                break;
+
+            case CrabState.Idle:
+                _rb.isKinematic = false;
+                break;
+
+            case CrabState.Change:
+                _rb.isKinematic = true;
+                break;
+        }
     }
 
 }

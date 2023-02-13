@@ -11,6 +11,7 @@ public class Slime : Enemy
     private Rigidbody2D _rb;
     private GameObject _player;
     private StatsManager _playerStats;
+    private Animator _animator;
 
     private bool resting = false;
     private Vector2 _directionToPlayer;
@@ -18,6 +19,7 @@ public class Slime : Enemy
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         _health = _maxHealth;
     }
 
@@ -36,6 +38,7 @@ public class Slime : Enemy
 
         if(!resting && !IsBlocked) _rb.velocity = _directionToPlayer * _speed * Time.fixedDeltaTime;
         
+        //_animator.SetFloat("Speed", _rb.velocity.sqrMagnitude);
     }
 
     private IEnumerator HeapRestCycle()
@@ -52,7 +55,8 @@ public class Slime : Enemy
     public override void Attack()
     {
         _directionToPlayer = (_player.transform.position - transform.position).normalized;
-        _playerStats.TakeDamage(_attackDamage, _directionToPlayer * _knockbackForce, _knockbackDuration);
+        LastAttack = new EnemyAttack(_attackDamage, _directionToPlayer * _knockbackForce, _knockbackDuration);
+        _playerStats.TakeDamage(LastAttack);
 
     }
 
