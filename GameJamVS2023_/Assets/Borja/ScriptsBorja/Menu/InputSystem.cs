@@ -28,6 +28,7 @@ public class InputSystem : MonoBehaviour
         _menuIndice = 0;
         _inputText = "";
         _barra = "";
+        Cursor.visible = false;
         StartCoroutine(BarraBaja());
     }   
 

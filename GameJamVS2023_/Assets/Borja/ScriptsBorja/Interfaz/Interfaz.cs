@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class Interfaz : MonoBehaviour
@@ -9,8 +10,14 @@ public class Interfaz : MonoBehaviour
     public GameObject[] InterfaceRunTime;
     public GameObject[] Lives;
     public GameObject[] LivesPauseMenu;
+
+    bool _fading;
+    public Image FadeImage;
+    public float FadeSpeed;
+
     GameObject KeyBoardBackground;
     GameObject KeyShowCaseBackground;
+    GameObject InfoPanelBackground;
 
     Dictionary<Power, GameObject> _hUDPowers;
     Dictionary<Power, GameObject> _uIPowers;
@@ -21,9 +28,7 @@ public class Interfaz : MonoBehaviour
     private void Awake()
     {
         _hUDPowers = new Dictionary<Power, GameObject>();
-        _uIPowers = new Dictionary<Power, GameObject>();
-
-        
+        _uIPowers = new Dictionary<Power, GameObject>();      
     }
     private void Start()
     {
@@ -32,7 +37,8 @@ public class Interfaz : MonoBehaviour
         ChangeLives(0);
         ShowKeysAtStart();
         _stats.HealthChange.AddListener(ChangeLives);
-        
+        _fading = true;
+        Cursor.visible = false;
     }
     private void Update()
     {
@@ -47,6 +53,14 @@ public class Interfaz : MonoBehaviour
             }
         }
         
+        if (_fading)
+        {
+            FadeImage.color = new Color(0, 0, 0, Mathf.MoveTowards(FadeImage.color.a, 0, FadeSpeed * Time.deltaTime));
+            if (FadeImage.color.a == 0)
+            {
+                _fading = false;
+            }
+        }    
     }
 
     void OnCooldownStart(Power power)
@@ -68,7 +82,7 @@ public class Interfaz : MonoBehaviour
 
     void ShowKeysAtStart()
     {
-        if (!KeyBoardBackground && !KeyShowCaseBackground)
+        if (!KeyBoardBackground && !KeyShowCaseBackground && !InfoPanelBackground)
         {
             AssignKeyParents();
         }
@@ -78,6 +92,7 @@ public class Interfaz : MonoBehaviour
             _uIPowers.Add(power, uIprefab);
             var hUDprefab = Instantiate(power.HUDPrefab, KeyShowCaseBackground.transform);
             _hUDPowers.Add(power, hUDprefab);
+            var infoprefab = Instantiate(power.InfoPrefab, InfoPanelBackground.transform);
 
             power.UsePower.AddListener(OnCooldownStart);
             power.PowerAvailable.AddListener(OnCooldownOver);
@@ -86,7 +101,7 @@ public class Interfaz : MonoBehaviour
     }
     public void ShowNewKey(Power power)
     {
-        if (!KeyBoardBackground && !KeyShowCaseBackground)
+        if (!KeyBoardBackground && !KeyShowCaseBackground && !InfoPanelBackground)
         {
             AssignKeyParents();
         }
@@ -94,6 +109,7 @@ public class Interfaz : MonoBehaviour
         _uIPowers.Add(power, uIprefab);
         var hUDprefab = Instantiate(power.HUDPrefab, KeyShowCaseBackground.transform);
         _hUDPowers.Add(power, hUDprefab);
+        var infoprefab = Instantiate(power.InfoPrefab, InfoPanelBackground.transform);
 
         power.UsePower.AddListener(OnCooldownStart);
         power.PowerAvailable.AddListener(OnCooldownOver);
@@ -103,6 +119,7 @@ public class Interfaz : MonoBehaviour
     {
         KeyBoardBackground = transform.Find("Panel").Find("KeyBoardBackground").gameObject;
         KeyShowCaseBackground = transform.Find("Panel").Find("KeyShowCaseBackground").gameObject;
+        InfoPanelBackground = transform.Find("Panel").Find("InfoPanelBackground").gameObject;
     }
 
     void ChangeLives(int HealthChange)
@@ -128,10 +145,11 @@ public class Interfaz : MonoBehaviour
         
     }
 
-    void PauseMenu(int value)
+    public void PauseMenu(int value)
     {
         if (value == 0)
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
             KeyBoardBackground.SetActive(true);
             foreach (var element in InterfaceRunTime) 
@@ -141,11 +159,23 @@ public class Interfaz : MonoBehaviour
         }
         else if(value == 1)
         {
+            Cursor.visible = false;
             Time.timeScale = 1;
             KeyBoardBackground.SetActive(false);
+            InfoPanelBackground.SetActive(false);
             foreach (var element in InterfaceRunTime)
             {
                 element.SetActive(true);
+            }
+        }
+        else if (value == 2)
+        {
+            Cursor.visible = true;
+            InfoPanelBackground.SetActive(true);
+            KeyBoardBackground.SetActive(false);
+            foreach (var element in InterfaceRunTime)
+            {
+                element.SetActive(false);
             }
         }
     }

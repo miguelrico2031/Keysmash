@@ -22,6 +22,7 @@ public class TeclaPower : MonoBehaviour
             if (!_stats.Stats.Powers.Contains(Power))
             {
                 _stats.Stats.Powers.Add(Power);
+                Power.OnStart();
                 InterfazGO.GetComponent<Interfaz>().ShowNewKey(Power);
             }      
             Destroy(gameObject);

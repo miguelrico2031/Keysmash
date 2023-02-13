@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPlayerAtStart : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
+    private GameObject _player;
     Vector2 _spawnPoint;
     private void Start()
     {
@@ -13,9 +13,9 @@ public class SpawnPlayerAtStart : MonoBehaviour
 
     public void OnDungeonGenerated()
     {
-        
+        _player = GameObject.FindGameObjectWithTag("Player");
         _spawnPoint = GameObject.Find("PlayerSpawnPoint").transform.position;
         Debug.Log(_spawnPoint);
-        Instantiate(_player, _spawnPoint, Quaternion.identity);
+        _player.transform.position = _spawnPoint;
     }
 }

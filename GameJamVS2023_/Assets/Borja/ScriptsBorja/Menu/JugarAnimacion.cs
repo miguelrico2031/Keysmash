@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class JugarAnimacion : MonoBehaviour
 {
@@ -22,6 +23,19 @@ public class JugarAnimacion : MonoBehaviour
     public float FadeSpeed = 1.0f;
 
     public float[] TiempoDeEsperaEvento;
+
+    
+    public float VignetasVel;
+    public Image Vigneta1;
+    public TextMeshProUGUI Vigneta1Text;
+    public float Vigneta1Time;
+    public Image Vigneta2;
+    public TextMeshProUGUI Vigneta2Text;
+    public float Vigneta2Time;
+    public Image Vigneta3;
+    public TextMeshProUGUI Vigneta3Text;
+    public float Vigneta3Time;
+    bool _vignetasCoroutine;
 
     public Transform ManoIzqPosInicial;
     public Transform TecladoPosInicial;
@@ -45,6 +59,7 @@ public class JugarAnimacion : MonoBehaviour
     {
         _golpe = 0;
         _vel1 = GolpeVelocidad1;
+        _vignetasCoroutine= false;
     }
 
     public void AnimacionDeJugar()
@@ -103,13 +118,12 @@ public class JugarAnimacion : MonoBehaviour
             if (dirManoIzq.magnitude >= 0.1f)
             {
                 Mano.transform.Translate(dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime);
-                Debug.Log((dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime).x);
             }
             Mano.transform.Translate(dirManoIzq.normalized * VelocidadRecogerTeclado * Time.deltaTime);
 
             Vector2 dir3 = ManoDerPosFinal.position - ManoDer.transform.position;
             ManoDer.transform.Translate(-dir3.normalized * VelocidadRecogerTeclado * Time.deltaTime);
-            if (dir3.magnitude <= 0.05f)
+            if (dir3.magnitude <= 0.1f)
             {
                 _final = 2;
             }
@@ -127,7 +141,7 @@ public class JugarAnimacion : MonoBehaviour
             Vector2 dir4 = ManoDerPosInicial.position - ManoDer.transform.position;
             ManoDer.transform.Translate(-dir4.normalized * VelocidadRecogerTeclado * Time.deltaTime);
             TecladoRoto.transform.Translate(dir4.normalized * VelocidadRecogerTeclado * Time.deltaTime);
-            if (dir4.magnitude <= 0.05f)
+            if (dir4.magnitude <= 0.1f)
             {
                 _final = 3;
             }
@@ -156,12 +170,56 @@ public class JugarAnimacion : MonoBehaviour
         }
         else if (_final == 6)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (!_vignetasCoroutine) { StartCoroutine(Vignetas(Vigneta1Time)); }
+            
+            Vigneta1.color = new Color(1, 1, 1, Mathf.MoveTowards(Vigneta1.color.a, 1, VignetasVel * Time.deltaTime));
+            Vigneta1Text.color = new Color(1, 1, 1, Mathf.MoveTowards(Vigneta1.color.a, 1, VignetasVel * 2 * Time.deltaTime));
+            if (Vigneta1.color.a == 1)
+            {
+                if (!_vignetasCoroutine) { StartCoroutine(Vignetas(Vigneta1Time)); }
+            }
+        }
+        else if (_final == 7)
+        {
+            Vigneta2.color = new Color(1, 1, 1, Mathf.MoveTowards(Vigneta2.color.a, 1, VignetasVel * Time.deltaTime));
+            Vigneta2Text.color = new Color(1, 1, 1, Mathf.MoveTowards(Vigneta2.color.a, 1, VignetasVel * 2 * Time.deltaTime));
+            Vigneta1Text.color = new Color(0, 0, 0 , 0);
+            if (Vigneta2.color.a == 1)
+            {
+                if (!_vignetasCoroutine) { StartCoroutine(Vignetas(Vigneta2Time)); }
+            }
+        }
+        else if (_final == 8)
+        {
+            Vigneta3Text.color = new Color(1, 1, 1, Mathf.MoveTowards(Vigneta3Text.color.a, 1, VignetasVel * 2 * Time.deltaTime));
+            Vigneta2Text.color = new Color(0, 0, 0, 0);
+            if (Vigneta3Text.color.a == 1)
+            {
+                if (!_vignetasCoroutine) { StartCoroutine(Vignetas(Vigneta3Time)); }
+            }
+        }
+        else if (_final == 9)
+        {
+            Vigneta3.color = new Color(1, 1, 1, Mathf.MoveTowards(Vigneta3.color.a, 1, VignetasVel / 2 * Time.deltaTime));
+            Vigneta3Text.color = new Color(0, 0, 0, 0);
+            if (Vigneta3.color.a == 1)
+            {
+                if (!_vignetasCoroutine) { StartCoroutine(Vignetas(Vigneta3Time)); }
+            }
+        }
+        else if (_final == 10)
+        {
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
-    IEnumerator Monologo()
+    IEnumerator Vignetas(float time)
     {
-        yield return null;
+        if (_vignetasCoroutine) { yield break; }
+        _vignetasCoroutine = true;
+        yield return new WaitForSeconds(time);
+        _final++;
+        _vignetasCoroutine = false;
     }
     
     IEnumerator EsperarRecogida()

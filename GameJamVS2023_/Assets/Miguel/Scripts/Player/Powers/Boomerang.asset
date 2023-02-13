@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIPrefab: {fileID: 9120614116966694449, guid: 7cef5dfa61b58994bb8a0660539a17d6, type: 3}
   HUDPrefab: {fileID: 8768541666950029508, guid: f0ee415d0ae18b748bf4d800af12fa8e, type: 3}
+  InfoPrefab: {fileID: 192292687022509893, guid: fe78e9709453a274bbcc43172ddf6784, type: 3}
   CoolDown: 0
   CoolDownOver: 1
   BlockPowers: 0
