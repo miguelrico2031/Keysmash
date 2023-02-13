@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7051729164616296217}
   - component: {fileID: 7051729164616296220}
   m_Layer: 0
-  m_Name: Dash1
+  m_Name: Dash1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4168968917317028419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.62, y: -4.65, z: 0.18366635}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1537322444, guid: 6fc222b46bf93594bbf8036cbf4b4aca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22c6be3cc4c3a4347a9666d13a58a7b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36895ac98e1864fa3816d4e878e089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InterfazGO: {fileID: 5996537028853567865, guid: 369b37d6e3c794a4f9936f76c2c06f68, type: 3}
   Power: {fileID: 11400000, guid: 0a84ad1fffd727c4783d5592254c971f, type: 2}
 --- !u!50 &7051729164616296217
 Rigidbody2D:
@@ -139,7 +138,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.21, y: 0.22}
+    oldSize: {x: 1.24, y: 1.08}
     newSize: {x: 0.21, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

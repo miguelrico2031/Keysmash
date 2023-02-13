@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class JugarAnimacion : MonoBehaviour
@@ -16,6 +17,9 @@ public class JugarAnimacion : MonoBehaviour
     public GameObject TecladoRoto;
     public GameObject Camara;
     public GameObject TecladoEnGrande;
+
+    public Image FadeImage;
+    public float FadeSpeed = 1.0f;
 
     public float[] TiempoDeEsperaEvento;
 
@@ -135,15 +139,20 @@ public class JugarAnimacion : MonoBehaviour
         }
         else if (_final == 4)
         {
-            TecladoEnGrande.transform.localScale += Vector3.one * KeyboardSizeSpeed * Time.deltaTime;
+            //TecladoEnGrande.transform.localScale += Vector3.one * KeyboardSizeSpeed * Time.deltaTime;
             if (TecladoEnGrande.transform.localScale.x >= KeyboardMaxSize)
             {
-                _final = 5;
+                
             }
+            _final = 5;
         }
         else if (_final == 5)
         {
-
+            FadeImage.color = new Color(0, 0, 0, Mathf.MoveTowards(FadeImage.color.a, 1, FadeSpeed * Time.deltaTime));
+            if (FadeImage.color.a == 1)
+            {
+                _final = 6;
+            }
         }
         else if (_final == 6)
         {
@@ -210,4 +219,6 @@ public class JugarAnimacion : MonoBehaviour
         yield return new WaitForSeconds(TiempoDeEsperaEvento[13]);
         _golpe = 1;
     }
+
+
 }
