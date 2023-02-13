@@ -68,6 +68,7 @@ public class Snake : Enemy
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if(!Alive) return;
         if(other.gameObject.CompareTag("Player")) Attack();
         
         if(!other.gameObject.CompareTag("Enemy"))
