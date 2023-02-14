@@ -975,9 +975,10 @@ GameObject:
   - component: {fileID: 4280536163846658799}
   - component: {fileID: 1426283833947208715}
   - component: {fileID: 1191565081985132220}
+  - component: {fileID: 4045960455181417651}
   m_Layer: 0
   m_Name: TeclaEspacio1
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1050,6 +1051,40 @@ MonoBehaviour:
       Margin1: 1
       Margin2: 1
       Enabled: 1
+--- !u!60 &4045960455181417651
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648183261164354279}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -11.035534, y: 4.933735}
+      - {x: -10.920119, y: -5.845798}
+      - {x: -6.0162363, y: -5.992322}
+      - {x: -5.923937, y: -10.99807}
+      - {x: -3.0156183, y: -10.969581}
+      - {x: -2.938846, y: -6.0544724}
+      - {x: 1.9793866, y: -6.091467}
+      - {x: 2.0183468, y: -0.09373641}
+      - {x: 1.9316916, y: 5.0348907}
 --- !u!1 &3753340658297751452
 GameObject:
   m_ObjectHideFlags: 0

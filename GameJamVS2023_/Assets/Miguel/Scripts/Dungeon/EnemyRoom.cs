@@ -12,23 +12,27 @@ public class EnemyRoom : RoomManager
     private int _enemyCount;
     public override void OnDungeonGenerated()
     {
+        
         base.OnDungeonGenerated();
         
         _enemySpawnPoints = new List<EnemySpawnPoint>();
         foreach(var spawnPoint in GetComponentsInChildren<EnemySpawnPoint>())
         {
+            
             _enemySpawnPoints.Add(spawnPoint);
             if(spawnPoint.IsAtStart) SpawnEnemy(spawnPoint);
         }
         _enemyCount = _enemySpawnPoints.Count;
 
-        _stairs.SetActive(false);
+        if (_stairs) { _stairs.SetActive(false); }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        Debug.Log("aaaaaaa");
+        if (other.gameObject.CompareTag("Player"))
         {
+
             CloseDoors();
             SpawnEnemies();
         }

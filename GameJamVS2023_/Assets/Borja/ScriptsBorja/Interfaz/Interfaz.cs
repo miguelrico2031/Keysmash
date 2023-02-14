@@ -79,10 +79,12 @@ public class Interfaz : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                Time.timeScale = 1;
                 SceneManager.LoadScene("MainMenu");
             }
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                Time.timeScale = 1;
                 SceneManager.LoadScene("Level 1");
             }
         }
@@ -93,7 +95,7 @@ public class Interfaz : MonoBehaviour
 
     void OnCooldownStart(Power power)
     {
-        Debug.Log(power.name + "start");
+
         var prefab = _hUDPowers[power];
         if (!prefab) return;
         prefab.transform.GetChild(0).gameObject.SetActive(false);
@@ -101,7 +103,7 @@ public class Interfaz : MonoBehaviour
     }
     void OnCooldownOver(Power power)
     {
-        Debug.Log(power.name);
+
         var prefab = _hUDPowers[power];
         if (!prefab) return;
         prefab.transform.GetChild(1).gameObject.SetActive(false);
@@ -152,7 +154,6 @@ public class Interfaz : MonoBehaviour
 
     public void ChangeLives(int HealthChange)
     {
-        Debug.Log("Interfaz");
         _currentlives += HealthChange;
         for (int i = 0; i < Lives.Length; i++)
         {  

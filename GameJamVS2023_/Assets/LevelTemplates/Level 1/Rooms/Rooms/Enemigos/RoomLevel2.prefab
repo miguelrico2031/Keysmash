@@ -1063,9 +1063,11 @@ GameObject:
   - component: {fileID: 6201919721729111998}
   - component: {fileID: 7952878446498383723}
   - component: {fileID: 4757500786401234171}
+  - component: {fileID: 2816438647374453718}
+  - component: {fileID: 1027396890980041241}
   m_Layer: 0
   m_Name: RoomLevel2
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1145,6 +1147,57 @@ MonoBehaviour:
       Margin1: 1
       Margin2: 1
       Enabled: 1
+--- !u!114 &2816438647374453718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930602298124477029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefa756e854d7c547b1eaa2af94577e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSpawned: 0
+  _stairs: {fileID: 0}
+--- !u!60 &1027396890980041241
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930602298124477029}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.019537, y: 1.0203364}
+      - {x: 3.9793463, y: 6.000327}
+      - {x: -2.0434213, y: 6.007997}
+      - {x: -1.8721434, y: 1}
+      - {x: -8.109251, y: 1.0248365}
+      - {x: -8.021295, y: -4.9387445}
+      - {x: -1.8900515, y: -4.9387436}
+      - {x: -2.0330858, y: -9.948313}
+      - {x: 3.8710642, y: -9.878246}
+      - {x: 4.124048, y: -4.8877254}
+      - {x: 9.916043, y: -4.93413}
+      - {x: 10.146584, y: 1.0248368}
 --- !u!1 &1126264344030839843
 GameObject:
   m_ObjectHideFlags: 0

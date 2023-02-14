@@ -181,9 +181,10 @@ GameObject:
   - component: {fileID: 2038550218933316403}
   - component: {fileID: 5327892590188109977}
   - component: {fileID: 6343573442874099566}
+  - component: {fileID: 6704401381797767413}
   m_Layer: 0
   m_Name: CorridorAlberto1
-  m_TagString: Untagged
+  m_TagString: Corridor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,6 +259,19 @@ MonoBehaviour:
       Margin1: 1
       Margin2: 1
       Enabled: 1
+--- !u!114 &6704401381797767413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4264147571960829142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c556c45ebbd6f45a1f0624e0c89811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Open: 0
 --- !u!1 &6074017017209220682
 GameObject:
   m_ObjectHideFlags: 0

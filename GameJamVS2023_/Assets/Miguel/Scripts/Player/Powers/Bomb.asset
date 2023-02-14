@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f137ac668521c48b9e0bc6351d1c4a, type: 3}
   m_Name: Bomb
   m_EditorClassIdentifier: 
-  UIPrefab: {fileID: 0}
-  HUDPrefab: {fileID: 0}
-  InfoPrefab: {fileID: 0}
+  UIPrefab: {fileID: 8093167727851540696, guid: 9dd4dceec434635498fc9e38b9a673f9, type: 3}
+  HUDPrefab: {fileID: 1067224603496675565, guid: 8d2c0f6f6bb33e545a2d58d02f6dc0f7, type: 3}
+  InfoPrefab: {fileID: 7901900639542400110, guid: de4c67d9133eb6941a18e5d61b15938e, type: 3}
   CoolDown: 0
   CoolDownOver: 1
+  ManualCooldown: 1
   BlockPowers: 0
   Key: i
   Description: 
@@ -24,6 +25,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PowerAvailable:
+    m_PersistentCalls:
+      m_Calls: []
+  StartCooldown:
     m_PersistentCalls:
       m_Calls: []
   _keyBombPrefab: {fileID: 2936075234321303763, guid: 34b2972a4410fed468622a4b7b55141c, type: 3}

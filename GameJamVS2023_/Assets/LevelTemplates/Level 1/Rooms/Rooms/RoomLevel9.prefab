@@ -3493,9 +3493,10 @@ GameObject:
   - component: {fileID: 1827644983587362187}
   - component: {fileID: 4994103818015979623}
   - component: {fileID: 2135923326997974849}
+  - component: {fileID: 3749429561965251581}
   m_Layer: 0
   m_Name: RoomLevel9
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3574,6 +3575,39 @@ MonoBehaviour:
       Margin1: 1
       Margin2: 1
       Enabled: 1
+--- !u!60 &3749429561965251581
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683339369458272930}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 8.051889, y: 4.962041}
+      - {x: -6.9580216, y: 4.9526997}
+      - {x: -6.9750905, y: -2.9290643}
+      - {x: -5.011536, y: -2.9683251}
+      - {x: -4.98223, y: -4.8939238}
+      - {x: 5.8878083, y: -5.026674}
+      - {x: 5.9131093, y: -2.9391468}
+      - {x: 7.980484, y: -2.9713821}
 --- !u!1001 &7927282333093940680
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,28 +7,30 @@ public class CorridorManager : MonoBehaviour
     private GameObject _door;
     // Start is called before the first frame update
     public bool Open = false;
+    bool _generated = false;
 
     private void OnEnable()
     {
         if (!DungeonManager.Instance) return;
-        DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
+        //DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     private void OnDisable()
     {
         
-        DungeonManager.Instance.DungeonGenerated.RemoveListener(OnDungeonGenerated);
+        //DungeonManager.Instance.DungeonGenerated.RemoveListener(OnDungeonGenerated);
     }
 
-    //private void Start()
-    //{
-    //    Debug.Log("pasillo start");
-    //    DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
-    //}
+    private void Start()
+    {
+        //DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
+    }
 
     // Update is called once per frame
-    void OnDungeonGenerated()
+    public void OnDungeonGenerated()
     {
+        if (_generated) return;
+        _generated = true;
         for (int i = 0; i < transform.childCount; i++)
         {
             
