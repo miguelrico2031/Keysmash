@@ -13,7 +13,7 @@ public class Snake : Enemy
     private GameObject _player;
     private StatsManager _playerStats;
     private Vector2 _directionToPlayer;
-    private bool _charging = true;
+    private bool _charging = true, _offsetting = true;
 
     void Awake()
     {
@@ -49,6 +49,13 @@ public class Snake : Enemy
     {
         _charging = true;
         _animator.SetBool("Charging", _charging);
+
+        if(_offsetting)
+        {
+            _offsetting = false;
+            yield return new WaitForSeconds(Random.Range(0f, 3.5f));
+        }
+
         yield return new WaitForSeconds(_chargeDuration);
         _charging = false;
         _animator.SetBool("Charging", _charging);
