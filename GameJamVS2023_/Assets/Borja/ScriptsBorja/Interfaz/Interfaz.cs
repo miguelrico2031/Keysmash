@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Interfaz : MonoBehaviour
 {
@@ -11,13 +12,12 @@ public class Interfaz : MonoBehaviour
     public GameObject[] Lives;
     public GameObject[] LivesPauseMenu;
 
-    bool _fading;
-    public Image FadeImage;
-    public float FadeSpeed;
-
     GameObject KeyBoardBackground;
     GameObject KeyShowCaseBackground;
     GameObject InfoPanelBackground;
+    public GameObject ConfirmarSalirBackground;
+    bool _info;
+    bool _confirm;
 
     Dictionary<Power, GameObject> _hUDPowers;
     Dictionary<Power, GameObject> _uIPowers;
@@ -37,8 +37,8 @@ public class Interfaz : MonoBehaviour
         ChangeLives(0);
         ShowKeysAtStart();
         _stats.HealthChange.AddListener(ChangeLives);
-        _fading = true;
         Cursor.visible = false;
+        _info= false; _confirm= false;
     }
     private void Update()
     {
@@ -49,18 +49,26 @@ public class Interfaz : MonoBehaviour
                 PauseMenu(0);
             }else if (Time.timeScale == 0)
             {
-                PauseMenu(1);
+                if (_info)
+                {
+                    PauseMenu(-2);
+                }
+                else if (_confirm)
+                {
+                    Debug.LogWarning("-3");
+                    PauseMenu(-3);
+                }
+                else
+                {
+                    PauseMenu(1);
+                }
+                
             }
         }
-        
-        if (_fading)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            FadeImage.color = new Color(0, 0, 0, Mathf.MoveTowards(FadeImage.color.a, 0, FadeSpeed * Time.deltaTime));
-            if (FadeImage.color.a == 0)
-            {
-                _fading = false;
-            }
-        }    
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     void OnCooldownStart(Power power)
@@ -170,13 +178,31 @@ public class Interfaz : MonoBehaviour
         }
         else if (value == 2)
         {
+            _info = true;
             Cursor.visible = true;
             InfoPanelBackground.SetActive(true);
             KeyBoardBackground.SetActive(false);
-            foreach (var element in InterfaceRunTime)
-            {
-                element.SetActive(false);
-            }
+        }
+        else if (value == 3)
+        {
+            _confirm = true;
+            Cursor.visible = true;
+            ConfirmarSalirBackground.SetActive(true);
+            KeyBoardBackground.SetActive(false);
+        }
+        else if (value == -2)
+        {
+            _info = false;
+            Cursor.visible = true;
+            InfoPanelBackground.SetActive(false);
+            KeyBoardBackground.SetActive(true);
+        }
+        else if (value == -3)
+        {
+            _confirm = false;
+            Cursor.visible = true;
+            ConfirmarSalirBackground.SetActive(false);
+            KeyBoardBackground.SetActive(true);
         }
     }
 }
