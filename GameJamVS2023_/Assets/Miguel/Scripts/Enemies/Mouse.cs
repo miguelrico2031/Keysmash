@@ -32,7 +32,7 @@ public class Mouse : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!Alive || IsBlocked) return;
+        if(!Alive) return;
         
 
         _directionToPlayer = (_player.transform.position - transform.position);
@@ -42,7 +42,7 @@ public class Mouse : Enemy
             //if(_directionToPlayer.magnitude <= _explosionRadius) Attack();
             return;
         }
-        if(IsExploding) return;
+        if(IsExploding || IsBlocked) return;
 
         _directionToPlayer = _directionToPlayer.normalized;
 

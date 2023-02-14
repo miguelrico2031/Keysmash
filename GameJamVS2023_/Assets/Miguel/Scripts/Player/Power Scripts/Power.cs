@@ -30,6 +30,11 @@ public abstract class Power : ScriptableObject
         
     }
 
+    public virtual void OnCollision(GameObject other)
+    {
+
+    }
+
 
 }
 

@@ -10,13 +10,14 @@ public class DashPower : Power
 
     private Rigidbody2D _rb;
     private PlayerMovement _playerMovement;
-    private bool _dashing = false;
     private float _speed, _acceleration;
     private Vector2 _direction;
 
+    public bool Dashing = false;
+
     public override void Use(GameObject player)
     {
-        if(!CoolDownOver || _dashing) return;
+        if(!CoolDownOver || Dashing) return;
 
 
         _player = player;
@@ -27,7 +28,11 @@ public class DashPower : Power
 
         UsePower.Invoke(this);
 
-        Dash();
+        _playerMovement.BlockMovement = true;
+        _speed = _initialSpeed;
+        _acceleration = -_initialSpeed / _dashDuration;
+        Dashing = true;
+        BlockPowers = true;
         
     }
 
@@ -42,7 +47,7 @@ public class DashPower : Power
 
     public override void OnFixedUpdate()
     {
-        if(!_dashing) return;
+        if(!Dashing) return;
 
         _speed += _acceleration * Time.fixedDeltaTime;
         _rb.velocity = _direction * _speed;
@@ -50,20 +55,10 @@ public class DashPower : Power
         if(_speed <= 0)
         {
             _rb.velocity = Vector2.zero;
-            _dashing = false;
+            Dashing = false;
             _playerMovement.BlockMovement = false;
             BlockPowers = false;
         }
-
-    }
-
-    private void Dash()
-    {
-        _playerMovement.BlockMovement = true;
-        _speed = _initialSpeed;
-        _acceleration = -_initialSpeed / _dashDuration;
-        _dashing = true;
-        BlockPowers = true;
 
     }
 

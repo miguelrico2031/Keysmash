@@ -50,4 +50,9 @@ public class PowerManager : MonoBehaviour
         power.CoolDownOver = true;
         power.OnCoolDownOver();
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        foreach(var power in Stats.Powers) power.OnCollision(other.gameObject);
+    }
 }

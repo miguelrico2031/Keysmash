@@ -15,6 +15,7 @@ public class Keyboard : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     private HandsFollowPlayer _rightHandFollowPlayer, _leftHandFollowPlayer;
+    private RotateHands _rotateHands;
     private PlayerMovement _playerMovement;
     private StatsManager _playerStats;
 
@@ -40,11 +41,13 @@ public class Keyboard : MonoBehaviour
         _animator = GetComponent<Animator>();
         _rightHandFollowPlayer = _rightHand.GetComponent<HandsFollowPlayer>();
         _leftHandFollowPlayer = _leftHand.GetComponent<HandsFollowPlayer>();
+
     }
     private void Start()
     {
         _playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         _playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>();
+        _rotateHands = _playerMovement.GetComponentInChildren<RotateHands>();
         _collider.enabled = false;
     }
 
@@ -93,7 +96,9 @@ public class Keyboard : MonoBehaviour
 
         _leftHandFollowPlayer.SetHandInPosition();
         _leftHandFollowPlayer.IsBlocked = true;
-        //block rotatehands?
+        //block rotatehands
+        //_rotateHands.SetHandsInRotation();
+        //_rotateHands.IsBlocked = true;
         _playerMovement.BlockMovement = true;
         //_playerMovement.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
@@ -190,7 +195,10 @@ public class Keyboard : MonoBehaviour
 
         _leftHandFollowPlayer.SetHandInPosition();
         _leftHandFollowPlayer.IsBlocked = true;
-        //block rotatehands?
+        //block rotatehands
+        _rotateHands.SetHandsInRotation();
+        _rotateHands.IsBlocked = true;
+
         _playerMovement.BlockMovement = true;
         _playerMovement.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
@@ -218,7 +226,9 @@ public class Keyboard : MonoBehaviour
         _shieldEndFw = _playerMovement.Direction;
 
         _rightHand.position = Bezier.GetBezier2(_shieldBashTime, _shieldBashDuration, _shieldStartPos, _shieldStartFw, _shieldEndPos, _shieldEndFw);
-
+        
+        transform.rotation = _rightHand.rotation;
+        transform.Rotate(Vector3.forward, 90f);
         
     }
 
@@ -227,7 +237,8 @@ public class Keyboard : MonoBehaviour
         AttackMode = KeyboardAttack.None;
         _rightHandFollowPlayer.IsBlocked = false;
         _leftHandFollowPlayer.IsBlocked = false;
-        //unblock rotatehands?
+        //unblock rotatehands
+        _rotateHands.IsBlocked = false;
         _playerMovement.BlockMovement = false;
         
         _rb.freezeRotation = false;
@@ -254,9 +265,6 @@ public class Keyboard : MonoBehaviour
                 enemy.TakeDamage(_boomerangAttackDamage);
                 break;
 
-            case KeyboardAttack.Shield:
-                _playerStats.ParriedAttacks.Add(enemy.GetComponent<Enemy>().LastAttack);
-                break;
             }
         }
         else if(AttackMode == KeyboardAttack.Boomerang && other.gameObject.layer == LayerMask.NameToLayer("Walls"))

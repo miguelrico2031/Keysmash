@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8aa466940123b4e8e75f80a5bdcd13, type: 3}
+  m_Name: Smash
+  m_EditorClassIdentifier: 
+  UIPrefab: {fileID: 0}
+  HUDPrefab: {fileID: 0}
+  InfoPrefab: {fileID: 0}
+  CoolDown: 0
+  CoolDownOver: 1
+  BlockPowers: 0
+  Key: space
+  Description: 
+  UsePower:
+    m_PersistentCalls:
+      m_Calls: []
+  PowerAvailable:
+    m_PersistentCalls:
+      m_Calls: []
+  _damage: 1
+  _dashPower: {fileID: 11400000, guid: 0a84ad1fffd727c4783d5592254c971f, type: 2}

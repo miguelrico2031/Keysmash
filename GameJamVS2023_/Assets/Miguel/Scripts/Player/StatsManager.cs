@@ -6,10 +6,10 @@ using UnityEngine.Events;
 public class StatsManager : MonoBehaviour
 {
     public PlayerStats Stats;
-    public bool IsCovering = false;
+    public bool IsInvulnerable = false;
 
     private PlayerMovement _playerMovement;
-    private bool _isInvulnerable = false;
+    
 
     public UnityEvent<int> HealthChange;
 
@@ -23,17 +23,19 @@ public class StatsManager : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (_isInvulnerable) return;
+        if (IsInvulnerable) return;
         Stats.DamagePlayer(damage);
         HealthChange.Invoke(-damage);
+        StartCoroutine(InvulnerabilityTime(Stats.InvulnerabilityDuration));
     }
 
     public void TakeDamage(int damage, Vector2 knockBackForce, float duration)
     {
-        if (_isInvulnerable) return;
+        if (IsInvulnerable) return;
         Stats.DamagePlayer(damage);
         _playerMovement.AddKnockback(knockBackForce, duration);
         HealthChange.Invoke(-damage);
+        StartCoroutine(InvulnerabilityTime(Stats.InvulnerabilityDuration));
     }
 
     public void TakeDamage(EnemyAttack attack)
@@ -55,9 +57,9 @@ public class StatsManager : MonoBehaviour
 
     private IEnumerator InvulnerabilityTime(float duration)
     {
-        _isInvulnerable = true;
+        IsInvulnerable = true;
         yield return new WaitForSeconds(duration);
-        _isInvulnerable = false;
+        IsInvulnerable = false;
     }
 }
 

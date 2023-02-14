@@ -56,4 +56,25 @@ public class RotateHands : MonoBehaviour
 
         _lastDirection = _playerMovement.Direction;
     }
+
+    public void SetHandsInRotation()
+    {
+        if(_lastDirection != _playerMovement.Direction && _lastDirection + _playerMovement.Direction == Vector2.zero)
+        {
+            transform.Rotate(Vector3.forward, 180f);
+            _leftHand.Rotate(Vector3.forward, 180f);
+            _rightHand.Rotate(Vector3.forward, 180f);
+            //_leftHandFollowPlayer.SetHandInPosition();
+            //_rightHandFollowPlayer.SetHandInPosition();
+        }
+
+        float angle = Mathf.Atan2(_playerMovement.Direction.y, _playerMovement.Direction.x) * Mathf.Rad2Deg;
+        
+        Quaternion rotation = Quaternion.AngleAxis(angle + 90f, Vector3.forward);
+        transform.rotation = rotation;
+        _leftHand.rotation = rotation;
+        _leftHand.Rotate(Vector3.forward, 90);
+        _rightHand.rotation = rotation;
+        _rightHand.Rotate(Vector3.forward, -90);
+    }
 }

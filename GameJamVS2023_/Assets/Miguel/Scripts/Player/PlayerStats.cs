@@ -7,7 +7,7 @@ public class PlayerStats : ScriptableObject
 {
     public List<Power> Powers;
     public int MaxHealth;
-    public float _invulnerabilityDuration;
+    public float InvulnerabilityDuration;
     public int Health; /*{get; private set;}*/
 
     public void DamagePlayer(int damage)

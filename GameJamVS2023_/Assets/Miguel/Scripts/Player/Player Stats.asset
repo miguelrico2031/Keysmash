@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7dc282dce266339498db3956af9f4a4c, type: 2}
   - {fileID: 11400000, guid: 0a84ad1fffd727c4783d5592254c971f, type: 2}
   - {fileID: 11400000, guid: 9b2b4d23e87b6234ba099146dffdb82f, type: 2}
+  - {fileID: 11400000, guid: 7bbccfc992be0a644ae7e16a7d5877cc, type: 2}
   MaxHealth: 9
-  _invulnerabilityDuration: 1
-  Health: -40
+  InvulnerabilityDuration: 0
+  Health: -2
