@@ -32,6 +32,7 @@ public class BombPower : Power
     }    
     public override void OnStart()
     {
+        ManualCooldown = true;
         _hasKeyBomb = true;
         GameObject cap = Instantiate(_keyBombPrefab, Vector3.zero, Quaternion.identity);
         _keyBomb = cap.GetComponent<KeyBomb>();
@@ -63,6 +64,11 @@ public class BombPower : Power
     {
         _keyBomb.gameObject.SetActive(false);
         _hasKeyBomb = true;
+        StartCooldown.Invoke(this);
+    }
+
+    public override void OnCoolDownOver()
+    {
         PowerAvailable.Invoke(this);
     }
     

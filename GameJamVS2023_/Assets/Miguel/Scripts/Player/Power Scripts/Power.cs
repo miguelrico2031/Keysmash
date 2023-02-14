@@ -6,6 +6,7 @@ public abstract class Power : ScriptableObject
     public GameObject UIPrefab, HUDPrefab, InfoPrefab;
     public float CoolDown;
     [HideInInspector] public bool CoolDownOver = true;
+    [HideInInspector] public bool ManualCooldown = false;
     [HideInInspector] public bool BlockPowers = false;
     public string Key;
 
@@ -13,7 +14,7 @@ public abstract class Power : ScriptableObject
 
     //descripcion de lo que hace el objeto
     //conseguir una tecla
-    public UnityEvent<Power> UsePower, PowerAvailable;
+    public UnityEvent<Power> UsePower, PowerAvailable, StartCooldown;
 
     protected GameObject _player;
     
@@ -34,6 +35,7 @@ public abstract class Power : ScriptableObject
     {
 
     }
+
 
 
 }

@@ -25,7 +25,8 @@ public class PowerManager : MonoBehaviour
                 {
                     _activePower = power;
                     power.Use(gameObject);
-                    if(power.CoolDownOver && power.CoolDown > 0) StartCoroutine(PowerCooldown(power));
+                    if(!power.ManualCooldown && power.CoolDownOver && power.CoolDown > 0) StartCooldown(power);
+                    else if(power.ManualCooldown) power.StartCooldown.AddListener(StartCooldown);
                     break;
                 }
             }
@@ -41,6 +42,11 @@ public class PowerManager : MonoBehaviour
         if(_activePower && _activePower.BlockPowers) _activePower.OnFixedUpdate();
 
         else foreach(var power in Stats.Powers) power.OnFixedUpdate();
+    }
+
+    public void StartCooldown(Power power)
+    {
+        StartCoroutine(PowerCooldown(power));
     }
 
     private IEnumerator PowerCooldown(Power power)
