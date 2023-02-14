@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 70108012930277036}
   - component: {fileID: 70108012930277037}
   - component: {fileID: 70108012930277026}
+  - component: {fileID: 2675719393965237167}
   m_Layer: 0
   m_Name: Crab
   m_TagString: Enemy
@@ -141,6 +142,9 @@ MonoBehaviour:
   IsBlocked: 0
   _maxHealth: 2
   _attackDamage: 1
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
   _speed: 100
   _knockbackDuration: 0.3
   _knockbackForce: 10
@@ -168,6 +172,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2675719393965237167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70108012930277027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b81e9ef41fb6149abbf987693bd61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 70108012930277038}
+  _damageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &70108013715007786
 GameObject:
   m_ObjectHideFlags: 0

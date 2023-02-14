@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -15,12 +16,20 @@ public abstract class Enemy : MonoBehaviour
 
     protected int _health;
 
+    protected DamageAnimation _damageAnimation;
+    public UnityEvent<Enemy> OnDie;
+
 
     public virtual void TakeDamage(int damage)
     {
         _health -= damage;
 
         if(_health <= 0) Die();
+        else
+        {
+            if(!_damageAnimation) _damageAnimation = GetComponent<DamageAnimation>();
+            _damageAnimation.StartAnimation();
+        }
     }
 
     public virtual void TakeDamage(int damage, Vector2 knockbackDirection)
@@ -31,6 +40,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual void Die()
     {
         Alive = false;
+        OnDie.Invoke(this);
     }
 
     public abstract void Attack();

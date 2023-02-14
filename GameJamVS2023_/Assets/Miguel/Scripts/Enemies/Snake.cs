@@ -9,14 +9,16 @@ public class Snake : Enemy
     [SerializeField] private float _knockbackDuration;
 
     private Rigidbody2D _rb;
+    private Animator _animator;
     private GameObject _player;
     private StatsManager _playerStats;
     private Vector2 _directionToPlayer;
-    private bool charging = true;
+    private bool _charging = true;
 
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         _health = _maxHealth;
     }
 
@@ -32,12 +34,12 @@ public class Snake : Enemy
     void FixedUpdate()
     {
         if(!Alive || IsBlocked) return;
-        if(!charging) _rb.velocity = _directionToPlayer * _speed * Time.fixedDeltaTime;
+        if(!_charging) _rb.velocity = _directionToPlayer * _speed * Time.fixedDeltaTime;
         else
         {
             _directionToPlayer = (_player.transform.position - transform.position).normalized;
             float angle = Mathf.Atan2(_directionToPlayer.y, _directionToPlayer.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Quaternion rotation = Quaternion.AngleAxis(angle + 180f, Vector3.forward);
             transform.rotation =  Quaternion.RotateTowards(transform.rotation, rotation, _rotationSpeed * Time.fixedDeltaTime);
         }
         
@@ -45,9 +47,11 @@ public class Snake : Enemy
 
     private IEnumerator ChargeTime()
     {
-        charging = true;
+        _charging = true;
+        _animator.SetBool("Charging", _charging);
         yield return new WaitForSeconds(_chargeDuration);
-        charging = false;
+        _charging = false;
+        _animator.SetBool("Charging", _charging);
     }
 
     public override void Attack()
@@ -77,11 +81,12 @@ public class Snake : Enemy
         if(!Alive) return;
         if(other.gameObject.CompareTag("Player")) Attack();
         
-        if(!other.gameObject.CompareTag("Enemy"))
+        if(other.gameObject.name == "Walls" || other.gameObject.name == "Collideable" || other.gameObject.CompareTag("Player"))
         {
             _rb.velocity = Vector2.zero;
-            StartCoroutine(ChargeTime());
-            charging = true;
+            Debug.Log(other.gameObject.name);
+            if(!_charging) StartCoroutine(ChargeTime());
+            
         }
     }
 }

@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 2885225813389629404}
   - component: {fileID: 2885225813389629407}
   - component: {fileID: 2885225813389629406}
+  - component: {fileID: 8483825216745839055}
   m_Layer: 14
   m_Name: Player Body
   m_TagString: Player
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: d95f2fb33f96b9e44b478f39d78f0ea9, type: 2}
-  IsCovering: 0
+  IsInvulnerable: 0
   HealthChange:
     m_PersistentCalls:
       m_Calls: []
@@ -211,6 +212,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae762ae550c08a441bcce4bd8514ca7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8483825216745839055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885225813389629394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b81e9ef41fb6149abbf987693bd61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 7141881225772132810}
+  _damageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &2885225813535702398
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Edgar.Unity;
 
-public class RoomManager : MonoBehaviour 
+public abstract class RoomManager : MonoBehaviour 
 {
     // Start is called before the first frame update
     public bool IsSpawned;
 
-    //[SerializeField] private List<Enemy> enemies;
 
-    private RoomInfoGrid2D _roomInfo;
-    private RoomInstanceGrid2D _roomInstance;
-    private List<CorridorManager> _corridors;
+    protected RoomInfoGrid2D _roomInfo;
+    protected RoomInstanceGrid2D _roomInstance;
+    protected List<CorridorManager> _corridors;
 
 
-    private void Awake()
+    public virtual void Awake()
     {
         _corridors = new List<CorridorManager>();
     }
@@ -30,13 +29,14 @@ public class RoomManager : MonoBehaviour
         DungeonManager.Instance.DungeonGenerated.RemoveListener(OnDungeonGenerated);
     }
 
-    private void Start()
+    public virtual void Start()
     {
         DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
-    public void OnDungeonGenerated()
+    public virtual void OnDungeonGenerated()
     {
+        IsSpawned = true;
         _roomInfo = GetComponent<RoomInfoGrid2D>();
         _roomInstance = _roomInfo.RoomInstance;
 
@@ -46,22 +46,12 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    public void OnRoomEnter()
-    {
-        if(IsSpawned) OpenDoors();
-        else CloseDoors();
-    }
-    public void OnRoomComplete()
-    {
-        OpenDoors();
-    }
-
-    void OpenDoors()
+    public void OpenDoors()
     {
         foreach(var corridor in _corridors) corridor.OpenDoor();
     }
 
-    void CloseDoors()
+    public void CloseDoors()
     {
         foreach(var corridor in _corridors) corridor.CloseDoor();
     }

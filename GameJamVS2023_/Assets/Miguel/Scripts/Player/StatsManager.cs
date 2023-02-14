@@ -9,16 +9,18 @@ public class StatsManager : MonoBehaviour
     public bool IsInvulnerable = false;
 
     private PlayerMovement _playerMovement;
+    private DamageAnimation _damageAnimation;
     
 
     public UnityEvent<int> HealthChange;
 
-    public List<EnemyAttack> ParriedAttacks;
+    //public List<EnemyAttack> ParriedAttacks;
 
     void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
-        ParriedAttacks = new List<EnemyAttack>();
+        _damageAnimation = GetComponent<DamageAnimation>();
+        //ParriedAttacks = new List<EnemyAttack>();
     }
 
     public void TakeDamage(int damage)
@@ -33,6 +35,7 @@ public class StatsManager : MonoBehaviour
     {
         if (IsInvulnerable) return;
         Stats.DamagePlayer(damage);
+        _damageAnimation.StartAnimation();
         _playerMovement.AddKnockback(knockBackForce, duration);
         HealthChange.Invoke(-damage);
         StartCoroutine(InvulnerabilityTime(Stats.InvulnerabilityDuration));
@@ -40,11 +43,11 @@ public class StatsManager : MonoBehaviour
 
     public void TakeDamage(EnemyAttack attack)
     {
-        if(ParriedAttacks.Contains(attack))
-        {
-            ParriedAttacks.Remove(attack);
-            return;
-        }
+        // if(ParriedAttacks.Contains(attack))
+        // {
+        //     ParriedAttacks.Remove(attack);
+        //     return;
+        // }
 
         TakeDamage(attack.damage, attack.knockbackForce, attack.knockbackDuration);
     }

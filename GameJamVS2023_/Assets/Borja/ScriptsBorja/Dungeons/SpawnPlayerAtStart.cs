@@ -15,7 +15,6 @@ public class SpawnPlayerAtStart : MonoBehaviour
     {
         _player = GameObject.FindGameObjectWithTag("Player");
         _spawnPoint = GameObject.Find("PlayerSpawnPoint").transform.position;
-        Debug.Log(_spawnPoint);
         _player.transform.position = _spawnPoint;
     }
 }

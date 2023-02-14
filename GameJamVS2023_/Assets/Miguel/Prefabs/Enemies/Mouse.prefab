@@ -80,8 +80,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.23}
-  m_Size: {x: 2.4, y: 3}
+  m_Offset: {x: 0, y: -0.13}
+  m_Size: {x: 2.2, y: 2.9}
   m_Direction: 0
 --- !u!1 &2660321026687557017
 GameObject:
@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2660321026687557019}
   - component: {fileID: 2660321026687557016}
   - component: {fileID: 2660321026687556999}
+  - component: {fileID: 2538673140973490892}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Enemy
@@ -224,6 +225,9 @@ MonoBehaviour:
   IsBlocked: 0
   _maxHealth: 3
   _attackDamage: 1
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
   _speed: 40
   _amplitude: 150
   _creepSpeed: 6
@@ -254,3 +258,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2538673140973490892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2660321026687557017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b81e9ef41fb6149abbf987693bd61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 2660321026687556997}

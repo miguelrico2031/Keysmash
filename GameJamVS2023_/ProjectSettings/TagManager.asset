@@ -15,6 +15,7 @@ TagManager:
   - Feet
   - Hand
   - Head
+  - EnemySpawnPoint
   layers:
   - Default
   - TransparentFX
