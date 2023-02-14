@@ -16,7 +16,7 @@ public class PlayerStats : ScriptableObject
 
         if(Health <= 0)
         {
-            //Die
+            GameObject.Find("Canvas").GetComponent<DieEvent>().OnDeath();
         }
     }
 

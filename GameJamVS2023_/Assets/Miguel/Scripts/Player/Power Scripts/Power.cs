@@ -12,8 +12,6 @@ public abstract class Power : ScriptableObject
 
     [TextArea] public string Description;
 
-    //descripcion de lo que hace el objeto
-    //conseguir una tecla
     public UnityEvent<Power> UsePower, PowerAvailable, StartCooldown;
 
     protected GameObject _player;

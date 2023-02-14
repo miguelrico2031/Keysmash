@@ -17,7 +17,6 @@ public class DungeonManager : DungeonGeneratorPostProcessingComponentGrid2D
     public override void Run(DungeonGeneratorLevelGrid2D level)
     {
         level.RootGameObject.transform.Find("Tilemaps").Find("Walls").gameObject.layer = LayerMask.NameToLayer("Walls");
-
         DungeonGenerated.Invoke();
     }
 }

@@ -28,6 +28,7 @@ public class StatsManager : MonoBehaviour
         if (IsInvulnerable) return;
         Stats.DamagePlayer(damage);
         HealthChange.Invoke(-damage);
+        GameObject.Find("Canvas").GetComponent<Interfaz>().ChangeLives(-damage);
         StartCoroutine(InvulnerabilityTime(Stats.InvulnerabilityDuration));
     }
 
@@ -38,6 +39,7 @@ public class StatsManager : MonoBehaviour
         _damageAnimation.StartAnimation();
         _playerMovement.AddKnockback(knockBackForce, duration);
         HealthChange.Invoke(-damage);
+        GameObject.Find("Canvas").GetComponent<Interfaz>().ChangeLives(-damage);
         StartCoroutine(InvulnerabilityTime(Stats.InvulnerabilityDuration));
     }
 
@@ -56,6 +58,7 @@ public class StatsManager : MonoBehaviour
     {
         Stats.HealPlayer(healAmount);
         HealthChange.Invoke(healAmount);
+        GameObject.Find("Canvas").GetComponent<Interfaz>().ChangeLives(healAmount);
     }
 
     private IEnumerator InvulnerabilityTime(float duration)

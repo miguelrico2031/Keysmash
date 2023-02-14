@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class Interfaz : MonoBehaviour
 {
+    [HideInInspector ]public bool HasDied;
+
     public GameObject[] InterfaceRunTime;
     public GameObject[] Lives;
     public GameObject[] LivesPauseMenu;
@@ -36,40 +38,58 @@ public class Interfaz : MonoBehaviour
         _currentlives = _stats.Stats.Health;
         ChangeLives(0);
         ShowKeysAtStart();
-        _stats.HealthChange.AddListener(ChangeLives);
+        //_stats.HealthChange.AddListener(ChangeLives);
         Cursor.visible = false;
         _info= false; _confirm= false;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!HasDied)
         {
-            if (Time.timeScale == 1)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                PauseMenu(0);
-            }else if (Time.timeScale == 0)
+                if (Time.timeScale == 1)
+                {
+                    PauseMenu(0);
+                }
+                else if (Time.timeScale == 0)
+                {
+                    if (_info)
+                    {
+                        PauseMenu(-2);
+                    }
+                    else if (_confirm)
+                    {
+                        Debug.LogWarning("-3");
+                        PauseMenu(-3);
+                    }
+                    else
+                    {
+                        PauseMenu(1);
+                    }
+
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Return) && _confirm)
             {
-                if (_info)
-                {
-                    PauseMenu(-2);
-                }
-                else if (_confirm)
-                {
-                    Debug.LogWarning("-3");
-                    PauseMenu(-3);
-                }
-                else
-                {
-                    PauseMenu(1);
-                }
-                
+                SceneManager.LoadScene("MainMenu");
             }
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+        else if (HasDied)
         {
-            SceneManager.LoadScene("MainMenu");
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SceneManager.LoadScene("Level 1");
+            }
         }
+        
     }
+
+    
 
     void OnCooldownStart(Power power)
     {
@@ -130,8 +150,9 @@ public class Interfaz : MonoBehaviour
         InfoPanelBackground = transform.Find("Panel").Find("InfoPanelBackground").gameObject;
     }
 
-    void ChangeLives(int HealthChange)
+    public void ChangeLives(int HealthChange)
     {
+        Debug.Log("Interfaz");
         _currentlives += HealthChange;
         for (int i = 0; i < Lives.Length; i++)
         {  

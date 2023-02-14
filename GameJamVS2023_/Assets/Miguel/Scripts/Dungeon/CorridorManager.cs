@@ -10,25 +10,28 @@ public class CorridorManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if(!DungeonManager.Instance) return;
+        if (!DungeonManager.Instance) return;
         DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
     }
 
     private void OnDisable()
     {
+        
         DungeonManager.Instance.DungeonGenerated.RemoveListener(OnDungeonGenerated);
     }
 
-    private void Start()
-    {
-        DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
-    }
+    //private void Start()
+    //{
+    //    Debug.Log("pasillo start");
+    //    DungeonManager.Instance.DungeonGenerated.AddListener(OnDungeonGenerated);
+    //}
 
     // Update is called once per frame
     void OnDungeonGenerated()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
+            
             var child = transform.GetChild(i);
             if (child.CompareTag("Door"))
             {
