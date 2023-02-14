@@ -19,6 +19,6 @@ public class SpawnRoom : RoomManager
         _player = GameObject.FindGameObjectWithTag("Player").transform.parent;
         _player.position = GameObject.Find("PlayerSpawnPoint").transform.position;
 
-        OpenDoors();
+        Invoke("OpenDoors", 0.2f);
     }
 }
