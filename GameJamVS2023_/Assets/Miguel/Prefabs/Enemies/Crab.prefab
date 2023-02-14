@@ -142,6 +142,7 @@ MonoBehaviour:
   IsBlocked: 0
   _maxHealth: 2
   _attackDamage: 1
+  _explosion: {fileID: 4342268703899673305, guid: 59dcc67b2c0689e4083b722d0e43381f, type: 3}
   OnDie:
     m_PersistentCalls:
       m_Calls: []
@@ -185,7 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 70108012930277038}
-  _damageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &70108013715007786
 GameObject:
   m_ObjectHideFlags: 0

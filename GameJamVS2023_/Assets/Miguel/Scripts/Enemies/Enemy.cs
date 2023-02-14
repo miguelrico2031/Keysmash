@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected int _maxHealth;
 
     [SerializeField] protected int _attackDamage;
+    [SerializeField] private GameObject _explosion;
 
     protected int _health;
 
@@ -41,6 +42,8 @@ public abstract class Enemy : MonoBehaviour
     {
         Alive = false;
         OnDie.Invoke(this);
+        if(_explosion) Instantiate(_explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     public abstract void Attack();

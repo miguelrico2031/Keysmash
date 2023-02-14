@@ -12,12 +12,10 @@ public class KeyCap : MonoBehaviour
     
 
     private Rigidbody2D _rb;
-    private BoxCollider2D _collider;
 
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _collider = GetComponent<BoxCollider2D>();
     }
 
     public void Throw(Vector2 direction)

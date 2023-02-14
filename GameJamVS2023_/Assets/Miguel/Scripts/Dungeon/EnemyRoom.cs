@@ -29,6 +29,11 @@ public class EnemyRoom : RoomManager
             CloseDoors();
             SpawnEnemies();
         }
+        // else if(other.gameObject.CompareTag("Enemy"))
+        // {
+        //     var lizard = other.gameObject.GetComponent<Lizard>();
+        //     if(lizard && !lizard.RoomBound) lizard.RoomBound = GetComponent<BoxCollider2D>();
+        // }
     }
 
     private void SpawnEnemies()

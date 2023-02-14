@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 104499874955656887}
   - component: {fileID: -3783517124088056803}
   - component: {fileID: 3674728354256882229}
-  - component: {fileID: 786303226875080244}
+  - component: {fileID: 2931779169848686008}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Room
@@ -1112,8 +1112,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &786303226875080244
-PolygonCollider2D:
+--- !u!61 &2931779169848686008
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1122,10 +1122,10 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.97271776, y: -0.010348201}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1135,12 +1135,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 3.7273607, y: 1.8153601}
-      - {x: -1.8662567, y: 1.8565373}
-      - {x: -1.8524253, y: -1.8074174}
-      - {x: 3.7826657, y: -1.7907771}
+  serializedVersion: 2
+  m_Size: {x: 5.7187176, y: 3.6698005}
+  m_EdgeRadius: 0
 --- !u!1 &7168249759428762624
 GameObject:
   m_ObjectHideFlags: 0

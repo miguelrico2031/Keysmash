@@ -225,6 +225,7 @@ MonoBehaviour:
   IsBlocked: 0
   _maxHealth: 3
   _attackDamage: 1
+  _explosion: {fileID: 0}
   OnDie:
     m_PersistentCalls:
       m_Calls: []
