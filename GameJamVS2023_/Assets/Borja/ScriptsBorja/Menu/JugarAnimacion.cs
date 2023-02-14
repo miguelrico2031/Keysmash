@@ -36,6 +36,8 @@ public class JugarAnimacion : MonoBehaviour
     public TextMeshProUGUI Vigneta3Text;
     public float Vigneta3Time;
     bool _vignetasCoroutine;
+    public float VelocidadVolumen;
+    bool _bajarVolumen;
 
     public Transform ManoIzqPosInicial;
     public Transform TecladoPosInicial;
@@ -60,6 +62,7 @@ public class JugarAnimacion : MonoBehaviour
         _golpe = 0;
         _vel1 = GolpeVelocidad1;
         _vignetasCoroutine= false;
+        _bajarVolumen = false;
     }
 
     public void AnimacionDeJugar()
@@ -71,6 +74,10 @@ public class JugarAnimacion : MonoBehaviour
 
     private void Update()
     {
+        if (_bajarVolumen)
+        {
+            Camara.GetComponent<AudioSource>().volume -= VelocidadVolumen * Time.deltaTime;
+        }
         
         if (_golpe == 1)
         {
@@ -245,6 +252,7 @@ public class JugarAnimacion : MonoBehaviour
     }
     IEnumerator Eventos()
     {
+        _bajarVolumen = true;
         yield return new WaitForSeconds(TiempoDeEsperaEvento[0]);
         Mano.GetComponent<TeclearAnimacion>().AnimacionTeclear(0);
         yield return new WaitForSeconds(TiempoDeEsperaEvento[1]);
