@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemyRoom : RoomManager
 {
+    [SerializeField] private GameObject _stairs;
+
     private List<EnemySpawnPoint> _enemySpawnPoints;
 
     private int _enemyCount;
@@ -20,6 +22,7 @@ public class EnemyRoom : RoomManager
         }
         _enemyCount = _enemySpawnPoints.Count;
 
+        _stairs.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -58,7 +61,15 @@ public class EnemyRoom : RoomManager
     public void OnEnemyDie(Enemy enemy)
     {
         _enemyCount --;
-        if(_enemyCount == 0) OpenDoors();
+        if(_enemyCount == 0) RoomFinished();
+    }
+
+    private void RoomFinished()
+    {
+        OpenDoors();
+        if(!_stairs) return;
+
+        _stairs.SetActive(true);
     }
 
 }
