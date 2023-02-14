@@ -36,6 +36,7 @@ public class InputSystem : MonoBehaviour
 
     void Update()
     {
+        
         foreach (char c in Input.inputString)
         {
             if (c == '\b') // Backspace
@@ -108,6 +109,12 @@ public class InputSystem : MonoBehaviour
 
     void LeerInput()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && _animacionEnCurso == true)
+        {
+            Personaje.GetComponent<JugarAnimacion>().StartLoading();
+
+        }
+
         if (_inputText == "config" || _inputText == "Config")
         {
             if (_menuIndice == 0)

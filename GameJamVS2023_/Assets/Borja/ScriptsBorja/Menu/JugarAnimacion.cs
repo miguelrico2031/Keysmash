@@ -24,7 +24,10 @@ public class JugarAnimacion : MonoBehaviour
 
     public float[] TiempoDeEsperaEvento;
 
-    
+    public string SceneToLoadName;
+    public GameObject LoadingScreen;
+    public TextMeshProUGUI LoadingProgressText;
+
     public float VignetasVel;
     public Image Vigneta1;
     public TextMeshProUGUI Vigneta1Text;
@@ -74,6 +77,8 @@ public class JugarAnimacion : MonoBehaviour
 
     private void Update()
     {
+        
+
         if (_bajarVolumen)
         {
             Camara.GetComponent<AudioSource>().volume -= VelocidadVolumen * Time.deltaTime;
@@ -202,7 +207,7 @@ public class JugarAnimacion : MonoBehaviour
             Vigneta2Text.color = new Color(0, 0, 0, 0);
             if (Vigneta3Text.color.a == 1)
             {
-                if (!_vignetasCoroutine) { StartCoroutine(Vignetas(Vigneta3Time)); }
+                if (!_vignetasCoroutine) { StartCoroutine(Vignetas(Vigneta3Time / 1.5f)); }
             }
         }
         else if (_final == 9)
@@ -217,9 +222,25 @@ public class JugarAnimacion : MonoBehaviour
         else if (_final == 10)
         {
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StartLoading();
         }
     }
+
+    public void StartLoading()
+    {
+        StartCoroutine(LoadSceneAsync(SceneToLoadName));
+    }
+
+    IEnumerator LoadSceneAsync(string sceneName)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        LoadingScreen.SetActive(true);
+        while(!operation.isDone)
+        {
+            yield return null;
+        }
+    }
+
     IEnumerator Vignetas(float time)
     {
         if (_vignetasCoroutine) { yield break; }

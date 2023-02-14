@@ -11,10 +11,6 @@ public class Interfaz : MonoBehaviour
     public GameObject[] Lives;
     public GameObject[] LivesPauseMenu;
 
-    bool _fading;
-    public Image FadeImage;
-    public float FadeSpeed;
-
     GameObject KeyBoardBackground;
     GameObject KeyShowCaseBackground;
     GameObject InfoPanelBackground;
@@ -37,7 +33,6 @@ public class Interfaz : MonoBehaviour
         ChangeLives(0);
         ShowKeysAtStart();
         _stats.HealthChange.AddListener(ChangeLives);
-        _fading = true;
         Cursor.visible = false;
     }
     private void Update()
@@ -51,16 +46,7 @@ public class Interfaz : MonoBehaviour
             {
                 PauseMenu(1);
             }
-        }
-        
-        if (_fading)
-        {
-            FadeImage.color = new Color(0, 0, 0, Mathf.MoveTowards(FadeImage.color.a, 0, FadeSpeed * Time.deltaTime));
-            if (FadeImage.color.a == 0)
-            {
-                _fading = false;
-            }
-        }    
+        }   
     }
 
     void OnCooldownStart(Power power)
