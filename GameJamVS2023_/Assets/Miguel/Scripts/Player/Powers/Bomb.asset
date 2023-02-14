@@ -18,7 +18,7 @@ MonoBehaviour:
   CoolDown: 0
   CoolDownOver: 1
   BlockPowers: 0
-  Key: 
+  Key: i
   Description: 
   UsePower:
     m_PersistentCalls:
@@ -26,6 +26,6 @@ MonoBehaviour:
   PowerAvailable:
     m_PersistentCalls:
       m_Calls: []
-  _keyBombPrefab: {fileID: 0}
-  _damage: 0
-  _bombActivationDuration: 0
+  _keyBombPrefab: {fileID: 2936075234321303763, guid: 34b2972a4410fed468622a4b7b55141c, type: 3}
+  _damage: 1
+  _bombActivationDuration: 1
