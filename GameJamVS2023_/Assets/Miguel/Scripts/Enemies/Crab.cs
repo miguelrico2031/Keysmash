@@ -17,6 +17,8 @@ public class Crab : Enemy
 
     private CrabState _state;
 
+    private Vector2 _directionToPlayer;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -43,11 +45,16 @@ public class Crab : Enemy
 
     void FixedUpdate()
     {
+        // if(Alive && State == CrabState.Idle)
+        // {
+        //     SetAnimatorDirection();
+        //     return;
+        // }
         if(!Alive || State != CrabState.Chase || IsBlocked) return;
 
-        Vector2 direction = (_player.transform.position - transform.position).normalized;
+        _directionToPlayer = (_player.transform.position - transform.position).normalized;
 
-        _rb.velocity = direction * _speed * Time.fixedDeltaTime;
+        _rb.velocity = _directionToPlayer * _speed * Time.fixedDeltaTime;
     }
 
     void InitialAppear()
@@ -58,6 +65,7 @@ public class Crab : Enemy
         State = CrabState.Chase;
         _animator.SetBool("Moving", true);
         
+
     }
     
     public void StartAttackProcess()
@@ -65,6 +73,7 @@ public class Crab : Enemy
         State = CrabState.Change;
         _rb.velocity = Vector2.zero;
         _animator.SetTrigger("Attack");
+        SetAnimatorDirection();
     }
 
     public override void Attack()
@@ -126,7 +135,6 @@ public class Crab : Enemy
         yield return new WaitForSeconds(_idleTime);
 
         if(!Alive) yield break;
-
         State = CrabState.Change;
         _animator.SetTrigger("Hide");
     }
@@ -161,6 +169,32 @@ public class Crab : Enemy
                 _rb.isKinematic = true;
                 break;
         }
+    }
+
+    private void SetAnimatorDirection()
+    {
+        _directionToPlayer = (_player.transform.position - transform.position).normalized;
+        
+        float[] dots = new float[4];
+        dots[0] = Vector2.Dot(_directionToPlayer, new Vector2(1, 1).normalized);
+        dots[1] = Vector2.Dot(_directionToPlayer, new Vector2(-1, 1).normalized);
+        dots[2] = Vector2.Dot(_directionToPlayer, new Vector2(-1, -1).normalized);
+        dots[3] = Vector2.Dot(_directionToPlayer, new Vector2(1, -1).normalized);
+
+        float greater = -2f;
+        int direction = -1;
+
+        for (int i = 0; i < 4; i++)
+        {
+            if(dots[i] > greater)
+            {
+                greater = dots[i];
+                direction = i;
+            }
+        }
+
+        _animator.SetInteger("Direction", direction);
+
     }
 
 }

@@ -31,11 +31,11 @@ public class ProjectilePower : Power
 
         ThrowKeyCap();
     }    
-
     public override void OnStart()
     {
         _hasKeyCap = true;
-        _keyCap = Instantiate(_keyCapPrefab, Vector3.zero, Quaternion.identity).GetComponent<KeyCap>();
+        GameObject cap = Instantiate(_keyCapPrefab, Vector3.zero, Quaternion.identity);
+        _keyCap = cap.GetComponent<KeyCap>();
         _keyCap.ProjectilePower = this;
         _keyCap.Speed = _speed;
         _keyCap.HarmlessSpeed = _harmlessSpeed;

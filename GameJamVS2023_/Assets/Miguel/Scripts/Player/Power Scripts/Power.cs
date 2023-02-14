@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public abstract class Power : ScriptableObject
 {
-    public GameObject UIPrefab, HUDPrefab;
+    public GameObject UIPrefab, HUDPrefab, InfoPrefab;
     public float CoolDown;
     [HideInInspector] public bool CoolDownOver = true;
     [HideInInspector] public bool BlockPowers = false;
