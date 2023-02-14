@@ -1,27 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class Interfaz : MonoBehaviour
 {
-    public GameObject KeyboardPauseMenu;
     public GameObject[] InterfaceRunTime;
     public GameObject[] Lives;
     public GameObject[] LivesPauseMenu;
-    public GameObject KeyBoardBackground;
-    public GameObject KeyShowCaseBackground;
 
-    Dictionary<GameObject, Power> _hUDPowers;
-    Dictionary<GameObject, Power> _uIPowers;
+    bool _fading;
+    public Image FadeImage;
+    public float FadeSpeed;
+
+    GameObject KeyBoardBackground;
+    GameObject KeyShowCaseBackground;
+    GameObject InfoPanelBackground;
+
+    Dictionary<Power, GameObject> _hUDPowers;
+    Dictionary<Power, GameObject> _uIPowers;
 
     StatsManager _stats;
     int _currentlives;
 
     private void Awake()
     {
-        _hUDPowers = new Dictionary<GameObject, Power>();
-        _uIPowers = new Dictionary<GameObject, Power>();
+        _hUDPowers = new Dictionary<Power, GameObject>();
+        _uIPowers = new Dictionary<Power, GameObject>();      
     }
     private void Start()
     {
@@ -30,6 +37,8 @@ public class Interfaz : MonoBehaviour
         ChangeLives(0);
         ShowKeysAtStart();
         _stats.HealthChange.AddListener(ChangeLives);
+        _fading = true;
+        Cursor.visible = false;
     }
     private void Update()
     {
@@ -43,45 +52,78 @@ public class Interfaz : MonoBehaviour
                 PauseMenu(1);
             }
         }
-        ShowCooldown();
+        
+        if (_fading)
+        {
+            FadeImage.color = new Color(0, 0, 0, Mathf.MoveTowards(FadeImage.color.a, 0, FadeSpeed * Time.deltaTime));
+            if (FadeImage.color.a == 0)
+            {
+                _fading = false;
+            }
+        }    
     }
 
-    void ShowCooldown()
+    void OnCooldownStart(Power power)
     {
-        foreach (var prefab in _hUDPowers)
-        {
-            if (!prefab.Value.CoolDownOver)
-            {
-                prefab.Key.transform.GetChild(0).gameObject.SetActive(false);
-                prefab.Key.transform.GetChild(1).gameObject.SetActive(true);
-            }else if (prefab.Value.CoolDownOver)
-            {
-                prefab.Key.transform.GetChild(1).gameObject.SetActive(false);
-                prefab.Key.transform.GetChild(0).gameObject.SetActive(true);
-            }
-        }
+        Debug.Log(power.name + "start");
+        var prefab = _hUDPowers[power];
+        if (!prefab) return;
+        prefab.transform.GetChild(0).gameObject.SetActive(false);
+        prefab.transform.GetChild(1).gameObject.SetActive(true);
+    }
+    void OnCooldownOver(Power power)
+    {
+        Debug.Log(power.name);
+        var prefab = _hUDPowers[power];
+        if (!prefab) return;
+        prefab.transform.GetChild(1).gameObject.SetActive(false);
+        prefab.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     void ShowKeysAtStart()
     {
+        if (!KeyBoardBackground && !KeyShowCaseBackground && !InfoPanelBackground)
+        {
+            AssignKeyParents();
+        }
         foreach (var power in _stats.Stats.Powers)
         {
             var uIprefab = Instantiate(power.UIPrefab, KeyBoardBackground.transform);
-            _uIPowers.Add(uIprefab, power);
+            _uIPowers.Add(power, uIprefab);
             var hUDprefab = Instantiate(power.HUDPrefab, KeyShowCaseBackground.transform);
-            _hUDPowers.Add(hUDprefab, power);
-        }   
+            _hUDPowers.Add(power, hUDprefab);
+            var infoprefab = Instantiate(power.InfoPrefab, InfoPanelBackground.transform);
+
+            power.UsePower.AddListener(OnCooldownStart);
+            power.PowerAvailable.AddListener(OnCooldownOver);
+
+        }
     }
-    void ShowNewKey(Power power)
+    public void ShowNewKey(Power power)
     {
+        if (!KeyBoardBackground && !KeyShowCaseBackground && !InfoPanelBackground)
+        {
+            AssignKeyParents();
+        }
         var uIprefab = Instantiate(power.UIPrefab, KeyBoardBackground.transform);
-        _uIPowers.Add(uIprefab, power);
+        _uIPowers.Add(power, uIprefab);
         var hUDprefab = Instantiate(power.HUDPrefab, KeyShowCaseBackground.transform);
-        _hUDPowers.Add(hUDprefab, power);
+        _hUDPowers.Add(power, hUDprefab);
+        var infoprefab = Instantiate(power.InfoPrefab, InfoPanelBackground.transform);
+
+        power.UsePower.AddListener(OnCooldownStart);
+        power.PowerAvailable.AddListener(OnCooldownOver);
+    }
+
+    void AssignKeyParents()
+    {
+        KeyBoardBackground = transform.Find("Panel").Find("KeyBoardBackground").gameObject;
+        KeyShowCaseBackground = transform.Find("Panel").Find("KeyShowCaseBackground").gameObject;
+        InfoPanelBackground = transform.Find("Panel").Find("InfoPanelBackground").gameObject;
     }
 
     void ChangeLives(int HealthChange)
-    {        
+    {
         _currentlives += HealthChange;
         for (int i = 0; i < Lives.Length; i++)
         {  
@@ -103,12 +145,13 @@ public class Interfaz : MonoBehaviour
         
     }
 
-    void PauseMenu(int value)
+    public void PauseMenu(int value)
     {
         if (value == 0)
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
-            KeyboardPauseMenu.SetActive(true);
+            KeyBoardBackground.SetActive(true);
             foreach (var element in InterfaceRunTime) 
             { 
                 element.SetActive(false);
@@ -116,11 +159,23 @@ public class Interfaz : MonoBehaviour
         }
         else if(value == 1)
         {
+            Cursor.visible = false;
             Time.timeScale = 1;
-            KeyboardPauseMenu.SetActive(false);
+            KeyBoardBackground.SetActive(false);
+            InfoPanelBackground.SetActive(false);
             foreach (var element in InterfaceRunTime)
             {
                 element.SetActive(true);
+            }
+        }
+        else if (value == 2)
+        {
+            Cursor.visible = true;
+            InfoPanelBackground.SetActive(true);
+            KeyBoardBackground.SetActive(false);
+            foreach (var element in InterfaceRunTime)
+            {
+                element.SetActive(false);
             }
         }
     }

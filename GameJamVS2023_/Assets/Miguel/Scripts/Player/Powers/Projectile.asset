@@ -14,10 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIPrefab: {fileID: 5637531661771441492, guid: a0245642e4017574a8722c37214f23e8, type: 3}
   HUDPrefab: {fileID: 4557146632075794253, guid: b388b2f1b40602c4390b57462ab60125, type: 3}
+  InfoPrefab: {fileID: 7033853885139972210, guid: cf65b2a88108df84ea8888c6e676e503, type: 3}
   CoolDown: 0
   CoolDownOver: 1
   BlockPowers: 0
   Key: p
+  Description: 
+  UsePower:
+    m_PersistentCalls:
+      m_Calls: []
+  PowerAvailable:
+    m_PersistentCalls:
+      m_Calls: []
   _keyCapPrefab: {fileID: 7459885029885128383, guid: d5fef4f39bdab6445a6f565362fdc952, type: 3}
   _damage: 1
   _speed: 25

@@ -13,6 +13,8 @@ public class InputSystem : MonoBehaviour
     public GameObject Personaje;
     bool _animacionEnCurso;
 
+    public float MaximoVolumen;
+
     public GameObject Mano;
     int _longAnterior;
 
@@ -28,6 +30,7 @@ public class InputSystem : MonoBehaviour
         _menuIndice = 0;
         _inputText = "";
         _barra = "";
+        Cursor.visible = false;
         StartCoroutine(BarraBaja());
     }   
 
@@ -42,12 +45,16 @@ public class InputSystem : MonoBehaviour
                     _inputText = _inputText.Substring(0, _inputText.Length - 1);
                 }
             }
-            else if (char.IsLetter(c) && _inputText.Length <= MaximoDeLetras)
+            else if (char.IsLetter(c) || char.IsNumber(c))
             {
-                if (!_animacionEnCurso)
+                if (_inputText.Length <= MaximoDeLetras)
                 {
-                    _inputText += c;
+                    if (!_animacionEnCurso)
+                    {
+                        _inputText += c;
+                    }
                 }
+                
                 
             }
         }
@@ -151,6 +158,14 @@ public class InputSystem : MonoBehaviour
                 Title.SetActive(true);
                 _menuIndice = 0;
                 Debug.Log("Atrás...");
+            }
+        }
+        else if (char.IsNumber(_inputText[0]) && _inputText.Length == 1)
+        {
+            if (_menuIndice == 1)
+            {
+                AudioListener.volume = (float.Parse(_inputText) / 9) * MaximoVolumen;
+                Debug.Log(float.Parse(_inputText));
             }
         }
         else

@@ -54,7 +54,7 @@ public class TeclearAnimacion : MonoBehaviour
                 {
                     Vector3 direccion = _objetivo.position - transform.position;
                     transform.Translate(direccion.normalized * VelocidadIda * Time.deltaTime);
-                    if (direccion.magnitude <= 0.05f)
+                    if (direccion.magnitude <= 0.1f)
                     {
                         Ida = false;
                         if (_tecladoSeMueve == 0)
@@ -68,7 +68,7 @@ public class TeclearAnimacion : MonoBehaviour
                 {
                     Vector3 dir = ManoPosInicial.position - transform.position;
                     transform.Translate(dir.normalized * VelocidadVuelta * Time.deltaTime);
-                    if (dir.magnitude <= 0.05f)
+                    if (dir.magnitude <= 0.1f)
                     {
                         _enAnimacion = false;
                     }

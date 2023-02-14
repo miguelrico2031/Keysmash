@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3258480b445d7b54e85983b307276482, type: 3}
   m_Name: Melee
   m_EditorClassIdentifier: 
-  UIPrefab: {fileID: 0}
-  HUDPrefab: {fileID: 0}
+  UIPrefab: {fileID: 8610696995356022436, guid: eafb925312078194cb886933076e2a3b, type: 3}
+  HUDPrefab: {fileID: 1935576570032376122, guid: 0f8341bb4bdfd5341837858cd54dd6d3, type: 3}
+  InfoPrefab: {fileID: 2342646896271362894, guid: 2c1756c6784191447aca323c44123237, type: 3}
   CoolDown: 0.85
   CoolDownOver: 1
   BlockPowers: 0
   Key: k
+  Description: 
+  UsePower:
+    m_PersistentCalls:
+      m_Calls: []
+  PowerAvailable:
+    m_PersistentCalls:
+      m_Calls: []
   _damage: 1
   _attackDuration: 0.75
   _acceleration: 4

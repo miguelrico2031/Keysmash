@@ -21,5 +21,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7bbccfc992be0a644ae7e16a7d5877cc, type: 2}
   - {fileID: 11400000, guid: 344e90bb95d769043bc5b68bb05782f7, type: 2}
   MaxHealth: 9
-  InvulnerabilityDuration: 0
-  Health: -3
+  InvulnerabilityDuration: 1
+  Health: 9
