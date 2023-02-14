@@ -62,6 +62,10 @@ public class Snake : Enemy
     {
         base.TakeDamage(damage);
     }
+    public override void TakeDamage(int damage, Vector2 knockbackDirection)
+    {
+        base.TakeDamage(damage);
+    }
 
     public override void Die()
     {

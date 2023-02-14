@@ -70,12 +70,21 @@ public class Slime : Enemy
         StartCoroutine(BlockMovementDuringKnockback(_knockbackDuration));
     }
 
+    public override void TakeDamage(int damage, Vector2 knockbackDirection)
+    {
+        base.TakeDamage(damage);
+        _rb.velocity = Vector2.zero;
+        _rb.AddForce(knockbackDirection * _knockbackForce, ForceMode2D.Impulse);
+        StartCoroutine(BlockMovementDuringKnockback(_knockbackDuration));
+    }
+
     private IEnumerator BlockMovementDuringKnockback(float duration)
     {
         if(IsBlocked) yield break;
         IsBlocked = true;
         yield return new WaitForSeconds(duration);
         IsBlocked = false;
+        _rb.velocity = Vector2.zero;
     }
 
     public override void Die()

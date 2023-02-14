@@ -23,6 +23,11 @@ public abstract class Enemy : MonoBehaviour
         if(_health <= 0) Die();
     }
 
+    public virtual void TakeDamage(int damage, Vector2 knockbackDirection)
+    {
+        TakeDamage(damage);
+    }
+
     public virtual void Die()
     {
         Alive = false;

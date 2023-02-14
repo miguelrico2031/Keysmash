@@ -45,11 +45,6 @@ public class Crab : Enemy
 
     void FixedUpdate()
     {
-        // if(Alive && State == CrabState.Idle)
-        // {
-        //     SetAnimatorDirection();
-        //     return;
-        // }
         if(!Alive || State != CrabState.Chase || IsBlocked) return;
 
         _directionToPlayer = (_player.transform.position - transform.position).normalized;
@@ -61,7 +56,6 @@ public class Crab : Enemy
     {
         if(State != CrabState.Mimic) return;
 
-        // _trigger.enabled = false;
         State = CrabState.Chase;
         _animator.SetBool("Moving", true);
         
@@ -92,6 +86,17 @@ public class Crab : Enemy
         _rb.velocity = Vector2.zero;
         Vector2 direction = (transform.position - _player.transform.position).normalized;
         _rb.AddForce(direction * _knockbackForce, ForceMode2D.Impulse);
+        StartCoroutine(BlockMovementDuringKnockback(_knockbackDuration));
+
+    }
+
+    public override void TakeDamage(int damage, Vector2 knockbackDirection)
+    {
+        base.TakeDamage(damage);
+
+        _rb.velocity = Vector2.zero;
+
+        _rb.AddForce(knockbackDirection * _knockbackForce, ForceMode2D.Impulse);
         StartCoroutine(BlockMovementDuringKnockback(_knockbackDuration));
 
     }
