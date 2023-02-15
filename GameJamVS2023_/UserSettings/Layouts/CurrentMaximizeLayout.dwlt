@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c68ffff
-      m_LastClickedID: -38788
-      m_ExpandedIDs: ccf8ffffe2f8ffffe6f8ffff24fbffff28fbffff2afbffff
+      m_SelectedIDs: 54820000
+      m_LastClickedID: 0
+      m_ExpandedIDs: e6b1fdff20d5fdff24d5fdffd6f4fdffecf4fdfff0f4fdff3cf7fdffccf8ffffe2f8ffffe6f8ffff24fbffff28fbffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 1103
     height: 668
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.733549, y: -2.5068984, z: -0.18484417}
+    m_Target: {x: -5.008515, y: -4.5068083, z: 0.34146187}
     speed: 2
-    m_Value: {x: -7.733549, y: -2.5068984, z: -0.18484417}
+    m_Value: {x: -5.008515, y: -4.5068083, z: 0.34146187}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.745585
+    m_Target: 6.785539
     speed: 2
-    m_Value: 12.745585
+    m_Value: 6.785539
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -705,21 +705,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Miguel/Scripts/Player
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Miguel/Scripts/Player
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Varios\GitHub\GameJamVS2023\GameJamVS2023_
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: fe830000
-    m_LastClickedID: 33790
+    scrollPos: {x: 0, y: 618}
+    m_SelectedIDs: f8830000
+    m_LastClickedID: 33784
     m_ExpandedIDs: 000000004c8300004e830000ee830000f0830000f2830000f4830000f6830000f8830000fa830000fc830000fe83000000840000028400000484000006840000088400000a8400000c8400000e8400001084000012840000148400001684000018840000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -773,10 +773,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7c68ffff
-    m_LastClickedInstanceID: -38788
+    m_SelectedInstanceIDs: 54820000
+    m_LastClickedInstanceID: 33364
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300004e830000
+    m_ExpandedInstanceIDs: c62300004e830000f0810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
