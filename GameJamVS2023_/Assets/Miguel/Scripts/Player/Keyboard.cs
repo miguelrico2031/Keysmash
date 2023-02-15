@@ -267,6 +267,12 @@ public class Keyboard : MonoBehaviour
 
             }
         }
+        else if(other.gameObject.CompareTag("Boss"))
+        {
+            int damage = AttackMode == KeyboardAttack.Melee ? _meleeAttackDamage :
+                (AttackMode == KeyboardAttack.Boomerang ? _boomerangAttackDamage : 0);
+            if(damage > 0) other.gameObject.GetComponentInParent<Boss>().TakeDamage(damage);
+        }
         else if(AttackMode == KeyboardAttack.Boomerang && other.gameObject.layer == LayerMask.NameToLayer("Walls"))
         {
             _boomerangReturning = true;

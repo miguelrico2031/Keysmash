@@ -35,6 +35,10 @@ public class KeyCap : MonoBehaviour
                 other.gameObject.GetComponent<Enemy>().TakeDamage(Damage);
                 _rb.velocity = Vector2.zero;
             }
+            else if(other.gameObject.CompareTag("Boss"))
+            {
+                other.gameObject.GetComponentInParent<Boss>().TakeDamage(Damage);
+            }
         }
         else if (other.gameObject.CompareTag("Player"))
         {

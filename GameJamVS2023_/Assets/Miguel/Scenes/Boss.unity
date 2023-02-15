@@ -681,6 +681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa26dd1f968391b44a61ed5e210967cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  State: 0
+  MaxHealth: 0
+  Health: 0
   _minSlashTime: 3
   _maxSlashTime: 5
   SlashDamage: 1
@@ -692,7 +695,7 @@ MonoBehaviour:
   ThrustKnockbackDuration: 0.3
   _thrustDelay: 1.5
   FireballDamage: 1
-  FireballRounds: 3
+  FireballRounds: 1
   FireballDelay: 1
   FireballRoundDelay: 2
   FireballSpeed: 130
@@ -1285,9 +1288,10 @@ GameObject:
   - component: {fileID: 2081583590}
   - component: {fileID: 2081583589}
   - component: {fileID: 2081583588}
+  - component: {fileID: 2081583591}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1300,7 +1304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081583582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.4, z: 0}
+  m_LocalPosition: {x: 0, y: 4.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1419,6 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _openCollider: {fileID: 2081583589}
   _closeCollider: {fileID: 2081583590}
+  _vulCollider: {fileID: 2081583591}
   _fireball: {fileID: 6859071824786317219, guid: 301720d6aa50bf340b76ff1675029f0f, type: 3}
 --- !u!60 &2081583589
 PolygonCollider2D:
@@ -1427,7 +1432,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081583582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1550,6 +1555,45 @@ PolygonCollider2D:
       - {x: -0.56060606, y: -2.0909092}
       - {x: -0.2878788, y: -1.7272727}
       - {x: -0.16666667, y: -1.5151515}
+--- !u!60 &2081583591
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081583582}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.29, y: -1.88}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8484848, y: 5.287879}
+    newSize: {x: 3.8484848, y: 5.287879}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.3360573, y: 4.508602}
+      - {x: 0.2827605, y: 4.15862}
+      - {x: -0.07065821, y: 3.4650884}
+      - {x: -0.2307474, y: 2.6325948}
+      - {x: -0.07659799, y: 2.3278127}
+      - {x: 0.107210875, y: 2.531067}
+      - {x: 1.0485616, y: 2.048532}
+      - {x: 1.2929678, y: 2.1719713}
+      - {x: 1.6180001, y: 2.0080223}
+      - {x: 2.3958056, y: 2.5442638}
+      - {x: 2.6262124, y: 2.2606392}
+      - {x: 2.7990258, y: 2.5332355}
+      - {x: 2.81842, y: 3.4198945}
+      - {x: 2.3335853, y: 4.096449}
 --- !u!4 &128352448995092799
 Transform:
   m_ObjectHideFlags: 0

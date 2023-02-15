@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+   [HideInInspector] public BossState State;
+    public int MaxHealth, Health;
+
     [SerializeField] private float  _minSlashTime, _maxSlashTime;
     public int SlashDamage, SlashAttackNumber;
     public float SlashKnockback, SlashKnockbackDuration;
@@ -19,7 +22,7 @@ public class Boss : MonoBehaviour
     private List<Slash> _slashes;
     [SerializeField] private Thrust _leftThrust, _rightThrust;
     [SerializeField] private BossHead _head;
-    private BossState _state;
+    
 
     public StatsManager PlayerStats;
 
@@ -32,6 +35,7 @@ public class Boss : MonoBehaviour
         {
             if(transform.GetChild(i).CompareTag("Slash")) _slashes.Add(transform.GetChild(i).GetComponent<Slash>());
         }
+        Health = MaxHealth;
     }
 
     void Start()
@@ -41,7 +45,7 @@ public class Boss : MonoBehaviour
 
     void Slash()
     {
-        _state = BossState.Slash;
+        State = BossState.Slash;
         StartCoroutine(SlashTime());
     }
 
@@ -62,7 +66,7 @@ public class Boss : MonoBehaviour
 
     void Thrust()
     {
-        _state = BossState.Thrust;
+        State = BossState.Thrust;
         StartCoroutine(ThrustTime());
     }
 
@@ -95,7 +99,7 @@ public class Boss : MonoBehaviour
 
     void BulletHell()
     {
-        _state = BossState.BulletHell;
+        State = BossState.BulletHell;
         _head.StartBulletHell();
         
     }
@@ -104,6 +108,19 @@ public class Boss : MonoBehaviour
     {
         _rightThrust.EndThrustAttack();
         _leftThrust.EndThrustAttack();
+        Vulnerability();
+    }
+
+    void Vulnerability()
+    {
+        State = BossState.Vulnerable;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if(State != BossState.Vulnerable) return;
+
+        Debug.Log("auch");
     }
 
 }

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BossHead : MonoBehaviour
 {
-    [SerializeField] private PolygonCollider2D _openCollider, _closeCollider;
+    [SerializeField] private PolygonCollider2D _openCollider, _closeCollider, _vulCollider;
     [SerializeField] private FireBall _fireball;
 
     private GameObject _player;
+    private Animator _animator;
 
     List<FireBall> _fireballs;
 
@@ -21,8 +22,10 @@ public class BossHead : MonoBehaviour
         _fireballs = new List<FireBall>();
         _openCollider.enabled = false;
         _closeCollider.enabled = true;
+        _vulCollider.enabled = false;
 
         _player = GameObject.FindGameObjectWithTag("Player");
+        _animator = GetComponent<Animator>();
 
         _boss = GetComponentInParent<Boss>();
 
@@ -30,10 +33,12 @@ public class BossHead : MonoBehaviour
 
     public void StartBulletHell()
     {
+        _animator.SetTrigger("BH");
         fireballNumber = _boss.FireballRounds * transform.childCount;
         _fireballs = new List<FireBall>();
         _openCollider.enabled = true;
         _closeCollider.enabled = false;
+        _vulCollider.enabled = false;
         StartCoroutine(BulletHell());
     }
 
@@ -47,6 +52,7 @@ public class BossHead : MonoBehaviour
                 FireBall fireballInstance = Instantiate(_fireball, transform.GetChild(i).position,
                 Quaternion.AngleAxis(Mathf.Atan2(_directionToPlayer.y, _directionToPlayer.x) * Mathf.Rad2Deg, Vector3.forward));
                 _fireballs.Add(fireballInstance);
+                fireballInstance.OnDestroy.AddListener(OnFireballDestroy);
 
                 fireballInstance.Damage = _boss.FireballDamage;
                 fireballInstance.Speed = _boss.FireballSpeed;
@@ -61,31 +67,23 @@ public class BossHead : MonoBehaviour
 
     }
 
-    // void FixedUpdate()
-    // {
-    //     bool phaseOver = true;
-    //     foreach (var fireball in _fireballs)
-    //     {
-    //         if(fireball)
-    //         {
-    //             phaseOver = false;
-    //             break;
-    //         }
-    //     }
-        
-    //     if(phaseOver) _boss.OnBulletHellOver();
-        
-    // }
-
     public void OnFireballDestroy()
     {
         fireballNumber --;
-        if(fireballNumber <= 0f) _boss.OnBulletHellOver();
+        if(fireballNumber <= 0f)
+        {
+            _boss.OnBulletHellOver();
+            _animator.SetTrigger("Vulnerable");
+            _vulCollider.enabled = true;
+            _openCollider.enabled = false;
+            _closeCollider.enabled = false;
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && _boss.State != BossState.Vulnerable)
         {
             _directionToPlayer = (_player.transform.position - transform.position).normalized;
             other.gameObject.GetComponent<StatsManager>().

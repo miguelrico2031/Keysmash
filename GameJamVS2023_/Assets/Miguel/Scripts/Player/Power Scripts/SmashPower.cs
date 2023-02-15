@@ -50,5 +50,9 @@ public class SmashPower : Power
         {
             other.gameObject.GetComponent<Enemy>().TakeDamage(_damage);
         }
+        else if(other.CompareTag("Boss"))
+        {
+            other.gameObject.GetComponentInParent<Boss>().TakeDamage(_damage);
+        }
     }
 }
