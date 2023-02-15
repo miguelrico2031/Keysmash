@@ -22,6 +22,7 @@ public class Lizard : Enemy
 
     void Start()
     {
+        _health = _maxHealth;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _collider = GetComponent<CircleCollider2D>();
         _animator = GetComponent<Animator>();
@@ -103,6 +104,16 @@ public class Lizard : Enemy
         Vector2 newPos = new Vector2(Random.Range(_roomBounds.min.x, _roomBounds.max.x), Random.Range(_roomBounds.min.y, _roomBounds.max.y));
  
         transform.position = newPos;
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
+    }
+
+    public override void TakeDamage(int damage, Vector2 knockbackDirection)
+    {
+        base.TakeDamage(damage);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3979508382331819687}
   - component: {fileID: 3979508382331819684}
   - component: {fileID: 1211769766}
+  - component: {fileID: 3125492563550559540}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Enemy
@@ -124,7 +125,7 @@ MonoBehaviour:
   IsBlocked: 0
   _maxHealth: 4
   _attackDamage: 1
-  _explosion: {fileID: 0}
+  _explosion: {fileID: 4342268703899673305, guid: 59dcc67b2c0689e4083b722d0e43381f, type: 3}
   OnDie:
     m_PersistentCalls:
       m_Calls: []
@@ -172,3 +173,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &3125492563550559540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979508382331819736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b81e9ef41fb6149abbf987693bd61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 3979508382331819738}
