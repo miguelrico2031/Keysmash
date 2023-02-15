@@ -92,13 +92,31 @@ public class BossHead : MonoBehaviour
         _animator.SetBool("Idle", true);
         _vulCollider.enabled = false;
         _openCollider.enabled = false;
+
+        _closeCollider.isTrigger = true;
         _closeCollider.enabled = true;
+         Invoke("ToggleOffTrigger", 1.5f);
+       
         Invoke("ToggleOffIdle", 0.3f);
     }
 
     void ToggleOffIdle()
     {
         _animator.SetBool("Idle", false);
+        
+    }
+
+    void ToggleOffTrigger()
+    {
+        _closeCollider.isTrigger = false;
+    }
+
+    public void DieAnimation()
+    {
+        _animator.SetTrigger("Die");
+        _vulCollider.enabled = false;
+        _openCollider.enabled = false;
+        _closeCollider.enabled = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -110,6 +128,15 @@ public class BossHead : MonoBehaviour
                 TakeDamage(_boss.FireballDamage, _directionToPlayer * _boss.FireballKnockbackForce, _boss.FireballKnockbackDuration);
             
             
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            _directionToPlayer = (_player.transform.position - transform.position).normalized;
+            other.gameObject.GetComponent<StatsManager>().
+            TakeDamage(_boss.FireballDamage, _directionToPlayer * _boss.FireballKnockbackForce, _boss.FireballKnockbackDuration);
         }
     }
 }

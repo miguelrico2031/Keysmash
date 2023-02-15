@@ -120,10 +120,10 @@ TextureImporter:
       name: boss_TA_2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1791
+        x: 3
+        y: 1789.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: boss_TA_2_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1547
+        x: 3
+        y: 1545.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: boss_TA_2_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1303
+        x: 3
+        y: 1301.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: boss_TA_2_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1059
+        x: 3
+        y: 1057.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: boss_TA_2_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 815
+        x: 3
+        y: 813.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: boss_TA_2_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 571
+        x: 3
+        y: 569.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +246,10 @@ TextureImporter:
       name: boss_TA_2_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 327
+        x: 3
+        y: 325.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: boss_TA_2_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 83
+        x: 3
+        y: 81.875
         width: 261
-        height: 244
+        height: 244.125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

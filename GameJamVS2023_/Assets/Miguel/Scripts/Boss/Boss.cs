@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-   [HideInInspector] public BossState State;
+   public BossState State;
     public int MaxHealth, Health;
 
     [SerializeField] private float  _minSlashTime, _maxSlashTime;
@@ -19,12 +19,14 @@ public class Boss : MonoBehaviour
     public int FireballDamage, FireballRounds;
     public float FireballDelay, FireballRoundDelay,FireballSpeed, FireballRotationSpeed, FireballKnockbackForce, FireballKnockbackDuration;
 
-    public float VulnerabilityDuration;
+    public float VulnerabilityDuration, DeadDuration, StartDelay;
 
     private List<Slash> _slashes;
     [SerializeField] private Thrust _leftThrust, _rightThrust;
     [SerializeField] private BossHead _head;
     private DamageAnimation _damageAnim;
+
+    private bool _hasPlayerAttacked = false;
     
 
     public StatsManager PlayerStats;
@@ -44,7 +46,7 @@ public class Boss : MonoBehaviour
 
     void Start()
     {
-        Slash();
+        Invoke("Slash", StartDelay);
     }
 
     void Slash()
@@ -119,13 +121,18 @@ public class Boss : MonoBehaviour
     void Vulnerability()
     {
         State = BossState.Vulnerable;
-        StartCoroutine(VulnerabilityTime());
+        
     }
 
     IEnumerator VulnerabilityTime()
     {
         yield return new WaitForSeconds(VulnerabilityDuration);
-        Slash();
+        if(State != BossState.Dead)
+        {
+            Slash();
+            _hasPlayerAttacked = false;
+        }
+        
     }
 
     public void TakeDamage(int damage)
@@ -133,16 +140,30 @@ public class Boss : MonoBehaviour
         if(State != BossState.Vulnerable) return;
 
         Health --;
+
+        if(!_hasPlayerAttacked)
+        {
+            _hasPlayerAttacked = true;
+            StartCoroutine(VulnerabilityTime());
+        }
+
         _damageAnim.StartAnimation();
         if(Health <= 0)
         {
-            //Die
+            _head.DieAnimation();
+            State = BossState.Dead;
+            Invoke("BossDead", DeadDuration);
         }
+    }
+
+    public void BossDead()
+    {
+        Debug.Log("Muelto");
     }
 
 }
 
 public enum BossState
 {
-    Slash, Thrust, BulletHell, Vulnerable
+    Slash, Thrust, BulletHell, Vulnerable, Dead
 }
