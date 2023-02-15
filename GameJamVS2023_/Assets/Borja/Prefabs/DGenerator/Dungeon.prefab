@@ -48,7 +48,7 @@ MonoBehaviour:
   version: 3
   EnableDiagnostics: 0
   FixedLevelGraphConfig:
-    LevelGraph: {fileID: 11400000, guid: 1a9a760adebfa794581ad960ef6962ac, type: 2}
+    LevelGraph: {fileID: 11400000, guid: 029138852beb0f547bd1a841776958e9, type: 2}
     UseCorridors: 1
   GeneratorConfig:
     RootGameObject: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
     TilemapLayersStructure: 0
     TilemapLayersHandler: {fileID: 0}
     TilemapLayersExample: {fileID: 0}
-    TilemapMaterial: {fileID: 0}
+    TilemapMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     CopyTilesToSharedTilemaps: 1
     CenterGrid: 1
     DisableRoomTemplatesRenderers: 1

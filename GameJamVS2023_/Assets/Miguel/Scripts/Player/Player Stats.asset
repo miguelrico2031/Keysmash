@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Player Stats
   m_EditorClassIdentifier: 
   StartingLives: 3
-  Powers: []
+  Powers:
+  - {fileID: 11400000, guid: 344e90bb95d769043bc5b68bb05782f7, type: 2}
   MaxHealth: 9
   InvulnerabilityDuration: 1
-  Health: 3
+  Health: 0
