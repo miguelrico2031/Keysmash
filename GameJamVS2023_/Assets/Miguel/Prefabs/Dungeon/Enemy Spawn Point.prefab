@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4326dc0514aa94a840d9366708d596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnEffect: {fileID: 2046974515386059996, guid: 6c2abdb476afd4e4a8b00c6544f25447, type: 3}
   EnemyToSpawn: {fileID: 0}
   SpawnDelay: 0
+  IsAtStart: 0
+  IsSpawned: 0

@@ -59,10 +59,17 @@ public class EnemyRoom : RoomManager
 
     private IEnumerator SpawnEnemy(EnemySpawnPoint spawnPoint)
     {
-        yield return new WaitForSeconds(spawnPoint.SpawnDelay);
-        Enemy enemy = Instantiate(spawnPoint.EnemyToSpawn, spawnPoint.transform.position, Quaternion.identity);
-        enemy.OnDie.AddListener(OnEnemyDie);
+        yield return new WaitForSeconds(Random.Range(spawnPoint.SpawnDelay -1f, spawnPoint.SpawnDelay + 1f));
+        EnemySpawnEffect effect = Instantiate(spawnPoint.SpawnEffect, spawnPoint.transform.position, Quaternion.identity);
+        effect.Room = this;
+        effect.Enemy = spawnPoint.EnemyToSpawn;
         spawnPoint.IsSpawned = true;
+    }
+
+    public void OnEnemySpawn(Enemy enemy)
+    {
+        enemy.OnDie.AddListener(OnEnemyDie);
+        
     }
 
     public void OnEnemyDie(Enemy enemy)
