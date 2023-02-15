@@ -37,6 +37,7 @@ public class EnemyRoom : RoomManager
             {
                 CloseDoors();
                 SpawnEnemies();
+                StartCoroutine(OpenRoomAfterTime());
             }  
         }
         // else if(other.gameObject.CompareTag("Enemy"))
@@ -55,6 +56,12 @@ public class EnemyRoom : RoomManager
                 StartCoroutine(SpawnEnemy(spawnPoint));
             }
         }
+    }
+
+    IEnumerator OpenRoomAfterTime()
+    {
+        yield return new WaitForSeconds(30f);
+        if(!_roomCompleted) OpenDoors();
     }
 
     private IEnumerator SpawnEnemy(EnemySpawnPoint spawnPoint)
