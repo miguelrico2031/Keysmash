@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6202bde9415723b4a809567970b15c59
+guid: 477863b8e5b9fce4db2da7a519741ec3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 33
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_tentacle_hide_0
+      name: boss_straight_atk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1464.8572
-        width: 261
-        height: 244.14285
+        y: 468
+        width: 299
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d838255b3b3935843a784e2a06405561
-      internalID: -1194851619
+      spriteID: 05b7e81fe35507e4db3416fdc380ae13
+      internalID: -1257080237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_1
+      name: boss_straight_atk_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1220.8572
-        width: 261
-        height: 244.14285
+        x: 299
+        y: 468
+        width: 299
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ef97f48797205d41b9e6ed1741cef8d
-      internalID: 1996100739
+      spriteID: b84d6355c1b5b9b408f1670fce7f3bae
+      internalID: -659049625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_2
+      name: boss_straight_atk_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 976.8572
-        width: 261
-        height: 244.14285
+        x: 598
+        y: 468
+        width: 299
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84ffba91146f6a444ae9dc05b60e88f4
-      internalID: 131050710
+      spriteID: 27c1892d15da3044daa63b893753f5a5
+      internalID: -1371904199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_3
+      name: boss_straight_atk_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 732.8572
-        width: 261
-        height: 244.14285
+        x: 897
+        y: 468
+        width: 299
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19a8ac1f0c61a044b98a801fc2a55049
-      internalID: 1020671446
+      spriteID: 531de278b558cdc479bce0929d79921d
+      internalID: 900363048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_4
+      name: boss_straight_atk_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 488.85715
-        width: 261
-        height: 244.14285
+        x: 1196
+        y: 468
+        width: 299
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f995ed20148eaab4cbf88851b25ecea5
-      internalID: -1062478795
+      spriteID: eed7264c4e2dec940a5eb21e521a9c73
+      internalID: -913044025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_5
+      name: boss_straight_atk_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 244.85715
-        width: 261
-        height: 244.14285
+        y: 0
+        width: 299
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62beeb07860e54240b7bd888009a3da5
-      internalID: 980808550
+      spriteID: 272baf8495e08114a92badb9c6040f65
+      internalID: -1539499419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_6
+      name: boss_straight_atk_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0.8571472
-        width: 261
-        height: 244.14285
+        x: 299
+        y: 0
+        width: 299
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,8 +257,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce085cfcc059f740a659872ebbc59c1
-      internalID: -1482219675
+      spriteID: dfa802a0b30e5134ca0d77cbb6a19f73
+      internalID: 1265369141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_straight_atk_7
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 0
+        width: 299
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69966d24647db5489ab5bc0472f5057
+      internalID: 1938764766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_straight_atk_8
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 0
+        width: 299
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dbb1007f2188d47b47f2f7b2409373
+      internalID: -940771851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_straight_atk_9
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 0
+        width: 299
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3175fd67729ba4bb1d729ad9585df4
+      internalID: 682035030
       vertices: []
       indices: 
       edges: []
@@ -274,13 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss_tentacle_hide_5: 980808550
-      boss_tentacle_hide_4: -1062478795
-      boss_tentacle_hide_6: -1482219675
-      boss_tentacle_hide_1: 1996100739
-      boss_tentacle_hide_0: -1194851619
-      boss_tentacle_hide_3: 1020671446
-      boss_tentacle_hide_2: 131050710
+      boss_straight_atk_0: -1257080237
+      boss_straight_atk_3: 900363048
+      boss_straight_atk_1: -659049625
+      boss_straight_atk_2: -1371904199
+      boss_straight_atk_7: 1938764766
+      boss_straight_atk_9: 682035030
+      boss_straight_atk_4: -913044025
+      boss_straight_atk_5: -1539499419
+      boss_straight_atk_6: 1265369141
+      boss_straight_atk_8: -940771851
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -16,6 +16,7 @@ TagManager:
   - Hand
   - Head
   - EnemySpawnPoint
+  - Slash
   layers:
   - Default
   - TransparentFX

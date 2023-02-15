@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6202bde9415723b4a809567970b15c59
+guid: d43eb2d7cc52dd644868375ecde8da59
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_tentacle_hide_0
+      name: boss_die_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1464.8572
-        width: 261
-        height: 244.14285
+        y: 696.8
+        width: 127
+        height: 174.2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d838255b3b3935843a784e2a06405561
-      internalID: -1194851619
+      spriteID: 1afe6e0f199e38442bcb3d778ba3dbff
+      internalID: -134165986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_1
+      name: boss_die_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 1220.8572
-        width: 261
-        height: 244.14285
+        y: 522.8
+        width: 127
+        height: 174.2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ef97f48797205d41b9e6ed1741cef8d
-      internalID: 1996100739
+      spriteID: c840015cdc633c94dbffda1e14984df9
+      internalID: -1416393375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_2
+      name: boss_die_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 976.8572
-        width: 261
-        height: 244.14285
+        y: 348.8
+        width: 127
+        height: 174.2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84ffba91146f6a444ae9dc05b60e88f4
-      internalID: 131050710
+      spriteID: d0310bd7b538af74f997f643833a2d26
+      internalID: -403483671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_3
+      name: boss_die_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 732.8572
-        width: 261
-        height: 244.14285
+        y: 174.8
+        width: 127
+        height: 174.2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19a8ac1f0c61a044b98a801fc2a55049
-      internalID: 1020671446
+      spriteID: 11cad22efd9721e459e2d09ce681f799
+      internalID: 845949229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_4
+      name: boss_die_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 488.85715
-        width: 261
-        height: 244.14285
+        y: 0.80000305
+        width: 127
+        height: 174.2
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,50 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f995ed20148eaab4cbf88851b25ecea5
-      internalID: -1062478795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_tentacle_hide_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 244.85715
-        width: 261
-        height: 244.14285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62beeb07860e54240b7bd888009a3da5
-      internalID: 980808550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_tentacle_hide_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0.8571472
-        width: 261
-        height: 244.14285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bce085cfcc059f740a659872ebbc59c1
-      internalID: -1482219675
+      spriteID: a2c74aac34abee845a6e116da2d55f18
+      internalID: 81742850
       vertices: []
       indices: 
       edges: []
@@ -274,13 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss_tentacle_hide_5: 980808550
-      boss_tentacle_hide_4: -1062478795
-      boss_tentacle_hide_6: -1482219675
-      boss_tentacle_hide_1: 1996100739
-      boss_tentacle_hide_0: -1194851619
-      boss_tentacle_hide_3: 1020671446
-      boss_tentacle_hide_2: 131050710
+      boss_die_0: -134165986
+      boss_die_1: -1416393375
+      boss_die_2: -403483671
+      boss_die_4: 81742850
+      boss_die_3: 845949229
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

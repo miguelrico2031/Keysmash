@@ -17,7 +17,7 @@ public class Lizard : Enemy
     private Animator _animator;
     private Vector2 _directionToPlayer, _lizardDirection;
 
-    private bool _hidden = false, _attacking = false;
+    private bool _hidden = false;
     private bool atStart = true;
 
     void Start()

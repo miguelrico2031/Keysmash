@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 35
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +115,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss_tentacle_atk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3660.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971d1c0719cf8f04492f39bd8f30aa23
+      internalID: 150481800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3416.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9c07fe07a2ffb4f842f84e77460d57
+      internalID: 277882410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3172.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b375cef1d7f9e9b4cbbfdd352a206311
+      internalID: 1006721740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2928.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d9d94491879cf44b87b7b0fbe2e9d0
+      internalID: -381747187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2684.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e93e339d9b27de4c916fd4050f09039
+      internalID: 1348355436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2440.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f8e8918ed0f0a478177046007ca5ef
+      internalID: -1297998354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2196.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849a60bd7c398d34ba5b3b5f84795894
+      internalID: 968088480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1952.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708d378cfdacbdc4ca9b65b2f5592b9a
+      internalID: -1572699161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1708.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fc2535ed44f024aa7535d4e4a78b47
+      internalID: 144468167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1464.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd83d4cae17d0d449e699a4b7447d52
+      internalID: -337462220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1220.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c1ed455bea621449b9dccf3ca0662a
+      internalID: 1741660400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 976.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24359bdddcfbff841a2ed29372436489
+      internalID: 468308005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 732.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68563640d7ab1a6468ed99163450baa6
+      internalID: 1474660894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873983efff9b8444ca5fb17002e79994
+      internalID: -1792600309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 244.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03745ce557c0d3e49b00bcd490c81615
+      internalID: 1372678673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_tentacle_atk_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.9375
+        width: 261
+        height: 244.0625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733f248729672ee46acfe862f6703a63
+      internalID: 413842216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +462,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boss_tentacle_atk_13: -1792600309
+      boss_tentacle_atk_0: 150481800
+      boss_tentacle_atk_7: -1572699161
+      boss_tentacle_atk_5: -1297998354
+      boss_tentacle_atk_11: 468308005
+      boss_tentacle_atk_15: 413842216
+      boss_tentacle_atk_2: 1006721740
+      boss_tentacle_atk_1: 277882410
+      boss_tentacle_atk_8: 144468167
+      boss_tentacle_atk_12: 1474660894
+      boss_tentacle_atk_9: -337462220
+      boss_tentacle_atk_3: -381747187
+      boss_tentacle_atk_4: 1348355436
+      boss_tentacle_atk_10: 1741660400
+      boss_tentacle_atk_6: 968088480
+      boss_tentacle_atk_14: 1372678673
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

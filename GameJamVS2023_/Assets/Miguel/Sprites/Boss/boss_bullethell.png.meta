@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6202bde9415723b4a809567970b15c59
+guid: 45020aec0994c144b87eaf0a78c4371b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_tentacle_hide_0
+      name: boss_bullethell_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1464.8572
-        width: 261
-        height: 244.14285
+        y: 174.5
+        width: 127
+        height: 174.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d838255b3b3935843a784e2a06405561
-      internalID: -1194851619
+      spriteID: c95a0f3fc9c96c645a7f633eeb178767
+      internalID: -508095185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_tentacle_hide_1
+      name: boss_bullethell_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 1220.8572
-        width: 261
-        height: 244.14285
+        y: 0.5
+        width: 127
+        height: 174.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,113 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ef97f48797205d41b9e6ed1741cef8d
-      internalID: 1996100739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_tentacle_hide_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 976.8572
-        width: 261
-        height: 244.14285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84ffba91146f6a444ae9dc05b60e88f4
-      internalID: 131050710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_tentacle_hide_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 732.8572
-        width: 261
-        height: 244.14285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19a8ac1f0c61a044b98a801fc2a55049
-      internalID: 1020671446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_tentacle_hide_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 488.85715
-        width: 261
-        height: 244.14285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f995ed20148eaab4cbf88851b25ecea5
-      internalID: -1062478795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_tentacle_hide_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 244.85715
-        width: 261
-        height: 244.14285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62beeb07860e54240b7bd888009a3da5
-      internalID: 980808550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_tentacle_hide_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0.8571472
-        width: 261
-        height: 244.14285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bce085cfcc059f740a659872ebbc59c1
-      internalID: -1482219675
+      spriteID: 14b0b3eaec3d4d345859c656c745a546
+      internalID: -95885882
       vertices: []
       indices: 
       edges: []
@@ -274,13 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss_tentacle_hide_5: 980808550
-      boss_tentacle_hide_4: -1062478795
-      boss_tentacle_hide_6: -1482219675
-      boss_tentacle_hide_1: 1996100739
-      boss_tentacle_hide_0: -1194851619
-      boss_tentacle_hide_3: 1020671446
-      boss_tentacle_hide_2: 131050710
+      boss_bullethell_0: -508095185
+      boss_bullethell_1: -95885882
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
