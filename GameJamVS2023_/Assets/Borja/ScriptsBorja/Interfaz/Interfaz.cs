@@ -72,6 +72,7 @@ public class Interfaz : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Return) && _confirm)
             {
+                Time.timeScale = 1;
                 SceneManager.LoadScene("MainMenu");
             }
         }

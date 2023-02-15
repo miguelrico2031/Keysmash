@@ -22,6 +22,7 @@ public class DashPower : Power
 
         _player = player;
         _rb = _player.GetComponent<Rigidbody2D>();
+        Debug.Log(_rb);
         _playerMovement = player.GetComponent<PlayerMovement>();
         
         _direction = _playerMovement.Direction;
@@ -39,6 +40,7 @@ public class DashPower : Power
     public override void OnStart()
     {
         CoolDownOver = true;
+        Dashing = false;
     }
 
     public override void OnUpdate()

@@ -9,6 +9,8 @@ public class EnemyRoom : RoomManager
 
     private List<EnemySpawnPoint> _enemySpawnPoints;
 
+    bool _roomCompleted = false;
+
     private int _enemyCount;
     public override void OnDungeonGenerated()
     {
@@ -29,12 +31,13 @@ public class EnemyRoom : RoomManager
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("aaaaaaa");
         if (other.gameObject.CompareTag("Player"))
         {
-
-            CloseDoors();
-            SpawnEnemies();
+            if (!_roomCompleted)
+            {
+                CloseDoors();
+                SpawnEnemies();
+            }  
         }
         // else if(other.gameObject.CompareTag("Enemy"))
         // {
@@ -71,8 +74,8 @@ public class EnemyRoom : RoomManager
     private void RoomFinished()
     {
         OpenDoors();
-        if(!_stairs) return;
-
+        _roomCompleted = true;
+        if (!_stairs) return;
         _stairs.SetActive(true);
     }
 

@@ -2928,6 +2928,7 @@ GameObject:
   - component: {fileID: 7294298332006774454}
   - component: {fileID: 5569344795222662257}
   - component: {fileID: 223626718238761031}
+  - component: {fileID: -5165554380306546437}
   m_Layer: 0
   m_Name: RoomLevel11
   m_TagString: Room
@@ -3039,6 +3040,19 @@ PolygonCollider2D:
       - {x: -9.006545, y: -0.92329884}
       - {x: -8.9356985, y: -5.037444}
       - {x: 3.9985716, y: -5.024134}
+--- !u!114 &-5165554380306546437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6935549913313120350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55d9860dacdd9a4895af32e4c02b261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSpawned: 0
 --- !u!1 &8807385058204518123
 GameObject:
   m_ObjectHideFlags: 0
