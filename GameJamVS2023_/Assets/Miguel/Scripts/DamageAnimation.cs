@@ -14,12 +14,13 @@ public class DamageAnimation : MonoBehaviour
     private Color _damageColor = new Color(1, 0.4f, 0.4f, 1);
     private Color _originalColor;
 
-    private bool _flickering = false;
+    private bool _flickering = false, _colorSetted = false;
 
 
     public void StartAnimation()
     {
-        _originalColor = _spriteRenderer.color;
+        if (!_colorSetted) { _originalColor = _spriteRenderer.color; _colorSetted = true; }
+        
         _damageColor.a = ALPHA;
         StartCoroutine(FlickerTime());
         StartCoroutine(Flicker());

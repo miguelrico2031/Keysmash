@@ -42,7 +42,9 @@ public abstract class RoomManager : MonoBehaviour
 
         foreach(var door in _roomInstance.Doors)
         {
-            _corridors.Add(door.ConnectedRoomInstance.RoomTemplateInstance.GetComponent<CorridorManager>());
+            var corridor = door.ConnectedRoomInstance.RoomTemplateInstance.GetComponent<CorridorManager>();
+            _corridors.Add(corridor);
+            corridor.OnDungeonGenerated();
         }
     }
 

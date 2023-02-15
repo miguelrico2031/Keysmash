@@ -9,28 +9,35 @@ public class EnemyRoom : RoomManager
 
     private List<EnemySpawnPoint> _enemySpawnPoints;
 
+    bool _roomCompleted = false;
+
     private int _enemyCount;
     public override void OnDungeonGenerated()
     {
+        
         base.OnDungeonGenerated();
         
         _enemySpawnPoints = new List<EnemySpawnPoint>();
         foreach(var spawnPoint in GetComponentsInChildren<EnemySpawnPoint>())
         {
+            
             _enemySpawnPoints.Add(spawnPoint);
             if(spawnPoint.IsAtStart) SpawnEnemy(spawnPoint);
         }
         _enemyCount = _enemySpawnPoints.Count;
 
-        _stairs.SetActive(false);
+        if (_stairs) { _stairs.SetActive(false); }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            CloseDoors();
-            SpawnEnemies();
+            if (!_roomCompleted)
+            {
+                CloseDoors();
+                SpawnEnemies();
+            }  
         }
         // else if(other.gameObject.CompareTag("Enemy"))
         // {
@@ -67,8 +74,8 @@ public class EnemyRoom : RoomManager
     private void RoomFinished()
     {
         OpenDoors();
-        if(!_stairs) return;
-
+        _roomCompleted = true;
+        if (!_stairs) return;
         _stairs.SetActive(true);
     }
 

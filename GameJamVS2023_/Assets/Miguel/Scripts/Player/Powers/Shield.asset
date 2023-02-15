@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54dc4261d5ec0dc498f0745a3ee5c250, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  UIPrefab: {fileID: 0}
-  HUDPrefab: {fileID: 0}
+  UIPrefab: {fileID: 3494986023395954574, guid: 613c58073ad934a4cb4780c985bfb54b, type: 3}
+  HUDPrefab: {fileID: 2874214687259591374, guid: 6366fb4c1ca61cd48b757a21079194c5, type: 3}
+  InfoPrefab: {fileID: 4785892927231863169, guid: 54dedb3188636a2449f22c67f8454007, type: 3}
   CoolDown: 1
   CoolDownOver: 1
+  ManualCooldown: 0
   BlockPowers: 0
   Key: l
   Description: 
@@ -23,6 +25,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PowerAvailable:
+    m_PersistentCalls:
+      m_Calls: []
+  StartCooldown:
     m_PersistentCalls:
       m_Calls: []
   _bashDuration: 0.2

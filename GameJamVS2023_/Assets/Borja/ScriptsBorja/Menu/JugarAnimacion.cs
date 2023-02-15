@@ -155,22 +155,8 @@ public class JugarAnimacion : MonoBehaviour
             TecladoRoto.transform.Translate(dir4.normalized * VelocidadRecogerTeclado * Time.deltaTime);
             if (dir4.magnitude <= 0.1f)
             {
-                _final = 3;
+                _final = 5;
             }
-        }else if (_final == 3)
-        {
-            TecladoEnGrande.SetActive(true);
-            TecladoEnGrande.transform.localScale = Vector3.zero;
-            _final = 4;
-        }
-        else if (_final == 4)
-        {
-            //TecladoEnGrande.transform.localScale += Vector3.one * KeyboardSizeSpeed * Time.deltaTime;
-            if (TecladoEnGrande.transform.localScale.x >= KeyboardMaxSize)
-            {
-                
-            }
-            _final = 5;
         }
         else if (_final == 5)
         {
@@ -255,7 +241,6 @@ public class JugarAnimacion : MonoBehaviour
         if (_final == 0)
         {
             _final = -1;
-            Debug.Log("recogida");
             yield return new WaitForSeconds(TiempoDeEsperaEvento[15]);
             SpriteDedo.SetActive(true);
             SpritePuño.SetActive(false);

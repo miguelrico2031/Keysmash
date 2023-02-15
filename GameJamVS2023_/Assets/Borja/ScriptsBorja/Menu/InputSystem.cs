@@ -31,6 +31,7 @@ public class InputSystem : MonoBehaviour
         _inputText = "";
         _barra = "";
         Cursor.visible = false;
+        AudioListener.volume = MaximoVolumen * 0.8f;
         StartCoroutine(BarraBaja());
     }   
 

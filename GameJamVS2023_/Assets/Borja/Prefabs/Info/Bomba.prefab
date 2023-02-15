@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ataque Rotatorio
+  m_text: Bomba
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22b68db353931f9458d6ad0ae3075f79, type: 2}
   m_sharedMaterial: {fileID: 1006116881289274171, guid: 22b68db353931f9458d6ad0ae3075f79, type: 2}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7901900639542400109}
   - component: {fileID: 7901900639542400108}
   m_Layer: 5
-  m_Name: Ataque en area
+  m_Name: Bomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8aa466940123b4e8e75f80a5bdcd13, type: 3}
   m_Name: Smash
   m_EditorClassIdentifier: 
-  UIPrefab: {fileID: 0}
-  HUDPrefab: {fileID: 0}
-  InfoPrefab: {fileID: 0}
-  CoolDown: 0
+  UIPrefab: {fileID: 2294518906067525281, guid: 6c3f3d2b524c40a44ae8dce902956bc5, type: 3}
+  HUDPrefab: {fileID: 3614110305078164343, guid: 4d72898e40dc0ad4a8eb030c00398621, type: 3}
+  InfoPrefab: {fileID: 8108338061793204784, guid: e3bf02a3c3a79364da52d454761fc2df, type: 3}
+  CoolDown: 1
   CoolDownOver: 1
+  ManualCooldown: 0
   BlockPowers: 0
   Key: space
   Description: 
@@ -24,6 +25,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PowerAvailable:
+    m_PersistentCalls:
+      m_Calls: []
+  StartCooldown:
     m_PersistentCalls:
       m_Calls: []
   _damage: 1
