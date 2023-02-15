@@ -57,6 +57,8 @@ public class TeclearAnimacion : MonoBehaviour
                     if (direccion.magnitude <= 0.1f)
                     {
                         Ida = false;
+
+                        PlaySound(Random.Range(1, 5));
                         if (_tecladoSeMueve == 0)
                         {
                             StartCoroutine(AnimacionTeclado());
@@ -97,5 +99,9 @@ public class TeclearAnimacion : MonoBehaviour
             }
         }
         
+    }
+    void PlaySound(int i)
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("Click" + i.ToString());
     }
 }

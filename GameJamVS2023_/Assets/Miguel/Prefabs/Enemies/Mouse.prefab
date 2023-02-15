@@ -229,14 +229,14 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
-  _speed: 40
+  _speed: 80
   _amplitude: 150
   _creepSpeed: 6
   _rotationSpeed: 300
-  _explodingDuration: 1
+  _explodingDuration: 0.5
   _knockbackForce: 15
   _knockbackDuration: 0.6
-  _explosionRadius: 2
+  _explosionRadius: 3
   IsExploding: 0
   InExplosion: 0
 --- !u!95 &2660321026687556999

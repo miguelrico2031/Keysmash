@@ -10,7 +10,8 @@ public class StatsManager : MonoBehaviour
 
     private PlayerMovement _playerMovement;
     private DamageAnimation _damageAnimation;
-    
+    private AudioManager _audioManager;
+
 
     public UnityEvent<int> HealthChange;
 
@@ -20,6 +21,7 @@ public class StatsManager : MonoBehaviour
     {
         _playerMovement = GetComponent<PlayerMovement>();
         _damageAnimation = GetComponent<DamageAnimation>();
+        _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         //ParriedAttacks = new List<EnemyAttack>();
     }
 
@@ -37,6 +39,7 @@ public class StatsManager : MonoBehaviour
         if (IsInvulnerable) return;
         Stats.DamagePlayer(damage);
         _damageAnimation.StartAnimation();
+        _audioManager.PlaySound("PlayerDamage");
         _playerMovement.AddKnockback(knockBackForce, duration);
         HealthChange.Invoke(-damage);
         GameObject.Find("Canvas").GetComponent<Interfaz>().ChangeLives(-damage);

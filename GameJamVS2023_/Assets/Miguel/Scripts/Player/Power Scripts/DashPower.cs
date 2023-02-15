@@ -27,6 +27,8 @@ public class DashPower : Power
         
         _direction = _playerMovement.Direction;
 
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("Dash");
+
         UsePower.Invoke(this);
 
         _playerMovement.BlockMovement = true;

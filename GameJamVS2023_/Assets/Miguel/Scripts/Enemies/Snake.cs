@@ -64,7 +64,7 @@ public class Snake : Enemy
     public override void Attack()
     {
         _directionToPlayer = (_player.transform.position - transform.position).normalized;
-        
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("SnakeAttack");
         LastAttack = new EnemyAttack(_attackDamage, _directionToPlayer * _knockbackForce, _knockbackDuration);
         _playerStats.TakeDamage(LastAttack);
     }

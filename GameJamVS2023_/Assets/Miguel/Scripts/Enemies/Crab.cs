@@ -64,6 +64,7 @@ public class Crab : Enemy
     
     public void StartAttackProcess()
     {
+        
         State = CrabState.Change;
         _rb.velocity = Vector2.zero;
         _animator.SetTrigger("Attack");
@@ -72,6 +73,7 @@ public class Crab : Enemy
 
     public override void Attack()
     {
+        
         Vector2 direction = (_player.transform.position - transform.position).normalized;
         LastAttack = new EnemyAttack(_attackDamage, direction * _knockbackForce, _knockbackDuration);
         _playerStats.TakeDamage(LastAttack);
@@ -120,6 +122,7 @@ public class Crab : Enemy
     {
         if(State == CrabState.Change)
         {
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("CrabAttack");
             State = CrabState.Attack;
             //_trigger.enabled = true;
         }

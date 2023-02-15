@@ -21,7 +21,7 @@ public class ProjectilePower : Power
     {
         if(!_hasKeyCap) return;
 
-
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("PlayerAttack");
         _player = player;
         _playerMovement = player.GetComponent<PlayerMovement>();
     
