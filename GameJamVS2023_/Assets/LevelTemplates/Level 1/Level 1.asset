@@ -167,7 +167,7 @@ MonoBehaviour:
   Position: {x: 560, y: -496}
   Name: TeclaEspacio1
   IndividualRoomTemplates:
-  - {fileID: 2648183261164354279, guid: a41a3b019b2e2a74e9bc64ec27c082e6, type: 3}
+  - {fileID: 2648183261164354279, guid: 88c50ca2873560a4f8ec4a83ccde474d, type: 3}
   RoomTemplateSets: []
 --- !u!114 &-5662505024837494
 MonoBehaviour:
@@ -215,40 +215,40 @@ MonoBehaviour:
   - {fileID: -7154653829271284248}
   - {fileID: 4568984604981747842}
   CorridorIndividualRoomTemplates:
-  - {fileID: 8571110998739714833, guid: e45fb566b947c8c49ac5703bba70333d, type: 3}
-  - {fileID: 9141463818426978116, guid: a67284dc27fa3a94f8d854baec0f56e1, type: 3}
-  - {fileID: 9141463818426978116, guid: 8641330859c655a4aa3742be632b8721, type: 3}
-  - {fileID: 9141463818426978116, guid: 5988f3db608c191409577cf96578d968, type: 3}
-  - {fileID: 4264147571960829142, guid: e0fe88148d596f2458dca1d92c8a9668, type: 3}
-  - {fileID: 4264147571960829142, guid: 129b41675517fb047a641df901709092, type: 3}
-  - {fileID: 8571110998739714833, guid: 66da3d9ec4f936148bd4f484c2ba60a9, type: 3}
+  - {fileID: 8571110998739714833, guid: 81ba9f9813d7fb3429ad2cab118dd090, type: 3}
+  - {fileID: 4264147571960829142, guid: 63c4cbdbb59bfa84ebe34229871e53a3, type: 3}
+  - {fileID: 4264147571960829142, guid: 270db484b58db7d43bd2af5236332ab5, type: 3}
+  - {fileID: 9141463818426978116, guid: b6184957b747e7045ad7da4740eb3c2b, type: 3}
+  - {fileID: 9141463818426978116, guid: d980b23fb02bda44cb204532b7837368, type: 3}
+  - {fileID: 9141463818426978116, guid: ff8287fb05171c242b976ccc7da9846d, type: 3}
   CorridorRoomTemplateSets: []
   DefaultIndividualRoomTemplates:
-  - {fileID: 7406660133963991619, guid: 11d677e9056c0e14cb5dc85c9fa01fc4, type: 3}
-  - {fileID: 6872331251584800420, guid: 51fac5b4094faf64db7fb2abc664bef9, type: 3}
-  - {fileID: 6683339369458272930, guid: f20fb34c54da8fa44941a9c408f3bf4d, type: 3}
-  - {fileID: 6935549913313120350, guid: ea0115b2c834e324da933cfac7622787, type: 3}
-  - {fileID: 5898788453104716393, guid: 5f7874fa0793b5a4da4a548cf5842427, type: 3}
-  - {fileID: 4007302776263408041, guid: 1ff59d89bbdff2547a04c4ef1c104a6e, type: 3}
-  - {fileID: 930602298124477029, guid: 2a0c6285fb61c5d48ab4c5296e96d4c6, type: 3}
-  - {fileID: 6709983857672699912, guid: ebb81d55b1adfdd44866a7e0c715ec0a, type: 3}
-  - {fileID: 3586509976535227293, guid: 981dbe6400bf206439aa3c843d891a27, type: 3}
-  - {fileID: 5199530861978900046, guid: 28a1dccbbaae8fc408fb65ef50f9ff10, type: 3}
-  - {fileID: 4179828414416347178, guid: 2d975b36c875b0442b7e77d00f864b47, type: 3}
-  - {fileID: 5117666755369057470, guid: f74e8e445dd8ff943a347d826377cf4a, type: 3}
-  - {fileID: 4126894292515256285, guid: 0e2a280d9291c1d428d16a9aaa014d28, type: 3}
-  - {fileID: 4624755413592172507, guid: 9839c587a05d9c2459206f371bddb35d, type: 3}
-  - {fileID: 2186215841513681638, guid: 69d65b3917bcf2f4b9bca61c8fffdc03, type: 3}
-  - {fileID: 5859539578547485610, guid: 9887e22adc82261449deec2f00e4b3c7, type: 3}
-  - {fileID: 1260362863245297155, guid: 15634a10fb720e8479d3e7f6ea80bd58, type: 3}
+  - {fileID: 7406660133963991619, guid: 8f057671495467e498423c2af4d441b5, type: 3}
+  - {fileID: 6872331251584800420, guid: d70d54e3f5159c948a958394be1424dc, type: 3}
+  - {fileID: 6683339369458272930, guid: b04c70deee96c7e4fa46ab11b63cd6ee, type: 3}
+  - {fileID: 6935549913313120350, guid: cc3ec89168bce0b48887d5d4e984ae5d, type: 3}
+  - {fileID: 5898788453104716393, guid: a9d3ca6c95bb73b4f980aede0b3fa1d9, type: 3}
+  - {fileID: 4007302776263408041, guid: e352031ffc0836e468dc3c51f6c06583, type: 3}
+  - {fileID: 930602298124477029, guid: f13f03379a4f7c44391e21b491b7c62c, type: 3}
+  - {fileID: 6709983857672699912, guid: be23ee5f381bc6e40a9f5d434da26f8c, type: 3}
+  - {fileID: 3586509976535227293, guid: 9ed7f77e9a9bd534ea70a8470719eb34, type: 3}
+  - {fileID: 5199530861978900046, guid: 11fe6a7afe197fe4ca11fec10ff1d6bd, type: 3}
+  - {fileID: 4179828414416347178, guid: 0b34b57a745355445b1e251a8b712b46, type: 3}
+  - {fileID: 5117666755369057470, guid: 9d2bac4373e814e47842d44b81756250, type: 3}
+  - {fileID: 4126894292515256285, guid: 57c4eaafef62baa44bcebf95799f93c1, type: 3}
+  - {fileID: 4624755413592172507, guid: f342733518e242f498f9d502aa546da9, type: 3}
+  - {fileID: 2186215841513681638, guid: 6b9327600d8001a4a8d6b5ab1a17d218, type: 3}
+  - {fileID: 5859539578547485610, guid: 5c3d13a3c73f62948bea17315d16b9cf, type: 3}
+  - {fileID: 1260362863245297155, guid: d52985cdc0e74c84c89375796d415a7e, type: 3}
   - {fileID: 3965000131606106293, guid: 7a71022119c005542a8f35c8703cae06, type: 3}
-  - {fileID: 4467924063858069608, guid: 6e7102a9eff97a34290382204ff32665, type: 3}
-  - {fileID: 8666697863173484772, guid: f3197a2562c18054c9fcee00613bc3c3, type: 3}
-  - {fileID: 2150390705717019213, guid: 40c6d10e84c116f4fb79149c565d03c1, type: 3}
-  - {fileID: 2577971763680883166, guid: 9dfff8e9fb03a5a47aca95b46d9e455b, type: 3}
-  - {fileID: 4984067790561583137, guid: dc01703afeeaf7c42bdd2c2e8b1683ef, type: 3}
-  - {fileID: 4989592155547606428, guid: c53db6a302c38bc4fbc3946dafff03aa, type: 3}
-  - {fileID: 1991642187288320114, guid: 1585323fa7a4e074186871c3e472979c, type: 3}
+  - {fileID: 4467924063858069608, guid: 893ca58b39928574ebe990f55bcdf320, type: 3}
+  - {fileID: 8666697863173484772, guid: ff0f5bae85d474d4baf98c7b45ed3caf, type: 3}
+  - {fileID: 2150390705717019213, guid: 135a6e862ad61d247977a6483971fff2, type: 3}
+  - {fileID: 2577971763680883166, guid: ea9bc10a5be769147af31b2da4e88131, type: 3}
+  - {fileID: 4984067790561583137, guid: 7c1de887b1a9fff458559e9d38ff5ee7, type: 3}
+  - {fileID: 4989592155547606428, guid: a3faabd4c4b5ac449addade84775a8fb, type: 3}
+  - {fileID: 1991642187288320114, guid: ad644a11757774a4aa9e070ee51d5cac, type: 3}
+  - {fileID: 3728374446577995611, guid: 309ebe34123097c4bbd81fb7c126b8fc, type: 3}
   DefaultRoomTemplateSets: []
   Rooms:
   - {fileID: 5314565180967497195}
@@ -271,8 +271,8 @@ MonoBehaviour:
   - {fileID: -696801552110176774}
   - {fileID: 8347407920041686238}
   EditorData:
-    PanOffset: {x: 536.711, y: 674.45325}
-    Zoom: 0.6072284
+    PanOffset: {x: 87.29103, y: 723.4983}
+    Zoom: 1.0383849
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &76130524099084059
@@ -436,7 +436,7 @@ MonoBehaviour:
   Position: {x: 400, y: -576}
   Name: Boss
   IndividualRoomTemplates:
-  - {fileID: 882606583291732652, guid: 2baf2da65855d6d46972cddfcd18fb32, type: 3}
+  - {fileID: 882606583291732652, guid: 9e9f97e80df92e947a697c607909217b, type: 3}
   RoomTemplateSets: []
 --- !u!114 &4568984604981747842
 MonoBehaviour:
@@ -497,7 +497,7 @@ MonoBehaviour:
   Position: {x: 400, y: 144}
   Name: Spawn
   IndividualRoomTemplates:
-  - {fileID: 5132425879888277898, guid: dc88df45ef1e6654ead04f1118e4e468, type: 3}
+  - {fileID: 5132425879888277898, guid: d89727f8053a48545ba8f39c1c8e7a92, type: 3}
   RoomTemplateSets: []
 --- !u!114 &5481530922001811850
 MonoBehaviour:
