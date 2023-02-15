@@ -10,6 +10,7 @@ public class DamageAnimation : MonoBehaviour
     private const float ALPHA = 0.4f;
 
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private float Alpha = 0.75f;
 
     private Color _damageColor = new Color(1, 0.4f, 0.4f, 1);
     private Color _originalColor;
@@ -21,7 +22,7 @@ public class DamageAnimation : MonoBehaviour
     {
         if (!_colorSetted) { _originalColor = _spriteRenderer.color; _colorSetted = true; }
         
-        _damageColor.a = ALPHA;
+        _damageColor.a = Alpha;
         StartCoroutine(FlickerTime());
         StartCoroutine(Flicker());
     }

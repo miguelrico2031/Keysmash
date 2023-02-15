@@ -17,6 +17,11 @@ public class BossHead : MonoBehaviour
 
     private Boss _boss;
 
+
+    void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
     void Start()
     {
         _fireballs = new List<FireBall>();
@@ -25,7 +30,7 @@ public class BossHead : MonoBehaviour
         _vulCollider.enabled = false;
 
         _player = GameObject.FindGameObjectWithTag("Player");
-        _animator = GetComponent<Animator>();
+        
 
         _boss = GetComponentInParent<Boss>();
 
@@ -48,6 +53,7 @@ public class BossHead : MonoBehaviour
         {
             for (int i = 0; i < transform.childCount; i++)
             {
+                yield return new WaitForSeconds(_boss.FireballDelay);
                 _directionToPlayer = (_player.transform.position - transform.GetChild(i).position).normalized;
                 FireBall fireballInstance = Instantiate(_fireball, transform.GetChild(i).position,
                 Quaternion.AngleAxis(Mathf.Atan2(_directionToPlayer.y, _directionToPlayer.x) * Mathf.Rad2Deg, Vector3.forward));
@@ -60,7 +66,7 @@ public class BossHead : MonoBehaviour
                 fireballInstance.KnockbackForce = _boss.FireballKnockbackForce;
                 fireballInstance.KnockbackDuration = _boss.FireballKnockbackDuration;
 
-                yield return new WaitForSeconds(_boss.FireballDelay);
+                
             }
             yield return new WaitForSeconds(_boss.FireballRoundDelay);          
         }
@@ -79,6 +85,20 @@ public class BossHead : MonoBehaviour
             _closeCollider.enabled = false;
 
         }
+    }
+
+    public void StartSlash()
+    {
+        _animator.SetBool("Idle", true);
+        _vulCollider.enabled = false;
+        _openCollider.enabled = false;
+        _closeCollider.enabled = true;
+        Invoke("ToggleOffIdle", 0.3f);
+    }
+
+    void ToggleOffIdle()
+    {
+        _animator.SetBool("Idle", false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

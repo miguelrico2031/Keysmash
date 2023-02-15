@@ -19,9 +19,12 @@ public class Boss : MonoBehaviour
     public int FireballDamage, FireballRounds;
     public float FireballDelay, FireballRoundDelay,FireballSpeed, FireballRotationSpeed, FireballKnockbackForce, FireballKnockbackDuration;
 
+    public float VulnerabilityDuration;
+
     private List<Slash> _slashes;
     [SerializeField] private Thrust _leftThrust, _rightThrust;
     [SerializeField] private BossHead _head;
+    private DamageAnimation _damageAnim;
     
 
     public StatsManager PlayerStats;
@@ -36,6 +39,7 @@ public class Boss : MonoBehaviour
             if(transform.GetChild(i).CompareTag("Slash")) _slashes.Add(transform.GetChild(i).GetComponent<Slash>());
         }
         Health = MaxHealth;
+        _damageAnim = GetComponent<DamageAnimation>();
     }
 
     void Start()
@@ -51,6 +55,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator SlashTime()
     {
+        _head.StartSlash();
         for (int i = 0; i < SlashAttackNumber; i++)
         {
             SlashAttack();
@@ -114,13 +119,25 @@ public class Boss : MonoBehaviour
     void Vulnerability()
     {
         State = BossState.Vulnerable;
+        StartCoroutine(VulnerabilityTime());
+    }
+
+    IEnumerator VulnerabilityTime()
+    {
+        yield return new WaitForSeconds(VulnerabilityDuration);
+        Slash();
     }
 
     public void TakeDamage(int damage)
     {
         if(State != BossState.Vulnerable) return;
 
-        Debug.Log("auch");
+        Health --;
+        _damageAnim.StartAnimation();
+        if(Health <= 0)
+        {
+            //Die
+        }
     }
 
 }
