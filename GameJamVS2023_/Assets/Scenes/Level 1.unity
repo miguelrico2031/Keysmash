@@ -334,6 +334,10 @@ PrefabInstance:
       propertyPath: GeneratorConfig.Timeout
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5788226578768552450, guid: e4abc22ed85b5a04ca40f5961641f805, type: 3}
+      propertyPath: FixedLevelGraphConfig.LevelGraph
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a9a760adebfa794581ad960ef6962ac, type: 2}
     - target: {fileID: 5788226578768552451, guid: e4abc22ed85b5a04ca40f5961641f805, type: 3}
       propertyPath: m_RootOrder
       value: 0
