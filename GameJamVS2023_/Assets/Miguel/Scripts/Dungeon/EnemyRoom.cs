@@ -60,7 +60,7 @@ public class EnemyRoom : RoomManager
 
     IEnumerator OpenRoomAfterTime()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(30f);
         if(!_roomCompleted) OpenDoors();
     }
 
