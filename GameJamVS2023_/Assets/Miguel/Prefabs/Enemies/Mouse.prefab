@@ -236,7 +236,7 @@ MonoBehaviour:
   _explodingDuration: 0.5
   _knockbackForce: 15
   _knockbackDuration: 0.6
-  _explosionRadius: 3
+  _explosionRadius: 2
   IsExploding: 0
   InExplosion: 0
 --- !u!95 &2660321026687556999

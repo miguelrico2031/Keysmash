@@ -5831,3 +5831,8 @@ MonoBehaviour:
     Volume: 0.8
     Pitch: 1
     Source: {fileID: 0}
+  - Name: Explosion
+    Clip: {fileID: 8300000, guid: 39f5b68cfd9522247866a83cdd7c4a59, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}
