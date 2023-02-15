@@ -161,17 +161,17 @@ public class Crab : Enemy
                 _rb.isKinematic = true;
                 break;
 
-            case CrabState.Chase:
-                _rb.isKinematic = false;
-                break;
+            // case CrabState.Chase:
+            //     _rb.isKinematic = false;
+            //     break;
 
-            case CrabState.Attack:
+            // case CrabState.Attack:
 
-                break;
+            //     break;
 
-            case CrabState.Idle:
-                _rb.isKinematic = false;
-                break;
+            // case CrabState.Idle:
+            //     _rb.isKinematic = false;
+            //     break;
 
             case CrabState.Change:
                 _rb.isKinematic = true;
