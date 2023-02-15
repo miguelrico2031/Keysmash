@@ -147,12 +147,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 0
-  MaxHealth: 10
+  MaxHealth: 8
   Health: 0
   _minSlashTime: 3
   _maxSlashTime: 5
   SlashDamage: 1
-  SlashAttackNumber: 4
+  SlashAttackNumber: 3
   SlashKnockback: 10
   SlashKnockbackDuration: 0.3
   ThrustDamage: 1
@@ -160,15 +160,15 @@ MonoBehaviour:
   ThrustKnockbackDuration: 0.3
   _thrustDelay: 0.5
   FireballDamage: 1
-  FireballRounds: 3
-  FireballDelay: 0.54
+  FireballRounds: 2
+  FireballDelay: 0.65
   FireballRoundDelay: 1
   FireballSpeed: 130
   FireballRotationSpeed: 80
   FireballKnockbackForce: 10
   FireballKnockbackDuration: 0.3
-  VulnerabilityDuration: 3
-  DeadDuration: 0
+  VulnerabilityDuration: 3.5
+  DeadDuration: 2
   StartDelay: 3
   _leftThrust: {fileID: 7411520710043561191}
   _rightThrust: {fileID: 7411520709356092462}

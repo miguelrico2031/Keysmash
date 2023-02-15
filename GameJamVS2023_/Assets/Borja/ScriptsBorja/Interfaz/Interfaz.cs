@@ -20,6 +20,7 @@ public class Interfaz : MonoBehaviour
     public GameObject ConfirmarSalirBackground;
     bool _info;
     bool _confirm;
+    public GameObject FinalIlustracion;
 
     Dictionary<Power, GameObject> _hUDPowers;
     Dictionary<Power, GameObject> _uIPowers;
@@ -48,6 +49,11 @@ public class Interfaz : MonoBehaviour
         //_stats.HealthChange.AddListener(ChangeLives);
         Cursor.visible = false;
         _info= false; _confirm= false;
+    }
+
+    public void FinalScreen()
+    {
+        FinalIlustracion.SetActive(true);
     }
     IEnumerator GetCurrentLivesDelayed()
     {

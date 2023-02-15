@@ -151,14 +151,24 @@ public class Boss : MonoBehaviour
         _damageAnim.StartAnimation();
         if(Health <= 0)
         {
+            Debug.Log("health 0");
             _head.DieAnimation();
             State = BossState.Dead;
+
             Invoke("BossDead", DeadDuration);
         }
     }
 
     public void BossDead()
     {
+        Debug.Log("BossIsDead");
+        StartCoroutine(EndCredits());
+    }
+    IEnumerator EndCredits()
+    {
+        Debug.Log("Coroutina");
+        GameObject.Find("Canvas").GetComponent<Interfaz>().FinalScreen();
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Credits");
     }
 
