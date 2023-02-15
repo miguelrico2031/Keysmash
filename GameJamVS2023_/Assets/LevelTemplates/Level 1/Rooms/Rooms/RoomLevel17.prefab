@@ -1145,6 +1145,10 @@ Transform:
   - {fileID: 7299415100211349868}
   - {fileID: 469582023092674999}
   - {fileID: 1405256472715556734}
+  - {fileID: 5080434056774119311}
+  - {fileID: 8210490275964203078}
+  - {fileID: 6125409373840789988}
+  - {fileID: 646165804725429477}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2711,6 +2715,254 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
   m_PrefabInstance: {fileID: 582504415782210719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &680238350479578821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6677059155194998528}
+    m_Modifications:
+    - target: {fileID: 3303793510865147050, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_Name
+      value: VelaAzul (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.482
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+--- !u!4 &5080434056774119311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+  m_PrefabInstance: {fileID: 680238350479578821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1941106039833192622
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6677059155194998528}
+    m_Modifications:
+    - target: {fileID: 3303793510865147050, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_Name
+      value: VelaAzul (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+--- !u!4 &6125409373840789988 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+  m_PrefabInstance: {fileID: 1941106039833192622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4467684699239254284
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6677059155194998528}
+    m_Modifications:
+    - target: {fileID: 3303793510865147050, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_Name
+      value: VelaAzul (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+--- !u!4 &8210490275964203078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+  m_PrefabInstance: {fileID: 4467684699239254284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5117855644004015535
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6677059155194998528}
+    m_Modifications:
+    - target: {fileID: 3303793510865147050, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_Name
+      value: VelaAzul (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.497
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+--- !u!4 &646165804725429477 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5760634951020034378, guid: e226e8eda7ad72f488d17ef173b66778, type: 3}
+  m_PrefabInstance: {fileID: 5117855644004015535}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6901545612179852438
 PrefabInstance:
