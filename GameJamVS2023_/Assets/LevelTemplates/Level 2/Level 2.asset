@@ -165,7 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Position: {x: 480, y: -336}
   Name: BossRoom
-  IndividualRoomTemplates: []
+  IndividualRoomTemplates:
+  - {fileID: 882606583291732652, guid: 64bdedb5b5a1c0e40aefa5faee8f804f, type: 3}
   RoomTemplateSets: []
 --- !u!114 &-3359493003880813599
 MonoBehaviour:
@@ -382,8 +383,8 @@ MonoBehaviour:
   - {fileID: 4380530643872029346}
   - {fileID: -3359493003880813599}
   EditorData:
-    PanOffset: {x: 552.8283, y: 451.94983}
-    Zoom: 0.464786
+    PanOffset: {x: 260.97168, y: 458.98502}
+    Zoom: 0.6536791
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &229536289268811894

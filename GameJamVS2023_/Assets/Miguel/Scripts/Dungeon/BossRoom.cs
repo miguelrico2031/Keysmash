@@ -24,7 +24,7 @@ public class BossRoom : RoomManager
         {
 
             CloseDoors();
-
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("BossMusic");
             Invoke("SpawnBoss", 3f);
         }
     }
