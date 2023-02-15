@@ -57,7 +57,7 @@ public class StatsManager : MonoBehaviour
     public void HealPlayer(int healAmount)
     {
         Stats.HealPlayer(healAmount);
-        HealthChange.Invoke(healAmount);
+        //HealthChange.Invoke(healAmount);
         GameObject.Find("Canvas").GetComponent<Interfaz>().ChangeLives(healAmount);
     }
 

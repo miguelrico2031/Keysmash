@@ -1039,8 +1039,8 @@ GameObject:
   - component: {fileID: 6862120480662079692}
   - component: {fileID: 5876667193439870182}
   - component: {fileID: 3900176913991472541}
-  - component: {fileID: 3566399150120071433}
   - component: {fileID: 5034617303615604194}
+  - component: {fileID: 8282788919149770923}
   m_Layer: 0
   m_Name: RoomLevel26
   m_TagString: Room
@@ -1123,20 +1123,6 @@ MonoBehaviour:
       Margin1: 1
       Margin2: 1
       Enabled: 1
---- !u!114 &3566399150120071433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991642187288320114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cefa756e854d7c547b1eaa2af94577e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsSpawned: 0
-  _stairs: {fileID: 0}
 --- !u!60 &5034617303615604194
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1184,6 +1170,19 @@ PolygonCollider2D:
       - {x: 2.0416565, y: -0.97055817}
       - {x: 2.108612, y: 1.0421702}
       - {x: 2.9703217, y: 1.0359528}
+--- !u!114 &8282788919149770923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991642187288320114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55d9860dacdd9a4895af32e4c02b261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSpawned: 0
 --- !u!1 &2226472225253040231
 GameObject:
   m_ObjectHideFlags: 0

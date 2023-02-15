@@ -35,8 +35,15 @@ public class Interfaz : MonoBehaviour
     private void Start()
     {
         _stats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>();
-        _currentlives = _stats.Stats.Health;
-        ChangeLives(0);
+        if (SceneManager.GetActiveScene().name != "Level 1")
+        {
+            ChangeLives(0);
+            _currentlives = _stats.Stats.Health;
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            _currentlives = 0;
+        }      
         ShowKeysAtStart();
         //_stats.HealthChange.AddListener(ChangeLives);
         Cursor.visible = false;
