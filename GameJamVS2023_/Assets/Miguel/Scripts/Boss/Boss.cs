@@ -5,10 +5,20 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     [SerializeField] private float  _minSlashTime, _maxSlashTime;
-    public int SlashDamage, SlashAttackNumber, ThrustDamage;
+    public int SlashDamage, SlashAttackNumber;
+    public float SlashKnockback, SlashKnockbackDuration;
 
+
+    public int ThrustDamage;
+    public float ThrustKnockback, ThrustKnockbackDuration;
+    [SerializeField] private float  _thrustDelay;
+
+    public int FireballDamage, FireballRounds;
+    public float FireballDelay, FireballRoundDelay,FireballSpeed, FireballRotationSpeed, FireballKnockbackForce, FireballKnockbackDuration;
 
     private List<Slash> _slashes;
+    [SerializeField] private Thrust _leftThrust, _rightThrust;
+    [SerializeField] private BossHead _head;
     private BossState _state;
 
     public StatsManager PlayerStats;
@@ -42,6 +52,7 @@ public class Boss : MonoBehaviour
             SlashAttack();
             yield return new WaitForSeconds(Random.Range(_minSlashTime, _maxSlashTime));
         }
+        Thrust();
     }
 
     void SlashAttack()
@@ -49,9 +60,55 @@ public class Boss : MonoBehaviour
         _slashes[Random.Range(0, _slashes.Count)].SlashAttack();
     }
 
+    void Thrust()
+    {
+        _state = BossState.Thrust;
+        StartCoroutine(ThrustTime());
+    }
+
+    IEnumerator ThrustTime()
+    {
+        Thrust first, second;
+        if(Random.value > 0.5f) 
+        {
+            first = _rightThrust;
+            second = _leftThrust;
+        }
+        else
+        {
+            first = _rightThrust;
+            second = _leftThrust;
+        }
+        yield return new WaitForSeconds(_thrustDelay);
+        ThrustAttack(first);
+        yield return new WaitForSeconds(_thrustDelay);
+        ThrustAttack(second);
+
+        BulletHell();
+
+    }
+
+    void ThrustAttack(Thrust thrust)
+    {
+        thrust.ThrustAttack();
+    }
+
+    void BulletHell()
+    {
+        _state = BossState.BulletHell;
+        _head.StartBulletHell();
+        
+    }
+
+    public void OnBulletHellOver()
+    {
+        _rightThrust.EndThrustAttack();
+        _leftThrust.EndThrustAttack();
+    }
+
 }
 
 public enum BossState
 {
-    Slash, Wait, Thrust, Vulnerable
+    Slash, Thrust, BulletHell, Vulnerable
 }

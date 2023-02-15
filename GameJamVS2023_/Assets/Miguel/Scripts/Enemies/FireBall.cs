@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FireBall : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class FireBall : MonoBehaviour
     private StatsManager _playerStats;
 
     private Vector2 _directionToPlayer;
+
+    public UnityEvent OnDestroy;
 
     void Start()
     {
@@ -36,16 +39,24 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log(other.gameObject.name);
-        if(other.CompareTag("Keyboard")) Destroy(gameObject);
+        if(other.CompareTag("Keyboard"))
+        {
+            OnDestroy.Invoke();
+            Destroy(gameObject);
+        }
         
         else if(other.gameObject.CompareTag("Player"))
         {
             _playerStats.TakeDamage(new EnemyAttack(Damage, _directionToPlayer * KnockbackForce, KnockbackDuration));
+            OnDestroy.Invoke();
             Destroy(gameObject);
         }
         
-        else if(other.gameObject.layer == LayerMask.NameToLayer("Walls")) Destroy(gameObject);        
+        else if(other.gameObject.layer == LayerMask.NameToLayer("Walls"))
+        {
+            OnDestroy.Invoke();
+            Destroy(gameObject);        
+        }
     }
 
 }
