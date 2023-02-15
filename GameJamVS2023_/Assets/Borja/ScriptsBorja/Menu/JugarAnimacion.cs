@@ -77,8 +77,8 @@ public class JugarAnimacion : MonoBehaviour
 
     private void Update()
     {
-        
 
+        
         if (_bajarVolumen)
         {
             Camara.GetComponent<AudioSource>().volume -= VelocidadVolumen * Time.deltaTime;

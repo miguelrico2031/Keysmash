@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputSystem : MonoBehaviour
 {
@@ -37,7 +38,13 @@ public class InputSystem : MonoBehaviour
 
     void Update()
     {
-        
+        if (_animacionEnCurso)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Level 1");
+            }
+        }
         foreach (char c in Input.inputString)
         {
             if (c == '\b') // Backspace

@@ -92,8 +92,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 720, y: -16}
-  Name: Room
-  IndividualRoomTemplates: []
+  Name: Heal
+  IndividualRoomTemplates:
+  - {fileID: 6935549913313120350, guid: 98b1c61105c792e42955a36a3bbe8ac7, type: 3}
+  - {fileID: 7406660133963991619, guid: f8992d97f929c7e4c9d54c54bd9ee424, type: 3}
+  - {fileID: 6872331251584800420, guid: 3193e71cb180c1045bd93057c2f8e674, type: 3}
+  - {fileID: 6683339369458272930, guid: 18a65715b7baefc4abd94df9432106cf, type: 3}
+  - {fileID: 5898788453104716393, guid: 6e04873b56b25334cb89c71851d24771, type: 3}
   RoomTemplateSets: []
 --- !u!114 &-6598142684637349996
 MonoBehaviour:
@@ -377,8 +382,8 @@ MonoBehaviour:
   - {fileID: 2216292119080218728}
   - {fileID: -4160788722483022495}
   EditorData:
-    PanOffset: {x: 322.20364, y: 330.85455}
-    Zoom: 0.51824695
+    PanOffset: {x: -40.627045, y: 320.52185}
+    Zoom: 0.77794075
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &573173728772521015
