@@ -12,6 +12,7 @@ public class DieEvent : MonoBehaviour
 
     public void OnDeath()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("Death");
         Time.timeScale = 0;
         GetComponent<Interfaz>().HasDied = true;
         _panel.SetActive(true);

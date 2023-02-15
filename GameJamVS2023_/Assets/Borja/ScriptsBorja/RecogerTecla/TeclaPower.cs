@@ -6,12 +6,14 @@ public class TeclaPower : MonoBehaviour
 {
     StatsManager _stats;
 
-    private GameObject InterfazGO;
+    private GameObject _interfazGO;
+    private GameObject _soundManager;
     public Power Power;
 
     void Start()
     {
-        InterfazGO = GameObject.Find("Canvas");
+        _interfazGO = GameObject.Find("Canvas");
+        _soundManager = GameObject.Find("AudioManager");
         _stats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>();
     }
 
@@ -23,7 +25,8 @@ public class TeclaPower : MonoBehaviour
             {
                 _stats.Stats.Powers.Add(Power);
                 Power.OnStart();
-                InterfazGO.GetComponent<Interfaz>().ShowNewKey(Power);
+                _interfazGO.GetComponent<Interfaz>().ShowNewKey(Power);
+                _soundManager.GetComponent<AudioManager>().PlaySound("NewPower");
             }      
             Destroy(gameObject);
         }

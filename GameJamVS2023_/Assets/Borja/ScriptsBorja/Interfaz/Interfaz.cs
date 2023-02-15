@@ -35,12 +35,24 @@ public class Interfaz : MonoBehaviour
     private void Start()
     {
         _stats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>();
-        _currentlives = _stats.Stats.Health;
-        ChangeLives(0);
+        if (SceneManager.GetActiveScene().name != "Level 1")
+        {
+            _currentlives = _stats.Stats.Health;
+            ChangeLives(0);       
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            StartCoroutine(GetCurrentLivesDelayed());
+        }      
         ShowKeysAtStart();
         //_stats.HealthChange.AddListener(ChangeLives);
         Cursor.visible = false;
         _info= false; _confirm= false;
+    }
+    IEnumerator GetCurrentLivesDelayed()
+    {
+        yield return new WaitForSeconds(0.2f);
+        _currentlives = _stats.Stats.Health;
     }
     private void Update()
     {

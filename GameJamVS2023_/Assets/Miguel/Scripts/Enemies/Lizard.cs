@@ -54,7 +54,7 @@ public class Lizard : Enemy
 
     public override void Attack()
     {
-
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("LizardAttack");
         FireBall fireball = Instantiate(_fireball, (Vector2)transform.position + new Vector2(0.5f * _lizardDirection.x, 0.5f),
             Quaternion.AngleAxis(Mathf.Atan2(_directionToPlayer.y, _directionToPlayer.x) * Mathf.Rad2Deg, Vector3.forward));
         fireball.Damage = _attackDamage;

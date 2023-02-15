@@ -29,6 +29,7 @@ public abstract class Enemy : MonoBehaviour
         else
         {
             if(!_damageAnimation) _damageAnimation = GetComponent<DamageAnimation>();
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("EnemyDamage");
             _damageAnimation.StartAnimation();
         }
     }

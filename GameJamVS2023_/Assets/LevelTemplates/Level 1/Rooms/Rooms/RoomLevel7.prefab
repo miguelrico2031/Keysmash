@@ -2642,7 +2642,7 @@ GameObject:
   - component: {fileID: 3657811709759597204}
   - component: {fileID: 5811784460418778842}
   - component: {fileID: 5954269434389525571}
-  - component: {fileID: 4016957529424192439}
+  - component: {fileID: 2753287318521612800}
   m_Layer: 0
   m_Name: RoomLevel7
   m_TagString: Room
@@ -2754,7 +2754,7 @@ PolygonCollider2D:
       - {x: -14.064772, y: 3.3263874}
       - {x: -14.0707445, y: -2.0274842}
       - {x: -2.0397272, y: -1.943301}
---- !u!114 &4016957529424192439
+--- !u!114 &2753287318521612800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
