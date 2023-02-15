@@ -4217,7 +4217,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535098239874740071, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: SpawnDelay
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3535098239874740071, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: EnemyToSpawn
@@ -4349,7 +4349,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535098239874740071, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: SpawnDelay
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3535098239874740071, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: EnemyToSpawn
@@ -4543,7 +4543,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535098239874740071, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: SpawnDelay
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3535098239874740071, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: EnemyToSpawn
