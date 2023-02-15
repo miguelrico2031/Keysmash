@@ -19,7 +19,7 @@ public class BoomerangPower : Power
     public override void Use(GameObject player)
     {
         if(!CoolDownOver || Keyboard.Instance.AttackMode != KeyboardAttack.None) return;
-
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("PlayerAttack");
         Keyboard.Instance.StartBoomerangAttack(_attackDuration, _initialSpeed, _rotationSpeed,_damage);
         BlockPowers = true;
         UsePower.Invoke(this);

@@ -17,7 +17,7 @@ public class MeleePower : Power
     public override void Use(GameObject player)
     {
         if(!CoolDownOver || Keyboard.Instance.AttackMode != KeyboardAttack.None) return;
-
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("PlayerAttack");
         Keyboard.Instance.StartMeleeAttack(_attackDuration, _acceleration, _damage);
         BlockPowers = true;
         UsePower.Invoke(this);

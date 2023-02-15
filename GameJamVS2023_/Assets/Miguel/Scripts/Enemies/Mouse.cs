@@ -64,6 +64,7 @@ public class Mouse : Enemy
         IsExploding = true;
         _animator.SetTrigger("Exploding");
         yield return new WaitForSeconds(_explodingDuration);
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("Explosion");
         _animator.SetTrigger("Boom");
     }
 
@@ -76,7 +77,8 @@ public class Mouse : Enemy
 
     public void OnExplosionEnd()
     {
-       Die();
+        
+        Die();
     }
 
     public override void Attack()

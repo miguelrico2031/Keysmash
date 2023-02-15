@@ -138,6 +138,42 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[11].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6da00cba7406a3d4590f69bc8f414f9a, type: 3}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[11].Name
+      value: LizardAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[12].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 39f5b68cfd9522247866a83cdd7c4a59, type: 3}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[12].Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[11].Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[12].Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[11].Volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 898289422750985070, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: Sounds.Array.data[12].Volume
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2959332716732912585, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
       propertyPath: m_Name
       value: UI

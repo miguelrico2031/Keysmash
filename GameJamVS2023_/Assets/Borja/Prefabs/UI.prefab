@@ -2816,6 +2816,7 @@ GameObject:
   - component: {fileID: 451055430816021489}
   - component: {fileID: 451055430816021490}
   - component: {fileID: 451055430816021491}
+  - component: {fileID: 8829840371884947095}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2956,6 +2957,102 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!82 &8829840371884947095
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451055430816021500}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &451055430891231136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,6 +4283,7 @@ Transform:
   m_Children:
   - {fileID: 451055430816021488}
   - {fileID: 6157971199771926747}
+  - {fileID: 6333176744589932828}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5628,3 +5726,108 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7979248842053061628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6333176744589932828}
+  - component: {fileID: 898289422750985070}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6333176744589932828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7979248842053061628}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 470.94742, y: 253.84, z: 2.5217915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6242156676296400815}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &898289422750985070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7979248842053061628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed77395b81b89ec4fb2b458ac34b155f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - Name: NewPower
+    Clip: {fileID: 8300000, guid: 3ee83fbff48c38642a05abfebfe33c95, type: 3}
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: PlayerDamage
+    Clip: {fileID: 8300000, guid: c31fee82b52485846b5cf08bbf1f588f, type: 3}
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: Dash
+    Clip: {fileID: 8300000, guid: 33eeb468619e0794e910c09a750f2e0e, type: 3}
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: Death
+    Clip: {fileID: 8300000, guid: 1f6c0baefc2518646a2ea06319e6a0a5, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: Click1
+    Clip: {fileID: 8300000, guid: 3c479c5934925eb4fabcc64c0cb78ca4, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: Click2
+    Clip: {fileID: 8300000, guid: df2423090b8605a458ac4e51a20be4ec, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: Click3
+    Clip: {fileID: 8300000, guid: f603a41f09430bc45a931d9580c00cc7, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: Click4
+    Clip: {fileID: 8300000, guid: 1c8d53295684e2d4e998f605aafe352d, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: PlayerAttack
+    Clip: {fileID: 8300000, guid: 21e71ac2cff26544bad8ffbe7349af49, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: EnemyDamage
+    Clip: {fileID: 8300000, guid: 006ddbeef78ffe44f92328763827d909, type: 3}
+    Volume: 0.65
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: CrabAttack
+    Clip: {fileID: 8300000, guid: 27fb8ada486aeeb49bfbdea7311dbe85, type: 3}
+    Volume: 0.65
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: SnakeAttack
+    Clip: {fileID: 8300000, guid: e762c5230401ec34ba168b5238a84e96, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Source: {fileID: 0}

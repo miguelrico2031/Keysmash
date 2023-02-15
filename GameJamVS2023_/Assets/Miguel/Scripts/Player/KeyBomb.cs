@@ -37,6 +37,7 @@ public class KeyBomb : MonoBehaviour
 
     private void Explode()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("Explosion");
         _collider.enabled = false;
         _trigger.enabled = true;
         _animator.SetTrigger("Explode");
