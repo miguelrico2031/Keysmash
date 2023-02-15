@@ -112,6 +112,8 @@ public class JugarAnimacion : MonoBehaviour
         }
         else if (_golpe == 4)
         {
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("Explosion");
+
             Teclas.GetComponent<AnimacionTeclasVolando>().IniciarAnimTeclasVolando();
             Teclado.SetActive(false);
             TecladoRoto.SetActive(true);
