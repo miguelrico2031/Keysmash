@@ -186,6 +186,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829840371884947095, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829840371884947095, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 01987e1558cfdc540894222f1cdbfc01, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
 --- !u!1001 &981583841
@@ -199,6 +207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dungeon
       objectReference: {fileID: 0}
+    - target: {fileID: 5788226578768552450, guid: e4abc22ed85b5a04ca40f5961641f805, type: 3}
+      propertyPath: FixedLevelGraphConfig.LevelGraph
+      value: 
+      objectReference: {fileID: 11400000, guid: 13f94db7a7a994440991bf107f6131a8, type: 2}
     - target: {fileID: 5788226578768552451, guid: e4abc22ed85b5a04ca40f5961641f805, type: 3}
       propertyPath: m_RootOrder
       value: 0
