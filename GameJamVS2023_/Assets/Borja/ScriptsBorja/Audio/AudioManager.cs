@@ -21,10 +21,9 @@ public class AudioManager : MonoBehaviour
     {
         foreach (Sound s in Sounds)
         {
-            Debug.Log("a");
+
             if (name == s.Name)
             {
-                Debug.Log(s.Name);
                 s.Source.Play();
             }
         }

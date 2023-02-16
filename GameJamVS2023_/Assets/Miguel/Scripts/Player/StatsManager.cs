@@ -19,6 +19,8 @@ public class StatsManager : MonoBehaviour
 
     void Awake()
     {
+        IsInvulnerable = false;
+
         _playerMovement = GetComponent<PlayerMovement>();
         _damageAnimation = GetComponent<DamageAnimation>();
         _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
@@ -64,6 +66,10 @@ public class StatsManager : MonoBehaviour
         GameObject.Find("Canvas").GetComponent<Interfaz>().ChangeLives(healAmount);
     }
 
+    public void MakeInvulnerable(float duration)
+    {
+        StartCoroutine(InvulnerabilityTime(duration));
+    }
     private IEnumerator InvulnerabilityTime(float duration)
     {
         IsInvulnerable = true;

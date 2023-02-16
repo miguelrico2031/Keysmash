@@ -24,7 +24,24 @@ public class PowerManager : MonoBehaviour
                 if(Input.GetKeyDown(power.Key))
                 {
                     _activePower = power;
-                    power.Use(gameObject);
+                    
+                    if(power is DashPower)
+                    {
+                        DashPower dashPower = (DashPower) power;
+                        if(dashPower.CoolDownOver && !dashPower.Dashing)
+                        {
+                            dashPower.Use(gameObject);
+                            foreach(var smash in Stats.Powers)
+                            {
+                                if(smash is SmashPower)
+                                {
+                                    smash.Use(gameObject);
+                                }
+                            }
+                        }
+
+                    }
+                    else if(!(power is SmashPower)) power.Use(gameObject);
                     if(!power.ManualCooldown && power.CoolDownOver && power.CoolDown > 0) StartCooldown(power);
                     else if(power.ManualCooldown) power.StartCooldown.AddListener(StartCooldown);
                     break;
