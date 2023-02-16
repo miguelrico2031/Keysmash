@@ -25,6 +25,11 @@ public class Boss : MonoBehaviour
     private List<Slash> _slashes;
     [SerializeField] private Thrust _leftThrust, _rightThrust;
     [SerializeField] private BossHead _head;
+
+    [SerializeField] GameObject[] _keys;
+    public SpriteRenderer Head;
+
+
     private DamageAnimation _damageAnim;
 
     private bool _hasPlayerAttacked = false;
@@ -161,12 +166,22 @@ public class Boss : MonoBehaviour
 
     public void BossDead()
     {
-        Debug.Log("BossIsDead");
         StartCoroutine(EndCredits());
     }
+
+
     IEnumerator EndCredits()
     {
-        Debug.Log("Coroutina");
+        foreach (var key in _keys)
+        {
+            yield return new WaitForSeconds(0.03f);
+            GameObject thisKey = Instantiate(key, Head.transform.position - new Vector3(0, 0.5f, 0), Quaternion.identity);
+            thisKey.transform.localScale = thisKey.transform.localScale * 0.8f;
+            Vector2 dir = new Vector2(Random.Range(-0.9f, 0.9f), -1);
+            Debug.Log(dir);
+            thisKey.GetComponent<Rigidbody2D>().velocity =  dir.normalized * Random.Range(10, 26);
+        }
+        yield return new WaitForSeconds(3);
         GameObject.Find("Canvas").GetComponent<Interfaz>().FinalScreen();
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Credits");

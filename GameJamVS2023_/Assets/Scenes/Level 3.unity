@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1547355439, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 703
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547355439, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 451055430137824732, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 380
+      objectReference: {fileID: 0}
+    - target: {fileID: 451055430448577689, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -330
+      objectReference: {fileID: 0}
     - target: {fileID: 451055430816021489, guid: f0c3023222e9a3b4d88221bbeb705f9b, type: 3}
       propertyPath: m_Camera
       value: 
@@ -361,6 +377,10 @@ PrefabInstance:
     - target: {fileID: 2885225812510384564, guid: a815f294f3dc6be41b55a408e65bcafc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141881225768616319, guid: a815f294f3dc6be41b55a408e65bcafc, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 17015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a815f294f3dc6be41b55a408e65bcafc, type: 3}
