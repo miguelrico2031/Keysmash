@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622439779375017640}
   - component: {fileID: 528337958221207448}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 6859071824786317217}
   - component: {fileID: 6859071824786317218}
   - component: {fileID: 6859071824786317219}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Fire Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}

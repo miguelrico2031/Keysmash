@@ -467,7 +467,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -1, y: -5, z: 0}
-  m_Size: {x: 1, y: 7, z: 1}
+  m_Size: {x: 2, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -918,8 +918,8 @@ Tilemap:
   - first: {x: 0, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -938,8 +938,8 @@ Tilemap:
   - first: {x: 0, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -958,8 +958,8 @@ Tilemap:
   - first: {x: 0, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -978,8 +978,8 @@ Tilemap:
   - first: {x: 0, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -998,8 +998,8 @@ Tilemap:
   - first: {x: 0, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1018,8 +1018,8 @@ Tilemap:
   - first: {x: 0, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1027,12 +1027,12 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 5
-    m_Data: {fileID: 11400000, guid: 671e4f232a0510a4587b30e774296659, type: 2}
-  - m_RefCount: 5
-    m_Data: {fileID: 11400000, guid: a82b7906616a0364f9557cc85b3e3d21, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d1787dc2585a64e4fa511a2e1c1bb04a, type: 2}
+  - m_RefCount: 5
+    m_Data: {fileID: 11400000, guid: a82b7906616a0364f9557cc85b3e3d21, type: 2}
+  - m_RefCount: 5
+    m_Data: {fileID: 11400000, guid: 671e4f232a0510a4587b30e774296659, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8878528e2462ec1469825febddd3e01c, type: 2}
   - m_RefCount: 1
@@ -1040,12 +1040,12 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: ee42fe45775eac340b7dc2afa7977a93, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 5
-    m_Data: {fileID: 1284394815, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
-  - m_RefCount: 5
-    m_Data: {fileID: -277530277, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1859338933, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
+  - m_RefCount: 5
+    m_Data: {fileID: -277530277, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
+  - m_RefCount: 5
+    m_Data: {fileID: 1284394815, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 886596776, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
   - m_RefCount: 1
@@ -1078,7 +1078,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -2, y: -5, z: 0}
-  m_Size: {x: 3, y: 7, z: 1}
+  m_Size: {x: 4, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1304,9 +1304,9 @@ MonoBehaviour:
   ManualDoorModeData:
     DoorsList:
     - From: {x: -1, y: 1, z: 0}
-      To: {x: -1, y: 1, z: 0}
+      To: {x: 0, y: 1, z: 0}
     - From: {x: -1, y: -5, z: 0}
-      To: {x: -1, y: -5, z: 0}
+      To: {x: 0, y: -5, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
@@ -1347,11 +1347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202239801342927497, guid: baaf4a65573c6334a98d29a13d0ba846, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5188605
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202239801342927497, guid: baaf4a65573c6334a98d29a13d0ba846, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4809428
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202239801342927497, guid: baaf4a65573c6334a98d29a13d0ba846, type: 3}
       propertyPath: m_LocalPosition.z

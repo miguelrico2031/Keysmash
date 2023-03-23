@@ -271,8 +271,8 @@ MonoBehaviour:
   - {fileID: -696801552110176774}
   - {fileID: 8347407920041686238}
   EditorData:
-    PanOffset: {x: 87.29103, y: 723.4983}
-    Zoom: 1.0383849
+    PanOffset: {x: 437.68625, y: 669.84503}
+    Zoom: 0.7019026
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &76130524099084059
@@ -303,7 +303,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Position: {x: 560, y: -336}
   Name: Room
-  IndividualRoomTemplates: []
+  IndividualRoomTemplates:
+  - {fileID: 7406660133963991619, guid: 8f057671495467e498423c2af4d441b5, type: 3}
+  - {fileID: 6872331251584800420, guid: d70d54e3f5159c948a958394be1424dc, type: 3}
+  - {fileID: 6683339369458272930, guid: b04c70deee96c7e4fa46ab11b63cd6ee, type: 3}
+  - {fileID: 6935549913313120350, guid: cc3ec89168bce0b48887d5d4e984ae5d, type: 3}
+  - {fileID: 5898788453104716393, guid: a9d3ca6c95bb73b4f980aede0b3fa1d9, type: 3}
   RoomTemplateSets: []
 --- !u!114 &345323991168914667
 MonoBehaviour:
@@ -573,7 +578,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Position: {x: 400, y: -176}
   Name: Room
-  IndividualRoomTemplates: []
+  IndividualRoomTemplates:
+  - {fileID: 7406660133963991619, guid: 8f057671495467e498423c2af4d441b5, type: 3}
+  - {fileID: 6872331251584800420, guid: d70d54e3f5159c948a958394be1424dc, type: 3}
+  - {fileID: 6683339369458272930, guid: b04c70deee96c7e4fa46ab11b63cd6ee, type: 3}
+  - {fileID: 6935549913313120350, guid: cc3ec89168bce0b48887d5d4e984ae5d, type: 3}
+  - {fileID: 5898788453104716393, guid: a9d3ca6c95bb73b4f980aede0b3fa1d9, type: 3}
   RoomTemplateSets: []
 --- !u!114 &7828719593897038342
 MonoBehaviour:

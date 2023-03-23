@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 70108012930277037}
   - component: {fileID: 70108012930277026}
   - component: {fileID: 2675719393965237167}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Crab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 70108013715007798}
   - component: {fileID: 70108013715007799}
   - component: {fileID: 70108013715007796}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

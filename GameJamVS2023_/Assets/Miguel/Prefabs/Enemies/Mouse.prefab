@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2660321025437849356}
   - component: {fileID: 2660321025437849359}
   - component: {fileID: 2660321025437849358}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Mouse Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2660321026687556999}
   - component: {fileID: 2538673140973490892}
   - component: {fileID: 1120871126740671534}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Mouse
   m_TagString: Enemy
   m_Icon: {fileID: 0}
