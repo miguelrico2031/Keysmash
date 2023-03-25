@@ -29,6 +29,18 @@ public class Lizard : Enemy
         _rb = GetComponent<Rigidbody2D>();
         _player = GameObject.FindGameObjectWithTag("Player");
         _lizardDirection = Vector2.right;
+
+        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+
+        foreach(var col in colliders)
+        {
+            if(col.CompareTag("Room"))
+            {
+                Debug.Log("lagartoo bounds");
+                _roomBounds = col.bounds;
+            }
+        }
+
         StartCoroutine(AttackLoop());
     }
 
@@ -118,10 +130,11 @@ public class Lizard : Enemy
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Room"))
-        {
-            _roomBounds = other.bounds;
-        }
+        //if(other.gameObject.CompareTag("Room"))
+        //{
+        //    Debug.Log("lagartoo bounds");
+        //    _roomBounds = other.bounds;
+        //}
     }
 
 }

@@ -3908,16 +3908,6 @@ Tilemap:
   m_GameObject: {fileID: 6757222548004036107}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -9, y: 2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 10
-      m_TileSpriteIndex: 10
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -6, y: 5, z: 0}
     second:
       serializedVersion: 2
@@ -3980,8 +3970,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9d1d57cd2aeba1d4183ca635cfa1449d, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: e657797f8bb8e6e4295de2fd36811f60, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -4003,10 +3993,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -723892087, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 67993917, guid: d620f974011f2b448a54b1fb0cf2893e, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data:
       e00: 1
       e01: 0
@@ -4025,7 +4015,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4179,18 +4169,6 @@ CompositeCollider2D:
         Y: 50303032
       - X: -50000000
         Y: 50303032
-    - - X: -80606064
-        Y: 28484850
-      - X: -81818184
-        Y: 29696970
-      - X: -86666672
-        Y: 29696970
-      - X: -89393936
-        Y: 28787880
-      - X: -89393936
-        Y: 20303030
-      - X: -80606064
-        Y: 20303030
   m_CompositePaths:
     m_Paths:
     - - {x: 2.999971, y: 8}
@@ -4204,12 +4182,6 @@ CompositeCollider2D:
       - {x: -6, y: 5.6969647}
       - {x: -5.9999924, y: 5.090902}
       - {x: -5.9393835, y: 5.0303035}
-    - - {x: -8.0606365, y: 2.030303}
-      - {x: -8.060615, y: 2.8484926}
-      - {x: -8.1818285, y: 2.969697}
-      - {x: -8.666672, y: 2.9696956}
-      - {x: -8.939394, y: 2.878768}
-      - {x: -8.939364, y: 2.030303}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &8047547316612038041
@@ -4674,6 +4646,10 @@ PrefabInstance:
     - target: {fileID: 4168968917317028419, guid: f413ac6be6a6c254187ed833ce7347fb, type: 3}
       propertyPath: m_Name
       value: Tecla K
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168968917317028419, guid: f413ac6be6a6c254187ed833ce7347fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6944821816514990835, guid: f413ac6be6a6c254187ed833ce7347fb, type: 3}
       propertyPath: m_RootOrder

@@ -4178,6 +4178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tecla O
       objectReference: {fileID: 0}
+    - target: {fileID: 4168968917317028419, guid: 8ce7041482e2abc4eadf310b5793c93b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6944821816514990835, guid: 8ce7041482e2abc4eadf310b5793c93b, type: 3}
       propertyPath: m_RootOrder
       value: 1
