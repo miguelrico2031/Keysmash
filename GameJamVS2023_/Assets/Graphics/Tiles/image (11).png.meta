@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1551,9 +1563,9 @@ TextureImporter:
       image (11)_35: 1560255301
       image (11)_40: 229196407
       image (11)_28: -879358963
-      image (11)_32: 1250062031
       image (11)_48: 1165186370
       image (11)_49: -780496792
+      image (11)_32: 1250062031
       image (11)_46: -989492212
       image (11)_0: -1562276700
       image (11)_21: -1871655658

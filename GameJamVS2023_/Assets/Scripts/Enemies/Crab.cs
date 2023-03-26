@@ -81,7 +81,7 @@ public class Crab : Enemy
 
     public override void TakeDamage(int damage)
     {
-        if(State != CrabState.Idle) return;
+        if(State != CrabState.Idle && State != CrabState.Change) return;
 
         base.TakeDamage(damage);
 
@@ -94,6 +94,7 @@ public class Crab : Enemy
 
     public override void TakeDamage(int damage, Vector2 knockbackDirection)
     {
+        if (State != CrabState.Idle && State != CrabState.Change) return;
         base.TakeDamage(damage);
 
         _rb.velocity = Vector2.zero;
@@ -124,17 +125,12 @@ public class Crab : Enemy
         {
             GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySound("CrabAttack");
             State = CrabState.Attack;
-            //_trigger.enabled = true;
         }
     }
 
     public void OnAttackEnd()
     {
-        if(State == CrabState.Attack)
-        {
-            //_trigger.enabled = false;
-            StartCoroutine(IdleTime());
-        }
+        if(State == CrabState.Attack) StartCoroutine(IdleTime());
     }
 
     IEnumerator IdleTime()
@@ -160,18 +156,6 @@ public class Crab : Enemy
             case CrabState.Mimic:
                 _rb.isKinematic = true;
                 break;
-
-            // case CrabState.Chase:
-            //     _rb.isKinematic = false;
-            //     break;
-
-            // case CrabState.Attack:
-
-            //     break;
-
-            // case CrabState.Idle:
-            //     _rb.isKinematic = false;
-            //     break;
 
             case CrabState.Change:
                 _rb.isKinematic = true;
