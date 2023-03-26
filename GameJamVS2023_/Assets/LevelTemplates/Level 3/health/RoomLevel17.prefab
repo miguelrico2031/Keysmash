@@ -1281,6 +1281,52 @@ MonoBehaviour:
       To: {x: 4, y: 4, z: 0}
     - From: {x: 10, y: -1, z: 0}
       To: {x: 10, y: -1, z: 0}
+    - From: {x: 2, y: -4, z: 0}
+      To: {x: 2, y: -4, z: 0}
+    - From: {x: 4, y: -4, z: 0}
+      To: {x: 4, y: -4, z: 0}
+    - From: {x: 1, y: -4, z: 0}
+      To: {x: 1, y: -4, z: 0}
+    - From: {x: 5, y: -4, z: 0}
+      To: {x: 5, y: -4, z: 0}
+    - From: {x: 0, y: -4, z: 0}
+      To: {x: 0, y: -4, z: 0}
+    - From: {x: -1, y: -4, z: 0}
+      To: {x: -1, y: -4, z: 0}
+    - From: {x: 6, y: -4, z: 0}
+      To: {x: 6, y: -4, z: 0}
+    - From: {x: 7, y: -4, z: 0}
+      To: {x: 7, y: -4, z: 0}
+    - From: {x: 10, y: 0, z: 0}
+      To: {x: 10, y: 0, z: 0}
+    - From: {x: 10, y: 1, z: 0}
+      To: {x: 10, y: 1, z: 0}
+    - From: {x: 10, y: 2, z: 0}
+      To: {x: 10, y: 2, z: 0}
+    - From: {x: 3, y: 4, z: 0}
+      To: {x: 3, y: 4, z: 0}
+    - From: {x: 2, y: 4, z: 0}
+      To: {x: 2, y: 4, z: 0}
+    - From: {x: 1, y: 4, z: 0}
+      To: {x: 1, y: 4, z: 0}
+    - From: {x: -1, y: 4, z: 0}
+      To: {x: -1, y: 4, z: 0}
+    - From: {x: 0, y: 4, z: 0}
+      To: {x: 0, y: 4, z: 0}
+    - From: {x: 5, y: 4, z: 0}
+      To: {x: 5, y: 4, z: 0}
+    - From: {x: 6, y: 4, z: 0}
+      To: {x: 6, y: 4, z: 0}
+    - From: {x: 7, y: 4, z: 0}
+      To: {x: 7, y: 4, z: 0}
+    - From: {x: -4, y: 1, z: 0}
+      To: {x: -4, y: 1, z: 0}
+    - From: {x: -4, y: 2, z: 0}
+      To: {x: -4, y: 2, z: 0}
+    - From: {x: -4, y: -1, z: 0}
+      To: {x: -4, y: -1, z: 0}
+    - From: {x: -4, y: -2, z: 0}
+      To: {x: -4, y: -2, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
@@ -1321,9 +1367,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -2.9739826, y: 3.9739826}
-      - {x: -2.9575987, y: -2.9874456}
-      - {x: 1.132108, y: -2.9947152}
-      - {x: 10.011369, y: -2.994715}
+      - {x: -2.9575987, y: -2.715255}
+      - {x: 1.1547905, y: -2.7225246}
+      - {x: 10.011369, y: -2.7678895}
       - {x: 10.016329, y: 4.0712843}
 --- !u!114 &6318046444609245191
 MonoBehaviour:

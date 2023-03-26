@@ -990,6 +990,38 @@ MonoBehaviour:
       To: {x: -2, y: -12, z: 0}
     - From: {x: -2, y: 2, z: 0}
       To: {x: -2, y: 2, z: 0}
+    - From: {x: -7, y: -4, z: 0}
+      To: {x: -7, y: -4, z: 0}
+    - From: {x: -7, y: -3, z: 0}
+      To: {x: -7, y: -3, z: 0}
+    - From: {x: -7, y: -2, z: 0}
+      To: {x: -7, y: -2, z: 0}
+    - From: {x: -7, y: -1, z: 0}
+      To: {x: -7, y: -1, z: 0}
+    - From: {x: -7, y: -6, z: 0}
+      To: {x: -7, y: -6, z: 0}
+    - From: {x: -7, y: -7, z: 0}
+      To: {x: -7, y: -7, z: 0}
+    - From: {x: -7, y: -8, z: 0}
+      To: {x: -7, y: -8, z: 0}
+    - From: {x: -7, y: -9, z: 0}
+      To: {x: -7, y: -9, z: 0}
+    - From: {x: 3, y: -9, z: 0}
+      To: {x: 3, y: -9, z: 0}
+    - From: {x: 3, y: -8, z: 0}
+      To: {x: 3, y: -8, z: 0}
+    - From: {x: 3, y: -6, z: 0}
+      To: {x: 3, y: -6, z: 0}
+    - From: {x: 3, y: -5, z: 0}
+      To: {x: 3, y: -5, z: 0}
+    - From: {x: 3, y: -7, z: 0}
+      To: {x: 3, y: -7, z: 0}
+    - From: {x: 3, y: -3, z: 0}
+      To: {x: 3, y: -3, z: 0}
+    - From: {x: 3, y: -2, z: 0}
+      To: {x: 3, y: -2, z: 0}
+    - From: {x: 3, y: -1, z: 0}
+      To: {x: 3, y: -1, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
@@ -1031,7 +1063,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.4958262, y: -4.504285}
+  m_Offset: {x: -1.4958262, y: -4.262162}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1042,7 +1074,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.966533, y: 12.966606}
+  m_Size: {x: 8.966533, y: 12.482361}
   m_EdgeRadius: 0
 --- !u!1 &5328751224487338819
 GameObject:

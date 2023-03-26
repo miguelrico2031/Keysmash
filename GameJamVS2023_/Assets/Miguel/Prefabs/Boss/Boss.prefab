@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 0
-  MaxHealth: 8
+  MaxHealth: 12
   Health: 0
   _minSlashTime: 3
   _maxSlashTime: 5

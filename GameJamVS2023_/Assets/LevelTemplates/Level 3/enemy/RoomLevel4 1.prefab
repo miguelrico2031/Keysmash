@@ -3739,6 +3739,44 @@ MonoBehaviour:
       To: {x: 15, y: 1, z: 0}
     - From: {x: 6, y: -6, z: 0}
       To: {x: 6, y: -6, z: 0}
+    - From: {x: 15, y: 2, z: 0}
+      To: {x: 15, y: 2, z: 0}
+    - From: {x: 15, y: 3, z: 0}
+      To: {x: 15, y: 3, z: 0}
+    - From: {x: 15, y: 4, z: 0}
+      To: {x: 15, y: 4, z: 0}
+    - From: {x: 15, y: 0, z: 0}
+      To: {x: 15, y: 0, z: 0}
+    - From: {x: 15, y: -4, z: 0}
+      To: {x: 15, y: -4, z: 0}
+    - From: {x: -2, y: 3, z: 0}
+      To: {x: -2, y: 3, z: 0}
+    - From: {x: -2, y: 4, z: 0}
+      To: {x: -2, y: 4, z: 0}
+    - From: {x: -2, y: -2, z: 0}
+      To: {x: -2, y: -2, z: 0}
+    - From: {x: -2, y: -4, z: 0}
+      To: {x: -2, y: -4, z: 0}
+    - From: {x: -2, y: -3, z: 0}
+      To: {x: -2, y: -3, z: 0}
+    - From: {x: 2, y: -6, z: 0}
+      To: {x: 2, y: -6, z: 0}
+    - From: {x: 3, y: -6, z: 0}
+      To: {x: 3, y: -6, z: 0}
+    - From: {x: 4, y: -6, z: 0}
+      To: {x: 4, y: -6, z: 0}
+    - From: {x: 5, y: -6, z: 0}
+      To: {x: 5, y: -6, z: 0}
+    - From: {x: 7, y: -6, z: 0}
+      To: {x: 7, y: -6, z: 0}
+    - From: {x: 8, y: -6, z: 0}
+      To: {x: 8, y: -6, z: 0}
+    - From: {x: 12, y: 6, z: 0}
+      To: {x: 12, y: 6, z: 0}
+    - From: {x: 1, y: 6, z: 0}
+      To: {x: 1, y: 6, z: 0}
+    - From: {x: 11, y: 6, z: 0}
+      To: {x: 11, y: 6, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 3
     DoorLength: 1
@@ -3792,7 +3830,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 14.884979, y: -4.973753}
+    - - {x: 14.884979, y: -4.4760723}
       - {x: 14.943887, y: 5.998248}
       - {x: 8.920486, y: 6.151767}
       - {x: 9.02582, y: 2.0107446}
@@ -3802,7 +3840,7 @@ PolygonCollider2D:
       - {x: -0.95105654, y: 0.30901697}
       - {x: -0.96477455, y: -0.85614073}
       - {x: -0.96729314, y: -1.845736}
-      - {x: -0.9810109, y: -4.9688253}
+      - {x: -0.9810109, y: -4.371609}
 --- !u!1 &5888781538974573152
 GameObject:
   m_ObjectHideFlags: 0

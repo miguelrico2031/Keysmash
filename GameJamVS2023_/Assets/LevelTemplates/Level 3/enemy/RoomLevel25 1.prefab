@@ -1375,6 +1375,58 @@ MonoBehaviour:
       To: {x: 3, y: -4, z: 0}
     - From: {x: 12, y: 0, z: 0}
       To: {x: 12, y: 0, z: 0}
+    - From: {x: 12, y: -1, z: 0}
+      To: {x: 12, y: -1, z: 0}
+    - From: {x: -6, y: 2, z: 0}
+      To: {x: -6, y: 2, z: 0}
+    - From: {x: -2, y: 5, z: 0}
+      To: {x: -2, y: 5, z: 0}
+    - From: {x: -1, y: 5, z: 0}
+      To: {x: -1, y: 5, z: 0}
+    - From: {x: 0, y: 5, z: 0}
+      To: {x: 0, y: 5, z: 0}
+    - From: {x: 2, y: 5, z: 0}
+      To: {x: 2, y: 5, z: 0}
+    - From: {x: 1, y: 5, z: 0}
+      To: {x: 1, y: 5, z: 0}
+    - From: {x: 3, y: 5, z: 0}
+      To: {x: 3, y: 5, z: 0}
+    - From: {x: 5, y: 5, z: 0}
+      To: {x: 5, y: 5, z: 0}
+    - From: {x: 6, y: 5, z: 0}
+      To: {x: 6, y: 5, z: 0}
+    - From: {x: 7, y: 5, z: 0}
+      To: {x: 7, y: 5, z: 0}
+    - From: {x: 8, y: 5, z: 0}
+      To: {x: 8, y: 5, z: 0}
+    - From: {x: 8, y: -4, z: 0}
+      To: {x: 8, y: -4, z: 0}
+    - From: {x: 7, y: -4, z: 0}
+      To: {x: 7, y: -4, z: 0}
+    - From: {x: 6, y: -4, z: 0}
+      To: {x: 6, y: -4, z: 0}
+    - From: {x: 5, y: -4, z: 0}
+      To: {x: 5, y: -4, z: 0}
+    - From: {x: 4, y: -4, z: 0}
+      To: {x: 4, y: -4, z: 0}
+    - From: {x: 2, y: -4, z: 0}
+      To: {x: 2, y: -4, z: 0}
+    - From: {x: 1, y: -4, z: 0}
+      To: {x: 1, y: -4, z: 0}
+    - From: {x: 0, y: -4, z: 0}
+      To: {x: 0, y: -4, z: 0}
+    - From: {x: -1, y: -4, z: 0}
+      To: {x: -1, y: -4, z: 0}
+    - From: {x: -2, y: -4, z: 0}
+      To: {x: -2, y: -4, z: 0}
+    - From: {x: -6, y: 0, z: 0}
+      To: {x: -6, y: 0, z: 0}
+    - From: {x: -6, y: -1, z: 0}
+      To: {x: -6, y: -1, z: 0}
+    - From: {x: 12, y: 1, z: 0}
+      To: {x: 12, y: 1, z: 0}
+    - From: {x: 12, y: 2, z: 0}
+      To: {x: 12, y: 2, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
@@ -1433,8 +1485,8 @@ PolygonCollider2D:
       - {x: -5.034827, y: 4.0194945}
       - {x: -5.045123, y: -1.9880415}
       - {x: -4.0602603, y: -2.0397677}
-      - {x: -3.8956642, y: -3.0067866}
-      - {x: 11.03691, y: -3.078822}
+      - {x: -3.9279218, y: -2.4584131}
+      - {x: 11.03691, y: -2.3369045}
       - {x: 10.980082, y: -1.9639022}
       - {x: 11.993852, y: -2.0765877}
       - {x: 12.038465, y: 3.894664}
@@ -3461,11 +3513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7
+      value: 7.93
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3717,11 +3769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 3.29
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3787,11 +3839,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 7879544467663078899, guid: 1ccaa0f49239d13438303133d9e32bb6, type: 3}
       propertyPath: m_LocalPosition.z

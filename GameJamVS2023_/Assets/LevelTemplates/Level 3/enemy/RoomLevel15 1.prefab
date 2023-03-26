@@ -850,6 +850,52 @@ MonoBehaviour:
       To: {x: -1, y: 2, z: 0}
     - From: {x: -2, y: -12, z: 0}
       To: {x: -2, y: -12, z: 0}
+    - From: {x: 3, y: 0, z: 0}
+      To: {x: 3, y: 0, z: 0}
+    - From: {x: 3, y: -1, z: 0}
+      To: {x: 3, y: -1, z: 0}
+    - From: {x: 3, y: -2, z: 0}
+      To: {x: 3, y: -2, z: 0}
+    - From: {x: 3, y: -3, z: 0}
+      To: {x: 3, y: -3, z: 0}
+    - From: {x: -7, y: -4, z: 0}
+      To: {x: -7, y: -4, z: 0}
+    - From: {x: -7, y: 0, z: 0}
+      To: {x: -7, y: 0, z: 0}
+    - From: {x: -2, y: 2, z: 0}
+      To: {x: -2, y: 2, z: 0}
+    - From: {x: -3, y: 2, z: 0}
+      To: {x: -3, y: 2, z: 0}
+    - From: {x: -4, y: 2, z: 0}
+      To: {x: -4, y: 2, z: 0}
+    - From: {x: -7, y: -6, z: 0}
+      To: {x: -7, y: -6, z: 0}
+    - From: {x: -7, y: -7, z: 0}
+      To: {x: -7, y: -7, z: 0}
+    - From: {x: -7, y: -8, z: 0}
+      To: {x: -7, y: -8, z: 0}
+    - From: {x: -7, y: -9, z: 0}
+      To: {x: -7, y: -9, z: 0}
+    - From: {x: -7, y: -10, z: 0}
+      To: {x: -7, y: -10, z: 0}
+    - From: {x: -4, y: -12, z: 0}
+      To: {x: -4, y: -12, z: 0}
+    - From: {x: -3, y: -12, z: 0}
+      To: {x: -3, y: -12, z: 0}
+    - From: {x: -1, y: -12, z: 0}
+      To: {x: -1, y: -12, z: 0}
+    - From: {x: 0, y: -12, z: 0}
+      To: {x: 0, y: -12, z: 0}
+    - From: {x: 3, y: -5, z: 0}
+      To: {x: 3, y: -5, z: 0}
+    - From: {x: 3, y: -6, z: 0}
+      To: {x: 3, y: -6, z: 0}
+    - From: {x: 3, y: -7, z: 0}
+      To: {x: 3, y: -7, z: 0}
+    - From: {x: 3, y: -8, z: 0}
+      To: {x: 3, y: -8, z: 0}
+    - From: {x: 3, y: -9, z: 0}
+      To: {x: 3, y: -9, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
@@ -905,8 +951,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 3.0682209, y: 1.9834037}
       - {x: -6.064758, y: 1.9611361}
-      - {x: -6.0161757, y: -11.075755}
-      - {x: 3.1053, y: -11.03642}
+      - {x: -6.0161757, y: -10.422219}
+      - {x: 3.1053, y: -10.464576}
       - {x: 3.0752091, y: -1.7758}
 --- !u!1 &5328751224487338819
 GameObject:

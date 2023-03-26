@@ -2646,6 +2646,56 @@ MonoBehaviour:
       To: {x: -7, y: -3, z: 0}
     - From: {x: -15, y: 2, z: 0}
       To: {x: -15, y: 2, z: 0}
+    - From: {x: -8, y: -3, z: 0}
+      To: {x: -8, y: -3, z: 0}
+    - From: {x: -9, y: -3, z: 0}
+      To: {x: -9, y: -3, z: 0}
+    - From: {x: -10, y: -3, z: 0}
+      To: {x: -10, y: -3, z: 0}
+    - From: {x: -11, y: -3, z: 0}
+      To: {x: -11, y: -3, z: 0}
+    - From: {x: -12, y: -3, z: 0}
+      To: {x: -12, y: -3, z: 0}
+    - From: {x: -13, y: -3, z: 0}
+      To: {x: -13, y: -3, z: 0}
+    - From: {x: -6, y: -3, z: 0}
+      To: {x: -6, y: -3, z: 0}
+    - From: {x: -5, y: -3, z: 0}
+      To: {x: -5, y: -3, z: 0}
+    - From: {x: -2, y: 0, z: 0}
+      To: {x: -2, y: 0, z: 0}
+    - From: {x: -2, y: 1, z: 0}
+      To: {x: -2, y: 1, z: 0}
+    - From: {x: -2, y: 3, z: 0}
+      To: {x: -2, y: 3, z: 0}
+    - From: {x: -2, y: 4, z: 0}
+      To: {x: -2, y: 4, z: 0}
+    - From: {x: -15, y: 3, z: 0}
+      To: {x: -15, y: 3, z: 0}
+    - From: {x: -15, y: 4, z: 0}
+      To: {x: -15, y: 4, z: 0}
+    - From: {x: -15, y: 1, z: 0}
+      To: {x: -15, y: 1, z: 0}
+    - From: {x: -15, y: 0, z: 0}
+      To: {x: -15, y: 0, z: 0}
+    - From: {x: -15, y: -1, z: 0}
+      To: {x: -15, y: -1, z: 0}
+    - From: {x: -8, y: 6, z: 0}
+      To: {x: -8, y: 6, z: 0}
+    - From: {x: -10, y: 6, z: 0}
+      To: {x: -10, y: 6, z: 0}
+    - From: {x: -12, y: 6, z: 0}
+      To: {x: -12, y: 6, z: 0}
+    - From: {x: -13, y: 6, z: 0}
+      To: {x: -13, y: 6, z: 0}
+    - From: {x: -6, y: 6, z: 0}
+      To: {x: -6, y: 6, z: 0}
+    - From: {x: -5, y: 6, z: 0}
+      To: {x: -5, y: 6, z: 0}
+    - From: {x: -7, y: 6, z: 0}
+      To: {x: -7, y: 6, z: 0}
+    - From: {x: -11, y: 6, z: 0}
+      To: {x: -11, y: 6, z: 0}
   SimpleDoorModeData:
     DistanceFromCorners: 1
     DoorLength: 1
@@ -2688,8 +2738,8 @@ PolygonCollider2D:
     - - {x: -2.0677023, y: 5.9846387}
       - {x: -14.058811, y: 5.995198}
       - {x: -14.064772, y: 3.3263874}
-      - {x: -14.0707445, y: -2.0274842}
-      - {x: -2.0397272, y: -1.943301}
+      - {x: -14.02139, y: -1.5092721}
+      - {x: -2.0397272, y: -1.5237956}
 --- !u!114 &4773166514108543557
 MonoBehaviour:
   m_ObjectHideFlags: 0

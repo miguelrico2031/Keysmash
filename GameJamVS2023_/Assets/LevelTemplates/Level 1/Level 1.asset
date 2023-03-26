@@ -59,8 +59,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 400, y: 64}
-  Name: Room
-  IndividualRoomTemplates: []
+  Name: Slime
+  IndividualRoomTemplates:
+  - {fileID: 4989592155547606428, guid: a3faabd4c4b5ac449addade84775a8fb, type: 3}
   RoomTemplateSets: []
 --- !u!114 &-7154653829271284248
 MonoBehaviour:
@@ -271,8 +272,8 @@ MonoBehaviour:
   - {fileID: -696801552110176774}
   - {fileID: 8347407920041686238}
   EditorData:
-    PanOffset: {x: 437.68625, y: 669.84503}
-    Zoom: 0.7019026
+    PanOffset: {x: 76.283066, y: 350.61768}
+    Zoom: 1.0223327
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &76130524099084059

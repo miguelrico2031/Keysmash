@@ -14,20 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: {fileID: 3610189201600888194}
   To: {fileID: -1939605018974252611}
---- !u!114 &-8600215618422789201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f692f83df7c1b5468af64edd22287dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  From: {fileID: -7874343295717641632}
-  To: {fileID: 1620095177862948775}
 --- !u!114 &-7874343295717641632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8074dc491ddc34f4e83332d9eae76980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Position: {x: 320, y: 64}
+  Position: {x: 320, y: 144}
   Name: SpawnRoom
   IndividualRoomTemplates:
   - {fileID: 7406660133963991619, guid: 90555f34101080b46a2ec62ced5805f9, type: 3}
@@ -276,8 +262,6 @@ MonoBehaviour:
   m_Name: Level 2
   m_EditorClassIdentifier: 
   Connections:
-  - {fileID: -8600215618422789201}
-  - {fileID: 3440010321848964859}
   - {fileID: 5214072217969665223}
   - {fileID: 3675637590954425208}
   - {fileID: 3968799766778899714}
@@ -296,6 +280,7 @@ MonoBehaviour:
   - {fileID: -8652127303525419290}
   - {fileID: 8347364973537038259}
   - {fileID: 3152807355687165063}
+  - {fileID: 2566197559049382931}
   CorridorIndividualRoomTemplates:
   - {fileID: 4202725253815419006, guid: da5fb14d67b31eb4e870dfee94c8bbae, type: 3}
   - {fileID: 4202725253815419006, guid: bfced9d2d60077c48b17cc45d9ce7448, type: 3}
@@ -326,7 +311,6 @@ MonoBehaviour:
   DefaultRoomTemplateSets: []
   Rooms:
   - {fileID: -7874343295717641632}
-  - {fileID: 1620095177862948775}
   - {fileID: 229536289268811894}
   - {fileID: 7920834233198789300}
   - {fileID: 6382834545719146761}
@@ -347,8 +331,8 @@ MonoBehaviour:
   - {fileID: -5988928004988443017}
   - {fileID: -3359493003880813599}
   EditorData:
-    PanOffset: {x: 763.2711, y: 602.3353}
-    Zoom: 0.4119793
+    PanOffset: {x: 223.76427, y: 200.40567}
+    Zoom: 0.7408081
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
 --- !u!114 &229536289268811894
@@ -414,22 +398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: {fileID: -5816030187369634851}
   To: {fileID: -30129084496019454}
---- !u!114 &1620095177862948775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8074dc491ddc34f4e83332d9eae76980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Position: {x: 320, y: 144}
-  Name: Raton
-  IndividualRoomTemplates: []
-  RoomTemplateSets: []
 --- !u!114 &1690643877449573657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +444,20 @@ MonoBehaviour:
   Name: Room
   IndividualRoomTemplates: []
   RoomTemplateSets: []
+--- !u!114 &2566197559049382931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f692f83df7c1b5468af64edd22287dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  From: {fileID: -7874343295717641632}
+  To: {fileID: 229536289268811894}
 --- !u!114 &3152807355687165063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,20 +472,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: {fileID: -5988928004988443017}
   To: {fileID: -3737307066945751571}
---- !u!114 &3440010321848964859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f692f83df7c1b5468af64edd22287dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  From: {fileID: 1620095177862948775}
-  To: {fileID: 229536289268811894}
 --- !u!114 &3597126937372627099
 MonoBehaviour:
   m_ObjectHideFlags: 0
