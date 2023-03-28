@@ -18,6 +18,15 @@ public class SmashPower : Power
         _dashPower.PowerAvailable.AddListener(OnDashOver);
         _statsManager = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>();
         _light =  GameObject.FindGameObjectWithTag("Player").GetComponent<Light2D>();
+
+        if(!_statsManager.Stats.Powers.Contains(_dashPower))
+        {
+            _statsManager.Stats.Powers.Remove(this);
+            _statsManager.Stats.Powers.Add(_dashPower);
+            _statsManager.Stats.Powers.Add(this);
+            _dashPower.OnStart();
+            GameObject.Find("Canvas").GetComponent<Interfaz>().ShowNewKey(_dashPower);
+        }
     }
 
     public override void Use(GameObject player)
