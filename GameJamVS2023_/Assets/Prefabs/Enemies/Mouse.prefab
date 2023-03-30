@@ -225,19 +225,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsBlocked: 0
   _maxHealth: 3
-  _attackDamage: 1
+  _attackDamage: 2
   _explosion: {fileID: 0}
   OnDie:
     m_PersistentCalls:
       m_Calls: []
-  _speed: 80
+  _speed: 100
   _amplitude: 150
-  _creepSpeed: 6
+  _creepSpeed: 8
   _rotationSpeed: 300
   _explodingDuration: 0.5
   _knockbackForce: 15
   _knockbackDuration: 0.6
-  _explosionRadius: 2
+  _explosionRadius: 2.5
   IsExploding: 0
   InExplosion: 0
 --- !u!95 &2660321026687556999

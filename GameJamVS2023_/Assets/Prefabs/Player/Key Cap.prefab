@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7459885029885128382}
   - component: {fileID: 7280186030217346735}
   - component: {fileID: 2364929971660043464}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Key Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
