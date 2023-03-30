@@ -7257,6 +7257,18 @@ PrefabInstance:
       propertyPath: SceneName
       value: Level 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1768292562484449870, guid: ad323e4f89898d740ab12ed713da4eb3, type: 3}
+      propertyPath: _powersInFloor.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768292562484449870, guid: ad323e4f89898d740ab12ed713da4eb3, type: 3}
+      propertyPath: _powersInFloor.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7dc282dce266339498db3956af9f4a4c, type: 2}
+    - target: {fileID: 1768292562484449870, guid: ad323e4f89898d740ab12ed713da4eb3, type: 3}
+      propertyPath: _powersInFloor.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b2b4d23e87b6234ba099146dffdb82f, type: 2}
     - target: {fileID: 3285683505855903041, guid: ad323e4f89898d740ab12ed713da4eb3, type: 3}
       propertyPath: m_RootOrder
       value: 1

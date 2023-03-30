@@ -18,6 +18,7 @@ TagManager:
   - EnemySpawnPoint
   - Slash
   - Boss
+  - Warning
   layers:
   - Default
   - TransparentFX

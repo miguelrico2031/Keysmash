@@ -14,6 +14,8 @@ public class Interfaz : MonoBehaviour
     public GameObject[] Lives;
     public GameObject[] LivesPauseMenu;
 
+    public GameObject Warning;
+
     GameObject KeyBoardBackground;
     GameObject KeyShowCaseBackground;
     GameObject InfoPanelBackground;
@@ -35,6 +37,9 @@ public class Interfaz : MonoBehaviour
     }
     private void Start()
     {
+        Warning = GameObject.FindGameObjectWithTag("Warning");
+        Warning.SetActive(false);
+
         _stats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>();
         if (SceneManager.GetActiveScene().name != "Level 1")
         {
@@ -68,7 +73,7 @@ public class Interfaz : MonoBehaviour
             {
                 if (Time.timeScale == 1)
                 {
-                    PauseMenu(0);
+                    if(!Warning.activeSelf) PauseMenu(0);
                 }
                 else if (Time.timeScale == 0)
                 {
